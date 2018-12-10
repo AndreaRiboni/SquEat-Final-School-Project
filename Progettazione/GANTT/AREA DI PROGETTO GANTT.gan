@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="GANTT Area di Progetto" company="OSDB" webLink="www.salesianisesto.it" view-date="2018-11-01" view-index="0" gantt-divider-location="423" resource-divider-location="300" version="2.8.9" locale="it">
+    <description><![CDATA[GANTT relativo alla progettazione dell'AREA DI PROGETTO del gruppo formato da Bressan Pietro, Miotto Luca, Riboni Andrea e Saponaro Andrea.]]></description>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="223" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="99" order="1"/>
+        <field id="tpd5" name="Data di fine" width="98" order="2"/>
+        <option id="color.recent"><![CDATA[#006699 #0099cc #ff9966 #ff6633 #00ccff #33ffff #00ffcc #00ff99 #99ff33 #cc9900]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="211" order="0"/>
+        <field id="1" name="Ruolo predefinito" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="it">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"><![CDATA[New Years Day]]></date>
+        <date year="" month="1" date="6" type="HOLIDAY"><![CDATA[Epiphany]]></date>
+        <date year="" month="4" date="25" type="HOLIDAY"><![CDATA[Liberation Day]]></date>
+        <date year="" month="5" date="1" type="HOLIDAY"><![CDATA[Labor Day]]></date>
+        <date year="" month="6" date="2" type="HOLIDAY"><![CDATA[Republic Day]]></date>
+        <date year="" month="8" date="15" type="HOLIDAY"><![CDATA[Assumption Day]]></date>
+        <date year="" month="11" date="1" type="HOLIDAY"><![CDATA[All Saints Day]]></date>
+        <date year="" month="12" date="8" type="HOLIDAY"><![CDATA[Immaculate Conception Day]]></date>
+        <date year="" month="12" date="25" type="HOLIDAY"><![CDATA[Christmas Day]]></date>
+        <date year="" month="12" date="26" type="HOLIDAY"><![CDATA[St. Stephen's Day]]></date>
+        <date year="2005" month="3" date="28" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2006" month="4" date="17" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2007" month="4" date="9" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2008" month="3" date="24" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2009" month="4" date="13" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2010" month="4" date="5" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2011" month="4" date="25" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2012" month="4" date="9" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2013" month="4" date="1" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2014" month="4" date="21" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2015" month="4" date="6" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2016" month="3" date="28" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2017" month="4" date="17" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+        <date year="2018" month="4" date="2" type="HOLIDAY"><![CDATA[Easter Monday]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="61" name="Progettazione Progetto" meeting="false" start="2018-12-03" duration="55" complete="0" expand="true">
+            <task id="62" name="Gantt" color="#ff3333" meeting="false" start="2018-12-03" duration="7" complete="0" thirdDate="2018-12-11" thirdDate-constraint="0" expand="true"/>
+            <task id="75" name="Specifica Requisiti" color="#ff6633" meeting="false" start="2018-12-11" duration="27" complete="0" thirdDate="2018-11-23" thirdDate-constraint="0" expand="true">
+                <depend id="82" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="82" name="Analisi Requisiti" color="#99ff33" meeting="false" start="2019-01-11" duration="21" complete="0" thirdDate="2018-12-17" thirdDate-constraint="0" expand="true">
+                <depend id="57" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="49" name="Implementazione" color="#33ffff" meeting="false" start="2019-02-01" duration="91" complete="0" thirdDate="2019-02-01" thirdDate-constraint="1" expand="true">
+            <depend id="104" type="2" difference="0" hardness="Strong"/>
+            <task id="57" name="Implementazione" color="#0099cc" meeting="false" start="2019-02-01" duration="85" complete="0" thirdDate="2018-11-17" thirdDate-constraint="0" expand="true"/>
+            <task id="54" name="Studio delle Tecnologie Necessarie" color="#00ff99" meeting="false" start="2019-02-01" duration="8" complete="0" thirdDate="2019-01-11" thirdDate-constraint="0" expand="true"/>
+            <task id="105" name="Testing" color="#00ccff" meeting="false" start="2019-04-01" duration="32" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="104" name="Demo" color="#006699" meeting="false" start="2019-05-05" duration="11" complete="0" thirdDate="2018-11-02" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="Bressan Pietro"/>
+        <role id="2" name="Miotto Luca"/>
+        <role id="3" name="Riboni Andrea"/>
+        <role id="4" name="Saponaro Andrea"/>
+    </roles>
+</project>
