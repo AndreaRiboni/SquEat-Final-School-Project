@@ -1,0 +1,9 @@
+Contenuto della cartella:
+  1) jsoup-1.11.3.jar
+    > JAR della libreria Jsoup, usata per il parsing di pagine HTML
+  2) WebUtility.java
+    > Contenitore di metodi statici per Java, utili ad effettuare connessioni HTTP
+  3) WebTest.java
+    > Esempio di utilizzo di WebUtility.java
+  4) index.php
+    > pagina PHP utilizzata per WebTest.java
