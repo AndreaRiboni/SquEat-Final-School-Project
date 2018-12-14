@@ -1,0 +1,6 @@
+la directory contiene sia esempi di web applications create utilizzando Apache Tomcat 9.
+
+Per installare Tomcat, bisogna:
+  1) scaricare apache tomcat 9
+  2) impostare il path di JAVA_HOME, JRE_HOME e CATALINA_HOME
+  3) impostare il server Apache Tomcat su Netbeans
