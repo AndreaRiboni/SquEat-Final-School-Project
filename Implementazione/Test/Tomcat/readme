@@ -1,5 +1,13 @@
 la directory contiene sia esempi di web applications create utilizzando Apache Tomcat 9.
 
+Contenuto:
+  > index.html
+    contiene un menù in HTML che effettua richieste GET gestite dalla servlet sotto citata
+  > HelloWorldServlet.java
+    servlet che processa le richieste GET.
+    Gestisce tre richieste differenti.
+    
+    
 Per installare Tomcat, bisogna:
   1) scaricare apache tomcat 9
   2) impostare il path di JAVA_HOME, JRE_HOME e CATALINA_HOME
