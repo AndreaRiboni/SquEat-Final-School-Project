@@ -1,0 +1,5 @@
+Test di un bot di Telegram.
+Il bot caricato necessita le librerie TelegramBots, JSoup e JDBC.
+La tabella usata nel DB è la seguente:
+  create table utente(id int primary key, nome varchar(20), stato int);
+Il bot permette agli utenti presenti nel DB di scaricare pagine HTML partendo dal loro URL.
