@@ -1,0 +1,4 @@
+Elenco delle librerie contenute in questa cartella:
+  - JSoup (Parser di HTML)
+  - TelegramBots (Telegram API)
+  - Encog (Basics Neural Network)
