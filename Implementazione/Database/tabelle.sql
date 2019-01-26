@@ -37,6 +37,7 @@ CREATE TABLE Ordine (
     IDProdotto INT NOT NULL,
     Giorno DATE NOT NULL,
     Costo FLOAT NOT NULL,
-    Stato INT NOT NULL
+    Stato INT NOT NULL,
+    IDFattorino INT NOT NULL
 );
 
