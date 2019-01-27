@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,14 +45,19 @@ public class ServerProcess extends Thread {
         try {
             String msg = in.readLine();
             process(msg);
+            client.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    private void send(String msg){
+        out.println(msg);
+    }
+    
     /**
      * Decapsula una richiesta e la processa.
-     * 
+     *
      * @param input richiesta da processare
      * @throws ServerException errore
      */
@@ -152,5 +158,91 @@ public class ServerProcess extends Thread {
             default:
                 throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
         }
+    }
+
+    /**
+     * Verifica la validità di un account e la comunica al client richiedente
+     *
+     * @param msg 000;mail;password
+     */
+    private void login(String[] msg) throws ServerException {
+        if(Database.count(
+                Database.select("select * from Utente where Mail = '"+msg[1]+"' and Psw = '"+msg[2]+"'")
+        ) > 0){
+            //l'utente esiste
+            send(Pacchetto.incapsula(001, "true"));
+        } else {
+            //l'utente non esiste
+            send(Pacchetto.incapsula(001, "false"));
+        }
+        
+    }
+
+    private void register(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void inviaLocali(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void inviaInfoLocale(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiAlCarrello(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void rimuoviDaCarrello(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void acquista(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void recensici(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void track(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiLocale(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void assegnaOrdine(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiProdMenu(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void getProdottiComprati(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void getOrdiniRicevuti(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiPost(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void getFeed(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiCommento(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void aggiungiVoto(String[] msg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
