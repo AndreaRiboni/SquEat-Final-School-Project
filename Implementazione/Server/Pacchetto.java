@@ -49,9 +49,10 @@ public class Pacchetto {
     public static boolean verifica(String[] msg) throws ServerException {
         try {
             return (msg.length - 1 == PARAM_NUM[Integer.parseInt(msg[0])]);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
             throw new ServerException("Codice del messaggio inesistente");
         }
     }
     
 }
+
