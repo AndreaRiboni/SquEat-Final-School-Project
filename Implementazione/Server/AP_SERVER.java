@@ -18,6 +18,12 @@ public class AP_SERVER {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Inizializzo i driver
+        try{
+            Class.forName("org.gjt.mm.mysql.Driver");
+        } catch(ClassNotFoundException ex){
+            ex.printStackTrace();
+        }
         //Inizializzo il server socket
         ServerSocket server = null;
         try {
