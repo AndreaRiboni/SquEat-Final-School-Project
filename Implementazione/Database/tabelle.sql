@@ -3,13 +3,15 @@ CREATE TABLE Locale (
     Nome VARCHAR(32) NOT NULL,
     Indirizzo VARCHAR(64) NOT NULL,
     Cellulare VARCHAR(13) NOT NULL,
-    IDAdmin INT NOT NULL UNIQUE
+    IDAdmin INT NOT NULL,
+    Punteggio FLOAT NOT NULL,
+    NumRecensioni INT NOT NULL
 );
 
 CREATE TABLE Menù (
     ID INT PRIMARY KEY,
     IDLocale INT NOT NULL UNIQUE,
-    IDProdotto INT NOT NULL UNIQUE,
+    IDProdotto INT NOT NULL,
     Costo FLOAT NOT NULL
 );
 
