@@ -48,7 +48,8 @@ CREATE TABLE Post(
     IDUtente INT NOT NULL,
     IDLocale INT NOT NULL,
     Testo VARCHAR(512) NOT NULL,
-    Foto BLOB
+    Foto BLOB, 
+    Data DATE NOT NULL
 );
 
 CREATE TABLE Commenti(
