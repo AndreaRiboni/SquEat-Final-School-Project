@@ -53,10 +53,10 @@ CREATE TABLE Post(
 );
 
 CREATE TABLE Commenti(
+	ID INT PRIMARY KEY AUTO_INCREMENT,
     IDUtente INT NOT NULL,
     IDPost INT NOT NULL,
-    Testo VARCHAR(256) NOT NULL,
-    PRIMARY KEY(IDUtente, IDPost, Testo)
+    Testo VARCHAR(256) NOT NULL
 );
 
 #reazione a commento o a post
