@@ -23,14 +23,19 @@ public class AP_CLIENT {
             System.out.println("Invio");
             String risp = null;
             //REGISTRAZIONE
-            //risp = ClientConnector.request("002;admin@admin.it;admin;admin;admin;3453797411;45.46, 9.19;0");
+//            risp = ClientConnector.request("002;admin@admin.it;admin;admin;admin;3453797411;45.46, 9.19;0");
             
-            //AGGIUNTA LOCALE
-            risp = ClientConnector.request("016;Da Totto;45.46;9.19;3663574756;1");
+            //CHIEDO LOCALI
+            risp = ClientConnector.request("005;45.464211, 9.191383");
+            String[] locali = risp.split(";");
+            for(int i = 1; i < locali.length; i+=3){
+                System.out.println("LOCALE "+(i/3));
+                System.out.println("        NOME: "+locali[i]);
+                System.out.println("  RECENSIONI: "+locali[i+2]);
+            }
             
-            
-            if(!risp.equalsIgnoreCase("null")) System.out.println(risp);
-            System.out.println("Inviata");
+//            if(!risp.equalsIgnoreCase("null")) System.out.println(risp);
+//            System.out.println("Inviata");
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (ClientException ex) {
