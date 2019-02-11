@@ -4,11 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_server/ServerProcess.java</file>
-            <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_server/ServerException.java</file>
             <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_database/Database.java</file>
             <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_utility/Checker.java</file>
+            <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_web/WebUtility.java</file>
             <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_server/AP_SERVER.java</file>
+            <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_utility/Utility.java</file>
+            <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_utility/ConfigurationLoader.java</file>
             <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_utility/Pacchetto.java</file>
+            <file>file:/C:/Users/Utente/Downloads/AreaProgetto-master/AP_SERVER/src/ap_database/Locale.java</file>
         </group>
     </open-files>
 </project-private>

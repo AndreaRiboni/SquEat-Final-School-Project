@@ -3,12 +3,15 @@ package ap_server;
 import ap_utility.Pacchetto;
 import ap_database.Database;
 import ap_utility.Checker;
+import ap_utility.Utility;
+import ap_web.WebUtility;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -195,22 +198,46 @@ public class ServerProcess extends Thread {
 
     private void register(String[] msg) throws ServerException {
         System.out.println("  > " + client + " chiede REGISTRAZIONE");
-        if (Checker.isMailValid(msg[1])
-                && !Checker.hasWhitespaces(msg[2], msg[3], msg[4])
-                && Checker.isPhoneNumberValid(msg[5])
-                && Checker.isAddressValid(msg[6])) {
+        boolean[] esito = {true, true, true, true};
+        if (!Checker.isMailValid(msg[1]) || !Checker.isMailUnique(db, msg[1])) {
+            esito[0] = false;
+            System.out.println("Mail non valida");
+        } else if (Checker.hasWhitespaces(msg[2])) {
+            System.out.println("password non valida");
+            esito[1] = false;
+        } else if (!Checker.isPhoneNumberValid(msg[5]) || !Checker.isPhoneNumberUnique(db, msg[5])) {
+            System.out.println("numero non valido");
+            esito[2] = false;
+        } else if (!Checker.isAddressValid(msg[6])) {
+            System.out.println("indirizzo non valido");
+            esito[3] = false;
+        }
+        if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
                 System.out.println("   > " + client + " registrazione SUCCESSO");
-                send(Pacchetto.incapsula(003, "true"));
-                return;
+                send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + ""));
             }
+        } else {
+            System.out.println("   > " + client + " registrazione RIFIUTATA");
+            send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + ""));
         }
-        System.out.println("   > " + client + " registrazione RIFIUTATA");
-        send(Pacchetto.incapsula(003, "false"));
     }
 
     private void inviaLocali(String[] msg) {
-
+        //nel raggio di 8km
+        ArrayList<String[]> locali = db.stringify(db.select("select Nome, Indirizzo, Punteggio, NumRecensioni from Locale"));
+        ArrayList<String> query = new ArrayList<>();
+        for (String[] locale : locali) {
+            if (Utility.integerDistance(WebUtility.getDistance(msg[1], locale[1])) <= 8) {
+                String punteggio = locale[3].equalsIgnoreCase("0") ? "Nessuna Recensione" : Integer.parseInt(locale[2]) / Integer.parseInt(locale[4]) + "";
+                query.add(locale[0] + ";" + locale[1] + ";" + punteggio);
+            }
+        }
+        StringBuilder response = new StringBuilder("006");
+        for (String locale : query) {
+            response.append(";").append(locale);
+        }
+        send(response.toString());
     }
 
     private void inviaInfoLocale(String[] msg) {

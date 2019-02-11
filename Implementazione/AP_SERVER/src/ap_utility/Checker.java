@@ -126,4 +126,14 @@ public class Checker {
             throw new ServerException("L'ID specificato non esiste");
         }
     }
+    
+    public static boolean isPhoneNumberUnique(Database db, String phone){
+        System.out.println("checking per "+phone);
+        System.out.println(db.count(db.select("select Cellulare from Utente where Cellulare = '"+phone+"'")));
+        return db.count(db.select("select Cellulare from Utente where Cellulare = '"+phone+"'")) == 0;
+    }
+    
+    public static boolean isMailUnique(Database db, String mail){
+        return db.count(db.select("select Mail from Utente where Mail = '"+mail+"'")) == 0;
+    }
 }

@@ -1,5 +1,6 @@
 package ap_database;
 
+import ap_utility.ConfigurationLoader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -22,11 +23,15 @@ public class Database {
     private PreparedStatement PrepQuery;
     private ResultSet result;
 
-    private static final String NOME_DB = "areaprogetto", USER = "root", IP = "localhost";
+    private static String NOME_DB, USER, IP, PSW;
 
     public Database() {
+            NOME_DB = ConfigurationLoader.getNodeValue("dbname");
+            USER = ConfigurationLoader.getNodeValue("dbuser");
+            IP = ConfigurationLoader.getNodeValue("dbip");
+            PSW = ConfigurationLoader.getNodeValue("dbpsw");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://" + IP + ":3306/" + NOME_DB + "?user=" + USER + "&password=Az-72165");
+            conn = DriverManager.getConnection("jdbc:mysql://" + IP + ":3306/" + NOME_DB + "?user=" + USER + "&password=" + PSW);
             query = conn.createStatement();
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
@@ -90,4 +95,6 @@ public class Database {
         }
         return true;
     }
+    
+    
 }

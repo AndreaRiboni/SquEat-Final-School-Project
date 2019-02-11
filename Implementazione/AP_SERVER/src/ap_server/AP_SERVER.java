@@ -1,10 +1,13 @@
 package ap_server;
 
+import ap_utility.ConfigurationLoader;
+import ap_web.WebUtility;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.JSONObject;
 
 /**
  * Il progetto gestisce il server relativo al progetto "Food Delivery and
@@ -17,7 +20,7 @@ public class AP_SERVER {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //Inizializzo i driver
         try {
             Class.forName("org.gjt.mm.mysql.Driver");
@@ -28,6 +31,7 @@ public class AP_SERVER {
         ServerSocket server = null;
         try {
             server = new ServerSocket(60240);
+            System.out.println("Server attivo.");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
