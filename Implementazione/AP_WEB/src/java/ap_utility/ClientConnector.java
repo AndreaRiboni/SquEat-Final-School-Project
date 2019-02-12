@@ -17,7 +17,7 @@ import java.net.Socket;
  */
 public class ClientConnector {
 
-    private static final String IP_SERVER = "10.1.33.27";
+    private static final String IP_SERVER = "localhost";
     private static final int PORT = 60240;
 
     public static String request(String request) throws IOException, ServerException {
