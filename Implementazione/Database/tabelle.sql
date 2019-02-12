@@ -8,7 +8,7 @@ CREATE TABLE Locale (
     NumRecensioni INT NOT NULL
 );
 
-CREATE TABLE Menù (
+CREATE TABLE MenuLoc (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     IDLocale INT NOT NULL,
     IDProdotto INT NOT NULL,
