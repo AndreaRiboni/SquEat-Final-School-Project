@@ -5,15 +5,26 @@
  */
 package ap_utility;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Utente
  */
 public class Utility {
-    
-    public static int integerDistance(String dist){
-        System.out.println("DIST: "+dist);
-        System.out.println("DISTTT: "+dist.substring(0, dist.length()-3));
-        return (int)(Float.parseFloat(dist.substring(0, dist.length()-3)));
+
+    public static int integerDistance(String dist) {
+        System.out.println("DIST: " + dist);
+        System.out.println("DISTTT: " + dist.substring(0, dist.length() - 3));
+        return (int) (Float.parseFloat(dist.substring(0, dist.length() - 3)));
+    }
+
+    public static void print(ArrayList<String[]> table) {
+        for (int i = 0; i < table.size(); i++) {
+            for (int o = 0; o < table.get(i).length; o++) {
+                System.out.print(table.get(i)[o] + "   ");
+            }
+            System.out.println("");
+        }
     }
 }

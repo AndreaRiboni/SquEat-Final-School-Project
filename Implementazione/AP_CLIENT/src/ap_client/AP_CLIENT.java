@@ -15,32 +15,46 @@ import java.util.logging.Logger;
  */
 public class AP_CLIENT {
 
+    private static String risp;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         try {
             System.out.println("Invio");
-            String risp = null;
-            //REGISTRAZIONE
-//            risp = ClientConnector.request("002;admin@admin.it;admin;admin;admin;3453797411;45.46, 9.19;0");
-            
-            //CHIEDO LOCALI
-            risp = ClientConnector.request("005;45.464211, 9.191383");
-            String[] locali = risp.split(";");
-            for(int i = 1; i < locali.length; i+=3){
-                System.out.println("LOCALE "+(i/3));
-                System.out.println("        NOME: "+locali[i]);
-                System.out.println("  RECENSIONI: "+locali[i+2]);
-            }
-            
-//            if(!risp.equalsIgnoreCase("null")) System.out.println(risp);
-//            System.out.println("Inviata");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } catch (ClientException ex) {
+            recensisci();
+            System.out.println(risp);
+            System.out.println("Inviata");
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
-    
+
+    private static void registra() throws Exception {
+        //REGISTRAZIONE
+        risp = ClientConnector.request("002;admin@admin.it;admin;admin;admin;3453797411;45.46, 9.19;0");
+    }
+
+    private static void richiedilocali() throws Exception {
+        //CHIEDO LOCALI
+        risp = ClientConnector.request("005;45.464211, 9.191383");
+//            System.out.println(risp);
+        String[] locali = risp.split(";");
+        for (int i = 1; i < locali.length; i += 4) {
+            System.out.println("LOCALE " + (i / 3));
+            System.out.println("        NOME: " + locali[i]);
+            System.out.println("  RECENSIONI: " + locali[i + 2]);
+            System.out.println("  ID: " + locali[i + 3]);
+        }
+    }
+
+    private static void chiediInfoLocale() throws Exception {
+        risp = ClientConnector.request("007;1");
+    }
+
+    private static void recensisci() throws Exception {
+        risp = ClientConnector.request("13;5;5");
+    }
+
 }

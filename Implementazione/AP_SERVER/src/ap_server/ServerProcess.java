@@ -225,12 +225,12 @@ public class ServerProcess extends Thread {
 
     private void inviaLocali(String[] msg) {
         //nel raggio di 8km
-        ArrayList<String[]> locali = db.stringify(db.select("select Nome, Indirizzo, Punteggio, NumRecensioni from Locale"));
+        ArrayList<String[]> locali = db.stringify(db.select("select Nome, Indirizzo, Punteggio, NumRecensioni, ID from Locale"));
         ArrayList<String> query = new ArrayList<>();
         for (String[] locale : locali) {
             if (Utility.integerDistance(WebUtility.getDistance(msg[1], locale[1])) <= 8) {
                 String punteggio = locale[3].equalsIgnoreCase("0") ? "Nessuna Recensione" : Integer.parseInt(locale[2]) / Integer.parseInt(locale[4]) + "";
-                query.add(locale[0] + ";" + locale[1] + ";" + punteggio);
+                query.add(locale[0] + ";" + locale[1] + ";" + punteggio + ";" + locale[4]);
             }
         }
         StringBuilder response = new StringBuilder("006");
@@ -240,8 +240,32 @@ public class ServerProcess extends Thread {
         send(response.toString());
     }
 
+    /**
+     * 
+     * @param msg MSG 0: IDLOCALE
+     */
     private void inviaInfoLocale(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //008,nome,indirizzo,punteggio,cellulare,menu
+        ArrayList<String[]> locale = db.stringify(db.select("select Nome, Indirizzo, Cellulare, Punteggio, NumRecensioni from Locale where ID = "+msg[1]));
+        int punteggio = Integer.parseInt(locale.get(0)[3]) / Integer.parseInt(locale.get(0)[4]);
+        String nome = locale.get(0)[0];
+        String cellulare = locale.get(0)[2];
+        String indirizzo = locale.get(0)[1];
+        //ottengo il menu
+        ArrayList<String[]> menu = db.stringify(db.select("select IDProdotto, Costo from MenuLoc where IDLocale = "+msg[1]));
+        StringBuilder prodotti = new StringBuilder();
+        for(int i = 0; i < menu.size(); i++){
+            String[] prodotto = db.stringify(db.select("select Nome, Ingredienti from Prodotto where ID = "+menu.get(i)[0])).get(0);
+            prodotti.append(prodotto[0]).append(";").append(prodotto[1]);
+            if(i < menu.size()-1) prodotti.append(";");
+        }
+        try {
+            send(Pacchetto.incapsula(8, nome, indirizzo, punteggio+"", cellulare, prodotti.toString()));
+        } catch (ServerException ex) {
+            send("8;null;null;null;null;null");
+            Logger.getLogger(ServerProcess.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     private void aggiungiAlCarrello(String[] msg) {
@@ -257,7 +281,12 @@ public class ServerProcess extends Thread {
     }
 
     private void recensici(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //IDLOCALE, STELLINE
+        if(db.update("update Locale set Punteggio = Punteggio + "+msg[2]+", NumRecensioni = NumRecensioni + 1 where ID = "+msg[1]) > -1){
+            send("1;true");
+        } else {
+            send("1;false");
+        }
     }
 
     private void track(String[] msg) {

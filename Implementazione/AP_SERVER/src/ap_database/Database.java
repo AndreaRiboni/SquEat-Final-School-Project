@@ -96,5 +96,13 @@ public class Database {
         return true;
     }
     
+    public int update(String query){
+        try {
+            return this.query.executeUpdate(query);
+        } catch (SQLException ex) {
+            return -1;
+        }
+    }
+    
     
 }
