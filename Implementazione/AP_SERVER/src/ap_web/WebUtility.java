@@ -97,10 +97,6 @@ public class WebUtility {
      * @return
      */
     public static String getDistance(String start, String end) {
-//        System.out.println("     LINK: https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&"
-//                    + "origins=" + start + "&"
-//                    + "destinations=" + end + "&"
-//                    + "key=" + ConfigurationLoader.getNodeValue("mapsapikey"));
         try {
             JSONObject dist = readJSONFromUrl("https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&"
                     + "origins=" + start + "&"

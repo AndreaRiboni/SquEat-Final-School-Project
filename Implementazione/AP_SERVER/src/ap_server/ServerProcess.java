@@ -277,7 +277,11 @@ public class ServerProcess extends Thread {
     }
 
     private void acquista(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //msg[1] = idcliente, msg[2] = carrello
+        /**
+         * carrello:
+         * 
+         */
     }
 
     private void recensici(String[] msg) {
@@ -326,7 +330,7 @@ public class ServerProcess extends Thread {
     }
 
     private void getProdottiComprati(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     private void getOrdiniRicevuti(String[] msg) {

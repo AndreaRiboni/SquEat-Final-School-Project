@@ -1,7 +1,7 @@
 <configuration>
-        <dbip>INDIRIZZO IP DB</dbip>
-        <dbname>NOME DB</dbname>
-        <dbuser>UTENTE DB</dbuser>
-        <dbpsw>PASSWORD DB</dbpsw>
-        <mapsapikey>G MAPS API</mapsapikey>
+        <dbip>localhost</dbip>
+        <dbname>areaprogetto</dbname>
+        <dbuser>root</dbuser>
+        <dbpsw>Az-</dbpsw>
+        <mapsapikey>AIU</mapsapikey>
 </configuration>

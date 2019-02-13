@@ -12,7 +12,7 @@ public class Pacchetto {
     //l'array contiene il numero di parametri che ogni messaggio deve avere, secondo il protocollo di comunicazione prestabilito.
     //si utilizzi il codice del messaggio come index.
     //es: PARAM_NUM[0] ritorna il numero di parametri che deve avere la richiesta con codice 000, ovvero 2.
-    private final static int[] PARAM_NUM = {2, 1, 7, 4, 0, 1, 3, 1, 5, 3, 3, 1, 1, 2, 2, 2, 5, 2, 1, 5, 1, 4, 1, 5, 4, 1, 4, 3, 3};
+    private final static int[] PARAM_NUM = {2, 1, 7, 4, 0, 1, 3, 1, 5, 3, 3, 2, 1, 2, 2, 2, 5, 2, 1, 5, 1, 4, 1, 5, 4, 1, 4, 3, 3};
 
     /**
      * Incapsula e formatta una richiesta
