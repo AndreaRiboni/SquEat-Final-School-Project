@@ -12,6 +12,7 @@
         <title>Elenco Ristoranti</title>
     </head>
     <body>
+        <h2>Elenco Locali</h2>
         <c:forEach var="place" items="${elenco}">
             <c:out value="${place}"/> 
         </c:forEach>

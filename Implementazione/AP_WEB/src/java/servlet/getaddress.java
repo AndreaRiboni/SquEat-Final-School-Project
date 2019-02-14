@@ -66,16 +66,18 @@ public class getaddress extends HttpServlet {
             throws ServletException, IOException {
         String answer = null;
         try {
-            String[] coor = getLatLongPositions(request.getParameter("address"));
-            answer = ClientConnector.request(Pacchetto.incapsula(5, coor[0], coor[1]));
+//            String[] coor = getLatLongPositions(request.getParameter("address"));
+//            System.out.println(coor[0]+""+coor[1]);
+            answer = ClientConnector.request(Pacchetto.incapsula(5, "45.46, 19.9"));
+            System.err.println(answer);
             request.setAttribute("elenco", Pacchetto.estrai(answer));
             request.getRequestDispatcher("elenco.jsp").forward(request, response);
-        } catch (ServerException ex) {
-            Logger.getLogger(getaddress.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             Logger.getLogger(getaddress.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+//        String[] t = {"a", "b", "c"};
+//        request.setAttribute("elenco", t);
+//        request.getRequestDispatcher("elenco.jsp").forward(request, response);
     }
 
     /**
@@ -101,5 +103,5 @@ public class getaddress extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }
