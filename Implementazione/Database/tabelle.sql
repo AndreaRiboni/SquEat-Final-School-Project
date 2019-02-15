@@ -38,7 +38,7 @@ CREATE TABLE Ordine (
     IDCliente INT NOT NULL,
     IDLocale INT NOT NULL,
     IDProdotto INT NOT NULL,
-    Giorno DATE NOT NULL,
+    Timestamp VARCHAR(16) NOT NULL,
     Costo FLOAT NOT NULL,
     Stato INT NOT NULL,
     IDFattorino INT NOT NULL,
