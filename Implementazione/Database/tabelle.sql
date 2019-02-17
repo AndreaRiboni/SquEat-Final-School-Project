@@ -14,7 +14,7 @@ CREATE TABLE Prodotto (
     Ingredienti VARCHAR(128) NOT NULL
 );
 
-CREATE TABLE Prodotto (
+CREATE TABLE MenuLoc (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     IDLocale INT NOT NULL,
     IDProdotto INT NOT NULL,
@@ -395,4 +395,79 @@ INSERT INTO Fattorini VALUES (
 
 INSERT INTO Fattorini VALUES (
     7, 2
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Acqua Naturale",
+    "Acqua Naturale"
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Acqua Frizzante",
+    "Acqua Frizzante"
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Coca Cola",
+    "Coca Cola"
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Sprite",
+    "Sprite"
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Fanta",
+    "Fanta"
+);
+
+INSERT INTO Prodotto (Nome, Ingredienti) VALUES (
+    "Birra",
+    "Birra"
+);
+
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    15,
+    1
+);
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    16,
+    1
+);
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    17,
+    2
+);
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    18,
+    2
+);
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    19,
+    2
+);
+
+INSERT INTO MenuLoc (IDLocale, IDProdotto, Costo) VALUES (
+    1,
+    20,
+    3
+);
+
+CREATE TABLE Telegram (
+    IDChat INT PRIMARY KEY,
+    IDUtente INT,
+    Stato INT,
+    Mail varchar(64),
+    CONSTRAINT FOREIGN KEY (IDUtente) REFERENCES Utente(ID)
 );
