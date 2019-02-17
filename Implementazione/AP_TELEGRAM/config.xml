@@ -1,0 +1,11 @@
+<configuration>
+        <ipserver>localhost</ipserver>
+        <botkey>no</botkey>
+        <welcome>Benvenuto su SquEat,%CHATNAME END %IMGWELCOME ENDCosa vuoi fare?%LOGINKB</welcome>
+        <login1>Certo.ENDQual è la tua mail?</login1>
+        <login2>E qual è la password del tuo account?</login2>
+        <loginERR>Sembra che tu abbia inserito dei dati non validi</loginERR>
+        <accessDone>Bentornato, %CHATNAME ENDScegli pure cosa fare</accessDone>
+        <unknown>Errore di stato</unknown>
+        <IMGwelcome>welcome.png</IMGwelcome>
+</configuration>
