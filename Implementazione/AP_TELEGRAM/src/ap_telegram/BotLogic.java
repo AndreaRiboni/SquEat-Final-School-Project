@@ -24,8 +24,11 @@ public class BotLogic {
     public static void callAction(String message, long mittente) {
         try {
             switch (message) {
-                case "login":
+                case "login": //se ricevo "login", imposto lo stato a 1
                     System.out.println(ClientConnector.request("36;" + mittente + ";1"));
+                    break; //se ricevo "register", imposto lo stato a 4
+                case "register":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";4"));
                     break;
             }
         } catch (Exception e) {
@@ -57,22 +60,99 @@ public class BotLogic {
                     //ottengo la mail
                     String mail = ClientConnector.request("38;" + ChatID).split(";")[1];
                     //Testo il login
-                    if (ClientConnector.request("000;" + mail + ";" + message).contains("true")) {
+                    String esito = ClientConnector.request("000;" + mail + ";" + message);
+                    if (esito.contains("true")) {
                         //login corretto
                         //imposto lo stato per andare alla home
-                        ClientConnector.request("36;" + ChatID + ";4");
-                        return getMessages("accessDone");
+                        ClientConnector.request("36;" + ChatID + ";11");
+                        //salvo nel db la relazione ChatID <--> ID Utente
+                        String[] responseid = esito.split(";");
+                        ClientConnector.request("40;"+ChatID+";6;"+responseid[responseid.length-1]);
+                        return concat(getMessages("loginOK"), getMessages("homepage"));
                     } else {
-                        ClientConnector.request("36;" + ChatID + ";0");                        
-                        return getMessages("loginERR");
+                        //Imposto lo stato iniziale
+                        ClientConnector.request("36;" + ChatID + ";0");
+                        return concat(getMessages("loginERR"), getMessages("welcome"));
+                    }
+                case "4": //Primo messaggio della registrazione
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";5");
+                    return getMessages("reg1");
+                case "5": //ho ricevuto il nome; chiedo cognome
+                    //salvo il nome nel db
+                    ClientConnector.request("40;"+ChatID+";0;"+message);
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";6");
+                    return getMessages("reg2");
+                case "6": //ho ricevuto il cognome; chiedo mail
+                    //salvo cognome
+                    ClientConnector.request("40;"+ChatID+";1;"+message);
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";7");
+                    return getMessages("reg3");
+                case "7": //ricevuto mail; chiedo indirizzo
+                    //salvo mail
+                    ClientConnector.request("40;"+ChatID+";4;"+message);
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";8");
+                    return getMessages("reg4");
+                case "8": //ho ricevuto indirizzo; chiedo cell
+                    //salvo indirizzo
+                    ClientConnector.request("40;"+ChatID+";3;"+message);
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";9");
+                    return getMessages("reg5");
+                case "9": //ho ricevuto cell; chiedo psw
+                    //salvo cell
+                    ClientConnector.request("40;"+ChatID+";2;"+message);
+                    //vado al livello successivo
+                    ClientConnector.request("36;" + ChatID + ";10");
+                    return getMessages("reg6");
+                case "10": //ho ricevuto psw. testo
+                    String email = ClientConnector.request("41;"+ChatID+";4").split(";")[1];
+                    String psw = message;
+                    String nome = ClientConnector.request("41;"+ChatID+";0").split(";")[1];
+                    String cognome = ClientConnector.request("41;"+ChatID+";1").split(";")[1];
+                    String cell = ClientConnector.request("41;"+ChatID+";2").split(";")[1];
+                    String indirizzo = ClientConnector.request("41;"+ChatID+";3").split(";")[1];
+                    indirizzo = ClientConnector.request("29;"+indirizzo).split(";")[1];
+                    String response = ClientConnector.request("2;"+email+";"+psw+";"+nome+";"+cognome+";"+cell+";"+indirizzo+";1");
+                    if(response.contains("false")){ //registrazione fallita
+                        return concat(getMessages("regERR"), getMessages("welcome"));
+                    } else { //registrazione ok
+                        //salvo id utente
+                        String[] resp = response.split(";");
+                        String ID = resp[resp.length-1];
+                        //salvo nel db la relazione ChatID <--> ID Utente
+                        ClientConnector.request("40;"+ChatID+";6;"+ID);
+                        return concat(getMessages("regOK"), getMessages("homepage"));
                     }
                 default:
                     return getMessages("unknown");
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             System.err.println("ERRORE");
             return getMessages("unknown");
         }
+    }
+
+    private static String[] concat(String[]... answers) {
+        //calcolo lunghezza totale
+        int len = 0;
+        for (String[] ans : answers) {
+            for (String val : ans) {
+                len++;
+            }
+        }
+        String[] concat = new String[len];
+        len = 0;
+        for (String[] ans : answers) {
+            for (String val : ans) {
+                concat[len++] = val;
+            }
+        }
+        return concat;
     }
 
     public static String getStatus(long ChatID) {
@@ -100,6 +180,7 @@ public class BotLogic {
                 List<List<InlineKeyboardButton>> buttons = new ArrayList<>();
                 List<InlineKeyboardButton> row = new ArrayList<>();
                 row.add(new InlineKeyboardButton().setText("Login").setCallbackData("login"));
+                row.add(new InlineKeyboardButton().setText("Registrati").setCallbackData("register"));
                 buttons.add(row);
                 keyboard.setKeyboard(buttons);
                 sender.setReplyMarkup(keyboard);

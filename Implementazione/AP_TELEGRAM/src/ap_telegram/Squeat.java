@@ -73,6 +73,10 @@ public class Squeat extends TelegramLongPollingBot {
                 message = message.replace("%LOGINKB", "");
                 BotLogic.setKeyboard(msg, "LogReg");
             }
+            if (message.contains("%HOMEPAGEKB")) {
+                message = message.replace("%HOMEPAGEKB", "");
+                BotLogic.setKeyboard(msg, "homepage");
+            }
             send(msg.setText(message));
         }
     }

@@ -77,7 +77,7 @@ public class ServerProcess extends Thread {
      * @param input richiesta da processare
      * @throws ServerException errore
      */
-    private void process(String input) throws ServerException {
+    private void process(String input) throws Exception {
         System.out.println("> From: " + client + "\n--> Message: " + input);
         String msg[] = null;
         msg = Pacchetto.estrai(input);
@@ -184,6 +184,12 @@ public class ServerProcess extends Thread {
                 case 38:
                     getMailById(msg);
                     break;
+                case 40:
+                    setTelegramUserValue(msg);
+                    break;
+                case 41:
+                    returnTelegramUserValue(msg);
+                    break;
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
@@ -197,18 +203,19 @@ public class ServerProcess extends Thread {
      *
      * @param msg 000;mail;password
      */
-    private void login(String[] msg) throws ServerException {
+    private void login(String[] msg) throws Exception {
         System.out.println("  > " + client + " chiede LOGIN");
-        if (db.count(
-                db.select("select * from Utente where Mail = '" + msg[1] + "' and Psw = '" + msg[2] + "'")
-        ) > 0) {
+        ResultSet table = db.select("select * from Utente where Mail = '" + msg[1] + "' and Psw = '" + msg[2] + "'");
+        if (db.count(table) > 0) {
             System.out.println("   > " + client + " login SUCCESSO");
+            table.first();
+            String idutente = table.getString(1);
             //l'utente esiste
-            send(Pacchetto.incapsula(001, "true"));
+            send(Pacchetto.incapsula(1, "true", idutente));
         } else {
             System.out.println("   > " + client + " login RIFIUTATO");
             //l'utente non esiste
-            send(Pacchetto.incapsula(001, "false"));
+            send(Pacchetto.incapsula(1, "false", "null"));
         }
 
     }
@@ -231,12 +238,13 @@ public class ServerProcess extends Thread {
         }
         if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
+                String idutente = db.stringify(db.select("select id from utente where mail = '"+msg[1]+"'")).get(0)[0];
                 System.out.println("   > " + client + " registrazione SUCCESSO");
-                send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + ""));
+                send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + "", idutente));
             }
         } else {
             System.out.println("   > " + client + " registrazione RIFIUTATA");
-            send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + ""));
+            send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + "", "null"));
         }
     }
 
@@ -314,10 +322,10 @@ public class ServerProcess extends Thread {
                     esito = false;
                 }
             }
-            send("1;" + esito);
+            send("44;" + esito);
         } else {
             System.out.println("L'ID cliente non esiste");
-            send("1;false");
+            send("44;false");
         }
 
     }
@@ -325,9 +333,9 @@ public class ServerProcess extends Thread {
     private void recensici(String[] msg) {
         //IDLOCALE, STELLINE
         if (db.update("update Locale set Punteggio = Punteggio + " + msg[2] + ", NumRecensioni = NumRecensioni + 1 where ID = " + msg[1]) > -1) {
-            send("1;true");
+            send("44;true");
         } else {
-            send("1;false");
+            send("44;false");
         }
     }
 
@@ -341,17 +349,17 @@ public class ServerProcess extends Thread {
             if (Checker.isNumber(msg[2]) && Checker.isNumber(msg[3]) && Checker.isPhoneNumberValid(msg[4]) && (Checker.isThatTypeOfUser(db, msg[5], "1") || Checker.isThatTypeOfUser(db, msg[5], "0"))) {
                 if (db.addLocale(msg)) {
                     System.out.println("   > " + client + " aggiunta locale RIUSCITA");
-                    send(Pacchetto.incapsula(001, "true"));
+                    send(Pacchetto.incapsula(44, "true"));
                 } else {
                     System.out.println("   > " + client + " aggiunta locale FALLITA");
-                    send(Pacchetto.incapsula(001, "false"));
+                    send(Pacchetto.incapsula(44, "false"));
                 }
             }
         } catch (ServerException ex) {
             System.out.println(ex.getMessage());
             System.out.println("   > " + client + " aggiunta locale FALLITA");
             try {
-                send(Pacchetto.incapsula(001, "false"));
+                send(Pacchetto.incapsula(44, "false"));
             } catch (ServerException ex1) {
                 System.out.println(ex1.getMessage());
             }
@@ -367,7 +375,7 @@ public class ServerProcess extends Thread {
                 + IdLocale + ","
                 + IdProdotto + ","
                 + costo) > 0;
-        send("1;" + esito);
+        send("44;" + esito);
     }
 
     private void getProdottiComprati(String[] msg) {
@@ -451,14 +459,14 @@ public class ServerProcess extends Thread {
         try {
             IdProdotto = prodotti.get(prodotti.size() - 1)[0];
         } catch (Exception e) {
-            send("1;false");
+            send("44;false");
         }
         //aggiungo il prodotto al menu del locale
         esito = esito && db.update("insert into MenuLoc (IDLocale, IDProdotto, Costo) values ("
                 + idlocale + ", "
                 + IdProdotto + ","
                 + costo + ")") > 0;
-        send("1;" + esito);
+        send("44;" + esito);
     }
 
     private void fromAddressToLatLong(String[] msg) {
@@ -486,12 +494,12 @@ public class ServerProcess extends Thread {
 
     private void aggiornaStatoUtente(String[] msg) {
         db.update("update telegram set stato = " + msg[2] + " where IDChat = " + msg[1]);
-        send("1;idc");
+        send("44;idc");
     }
 
     private void setMailById(String[] msg) {
         db.update("update telegram set mail = '" + msg[2] + "' where IDChat = " + msg[1]);
-        send("1;idc");
+        send("44;idc");
     }
 
     private void getMailById(String[] msg) {
@@ -500,6 +508,33 @@ public class ServerProcess extends Thread {
         } catch (Exception e) {
             send("39;null");
         }
+    }
+
+    private String getUserValue(String num){
+        switch(num){
+            case "0":
+                return "nome";
+            case "1":
+                return "cognome";
+            case "2":
+                return "cellulare";
+            case "3":
+                return "indirizzo";
+            case "4":
+                return "mail";
+            case "6":
+                return "IDUtente";
+            default:
+                return "null";
+        }
+    }
+    
+    private void setTelegramUserValue(String[] msg) {
+        send("44;"+((db.update("update telegram set "+getUserValue(msg[2])+" = '"+msg[3]+"' where IDChat = "+msg[1])>0)?"true":"false"));
+    }
+
+    private void returnTelegramUserValue(String[] msg) {
+        send("42;"+db.stringify(db.select("select "+getUserValue(msg[2])+" from telegram where IDChat = "+msg[1])).get(0)[0]);
     }
 
 }
