@@ -57,6 +57,7 @@ public class Database {
     }
 
     public ResultSet select(String query) {
+        System.out.println(query);
         try {
             return this.query.executeQuery(query);
         } catch (SQLException ex) {
@@ -97,11 +98,25 @@ public class Database {
     }
     
     public int update(String query){
+        System.out.println(query);
         try {
             return this.query.executeUpdate(query);
         } catch (SQLException ex) {
+            ex.printStackTrace();
             return -1;
         }
+    }
+    
+    public boolean userIdExists(String id){
+        return count(select("select * from utente where ID = "+id))>0;
+    }
+    
+    public String[] getFirstRow(ResultSet res){
+        return stringify(res).get(0);
+    }
+    
+    public String getIdFattorinoFromLocale(String id){
+        return getFirstRow(select("select IdCliente from fattorini where IdLocale = "+id))[0];
     }
     
     

@@ -11,7 +11,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -56,6 +59,7 @@ public class ServerProcess extends Thread {
         } finally {
             try {
                 client.close();
+                System.out.println("Chiusura Socket");
             } catch (IOException ex) {
                 System.out.println("Impossibile chiudere il canale di comunicazione");
             }
@@ -63,6 +67,7 @@ public class ServerProcess extends Thread {
     }
 
     private void send(String msg) {
+        System.out.println("Invio " + msg);
         out.println(msg);
     }
 
@@ -107,12 +112,6 @@ public class ServerProcess extends Thread {
                 case 8:
                     //richiesta sc
                     break;
-                case 9:
-                    aggiungiAlCarrello(msg);
-                    break;
-                case 10:
-                    rimuoviDaCarrello(msg);
-                    break;
                 case 11:
                     acquista(msg);
                     break;
@@ -134,11 +133,8 @@ public class ServerProcess extends Thread {
                 case 17:
                     //richiesta sc
                     break;
-                case 18:
-                    assegnaOrdine(msg); //serve?
-                    break;
                 case 19:
-                    aggiungiProdMenu(msg);
+                    aggiungiNuovoProdMenu(msg);
                     break;
                 case 20:
                     getProdottiComprati(msg);
@@ -166,6 +162,27 @@ public class ServerProcess extends Thread {
                     break;
                 case 28:
                     aggiungiVoto(msg);
+                    break;
+                case 31:
+                    aggiungiProdEsistMenu(msg);
+                    break;
+                case 29:
+                    fromAddressToLatLong(msg);
+                    break;
+                case 32:
+                    fromLatLongToAddress(msg);
+                    break;
+                case 34:
+                    getStatoUtente(msg);
+                    break;
+                case 36:
+                    aggiornaStatoUtente(msg);
+                    break;
+                case 37:
+                    setMailById(msg);
+                    break;
+                case 38:
+                    getMailById(msg);
                     break;
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
@@ -241,52 +258,73 @@ public class ServerProcess extends Thread {
     }
 
     /**
-     * 
+     *
      * @param msg MSG 0: IDLOCALE
      */
     private void inviaInfoLocale(String[] msg) {
         //008,nome,indirizzo,punteggio,cellulare,menu
-        ArrayList<String[]> locale = db.stringify(db.select("select Nome, Indirizzo, Cellulare, Punteggio, NumRecensioni from Locale where ID = "+msg[1]));
+        ArrayList<String[]> locale = db.stringify(db.select("select Nome, Indirizzo, Cellulare, Punteggio, NumRecensioni from Locale where ID = " + msg[1]));
         int punteggio = Integer.parseInt(locale.get(0)[3]) / Integer.parseInt(locale.get(0)[4]);
         String nome = locale.get(0)[0];
         String cellulare = locale.get(0)[2];
         String indirizzo = locale.get(0)[1];
         //ottengo il menu
-        ArrayList<String[]> menu = db.stringify(db.select("select IDProdotto, Costo from MenuLoc where IDLocale = "+msg[1]));
+        ArrayList<String[]> menu = db.stringify(db.select("select IDProdotto, Costo from MenuLoc where IDLocale = " + msg[1]));
         StringBuilder prodotti = new StringBuilder();
-        for(int i = 0; i < menu.size(); i++){
-            String[] prodotto = db.stringify(db.select("select Nome, Ingredienti from Prodotto where ID = "+menu.get(i)[0])).get(0);
+        for (int i = 0; i < menu.size(); i++) {
+            String[] prodotto = db.stringify(db.select("select Nome, Ingredienti from Prodotto where ID = " + menu.get(i)[0])).get(0);
             prodotti.append(prodotto[0]).append(";").append(prodotto[1]);
-            if(i < menu.size()-1) prodotti.append(";");
+            if (i < menu.size() - 1) {
+                prodotti.append(";");
+            }
         }
         try {
-            send(Pacchetto.incapsula(8, nome, indirizzo, punteggio+"", cellulare, prodotti.toString()));
+            send(Pacchetto.incapsula(8, nome, indirizzo, punteggio + "", cellulare, prodotti.toString()));
         } catch (ServerException ex) {
             send("8;null;null;null;null;null");
             Logger.getLogger(ServerProcess.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-    }
 
-    private void aggiungiAlCarrello(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void rimuoviDaCarrello(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void acquista(String[] msg) {
         //msg[1] = idcliente, msg[2] = carrello
-        /**
-         * carrello:
-         * 
-         */
+        //carrello: idlocale, idprodotto, costo
+        String IdCliente = msg[1];
+        boolean esito = true;
+        //esiste?
+        if (db.userIdExists(IdCliente)) {
+            //salvo il carrello
+            String[] carrello = msg[2].split("-");
+            System.out.println("si stanno comprando " + carrello.length / 3 + " prodotti");
+            //acquisto ogni prodotto del carrello
+            for (int i = 0; i < carrello.length; i += 3) {
+                //ottengo l'id fattorino del locale
+                String IdFattorino = db.getIdFattorinoFromLocale(carrello[i]);
+                String timestamp = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new GregorianCalendar().getTime());
+                int val = db.update("insert into ordine ("
+                        + "IDCliente,"
+                        + "IDLocale,"
+                        + "IDProdotto,"
+                        + "Timestamp,"
+                        + "Costo,"
+                        + "Stato,"
+                        + "IDFattorino) values (" + IdCliente + ", " + carrello[i] + ", " + carrello[i + 1] + ", '" + timestamp + "', " + carrello[i + 2] + ", 0, " + IdFattorino + ")");
+                if (val <= 0) {
+                    esito = false;
+                }
+            }
+            send("1;" + esito);
+        } else {
+            System.out.println("L'ID cliente non esiste");
+            send("1;false");
+        }
+
     }
 
     private void recensici(String[] msg) {
         //IDLOCALE, STELLINE
-        if(db.update("update Locale set Punteggio = Punteggio + "+msg[2]+", NumRecensioni = NumRecensioni + 1 where ID = "+msg[1]) > -1){
+        if (db.update("update Locale set Punteggio = Punteggio + " + msg[2] + ", NumRecensioni = NumRecensioni + 1 where ID = " + msg[1]) > -1) {
             send("1;true");
         } else {
             send("1;false");
@@ -321,20 +359,66 @@ public class ServerProcess extends Thread {
         }
     }
 
-    private void assegnaOrdine(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void aggiungiProdMenu(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void aggiungiProdEsistMenu(String[] msg) {
+        String IdLocale = msg[1];
+        String IdProdotto = msg[2];
+        String costo = msg[3];
+        boolean esito = db.update("insert into menuloc (IDLocale, IDProdotto, Costo) values ("
+                + IdLocale + ","
+                + IdProdotto + ","
+                + costo) > 0;
+        send("1;" + esito);
     }
 
     private void getProdottiComprati(String[] msg) {
-        
+        //msg1 = idcliente
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino from ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
+        StringBuilder response = new StringBuilder();
+        for (String[] row : table) {
+            int index = 0;
+            for (String val : row) {
+                if (index == 3) {
+                    //ottengo il nome del prodotto a partire dall'id
+                    String nome = db.getFirstRow(db.select("SELECT Nome from Prodotto where ID = " + val))[0];
+                    response.append(nome).append(";");
+                } else {
+                    response.append(val).append(";");
+                }
+                index++;
+            }
+        }
+        String risp = response.toString();
+        send("21;" + risp.substring(0, risp.length() - 1));
     }
 
     private void getOrdiniRicevuti(String[] msg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //msg1 = idcliente
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, IDProdotto, IDCliente, Timestamp, Costo, IDFattorino from ordine, locale where locale.ID = ordine.IDLocale and IDLocale = " + msg[1]));
+        StringBuilder response = new StringBuilder();
+        System.out.println("Ho trovato " + table.size() + " prodotti");
+        for (String[] row : table) {
+            int index = 0;
+            for (String val : row) {
+                switch (index) {
+                    case 1:
+                        //ottengo il nome del prodotto a partire dall'id
+                        String nome = db.getFirstRow(db.select("SELECT Nome from Prodotto where ID = " + val))[0];
+                        response.append(nome).append(";");
+                        break;
+                    case 2:
+                        //ottengo l'indirizzo cliente a partire dall'id
+                        String indirizzo = db.getFirstRow(db.select("SELECT Indirizzo from Utente where ID = " + val))[0];
+                        response.append(indirizzo).append(";");
+                        break;
+                    default:
+                        response.append(val).append(";");
+                        break;
+                }
+                index++;
+            }
+        }
+        String risp = response.toString();
+        send("23;" + risp.substring(0, risp.length() - 1));
     }
 
     private void aggiungiPost(String[] msg) {
@@ -352,4 +436,70 @@ public class ServerProcess extends Thread {
     private void aggiungiVoto(String[] msg) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    private void aggiungiNuovoProdMenu(String[] msg) {
+        String nomeprod = msg[1];
+        String ingredienti = msg[2].replace("-", ",");
+        String idlocale = msg[3];
+        String costo = msg[4];
+        boolean esito = true;
+        //aggiungo il prodotto al db
+        esito = db.update("insert into prodotto (Nome, Ingredienti) values ('" + nomeprod + "', '" + ingredienti + "')") > 0;
+
+        ArrayList<String[]> prodotti = db.stringify(db.select("select ID from prodotto"));
+        String IdProdotto = null;
+        try {
+            IdProdotto = prodotti.get(prodotti.size() - 1)[0];
+        } catch (Exception e) {
+            send("1;false");
+        }
+        //aggiungo il prodotto al menu del locale
+        esito = esito && db.update("insert into MenuLoc (IDLocale, IDProdotto, Costo) values ("
+                + idlocale + ", "
+                + IdProdotto + ","
+                + costo + ")") > 0;
+        send("1;" + esito);
+    }
+
+    private void fromAddressToLatLong(String[] msg) {
+        send("30;" + WebUtility.getLatLong(msg[1]));
+    }
+
+    private void fromLatLongToAddress(String[] msg) {
+        send("33;" + WebUtility.getAddress(msg[1], msg[2]));
+    }
+
+    private void getStatoUtente(String[] msg) {
+        try {
+            ResultSet table = db.select("select Stato from Telegram where IDChat = " + msg[1]);
+            if (db.count(table) > 0) {
+                table.first();
+                send("35;" + table.getString(1));
+            } else {
+                db.update("insert into Telegram (IDChat, stato) values (" + msg[1] + ", 0)");
+                send("35;0");
+            }
+        } catch (SQLException ex) {
+            send("35;-1");
+        }
+    }
+
+    private void aggiornaStatoUtente(String[] msg) {
+        db.update("update telegram set stato = " + msg[2] + " where IDChat = " + msg[1]);
+        send("1;idc");
+    }
+
+    private void setMailById(String[] msg) {
+        db.update("update telegram set mail = '" + msg[2] + "' where IDChat = " + msg[1]);
+        send("1;idc");
+    }
+
+    private void getMailById(String[] msg) {
+        try {
+            send("39;" + db.stringify(db.select("select mail from telegram where IDChat = " + msg[1])).get(0)[0]);
+        } catch (Exception e) {
+            send("39;null");
+        }
+    }
+
 }

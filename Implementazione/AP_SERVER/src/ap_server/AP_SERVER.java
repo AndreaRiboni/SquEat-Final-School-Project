@@ -21,6 +21,7 @@ public class AP_SERVER {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        
         //Inizializzo i driver
         try {
             Class.forName("org.gjt.mm.mysql.Driver");

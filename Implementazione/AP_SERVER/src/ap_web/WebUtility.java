@@ -77,7 +77,8 @@ public class WebUtility {
         return sb.toString();
     }
 
-    public static JSONObject readJSONFromUrl(String url) throws IOException, JSONException {        
+    public static JSONObject readJSONFromUrl(String url) throws IOException, JSONException {
+        System.out.println(url.replace(" ", "%20"));
         InputStream is = new URL(url.replace(" ", "%20")).openStream();
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
@@ -108,5 +109,30 @@ public class WebUtility {
             Logger.getLogger(WebUtility.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+
+    public static String getLatLong(String address) {
+        try {
+            JSONObject info = readJSONFromUrl("https://maps.googleapis.com/maps/api/geocode/json?"
+                    + "address=" + address.replace(" ", "%20")
+                    + "&key=" + ConfigurationLoader.getNodeValue("mapsapikey"));
+            float lat = info.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("viewport").getJSONObject("southwest").getFloat("lat");
+            float lon = info.getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("viewport").getJSONObject("southwest").getFloat("lng");
+            return lat+", "+lon;
+        } catch (Exception ex) {
+            Logger.getLogger(WebUtility.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+    }
+    
+    public static String getAddress(String lat, String lon){
+        try {
+            return readJSONFromUrl("https://maps.googleapis.com/maps/api/geocode/json?"
+                    + "address=" + lat+"%20,"+lon
+                    + "&key=" + ConfigurationLoader.getNodeValue("mapsapikey")).getJSONArray("results").getJSONObject(0).getString("formatted_address");
+        } catch (Exception ex) {
+            Logger.getLogger(WebUtility.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
     }
 }
