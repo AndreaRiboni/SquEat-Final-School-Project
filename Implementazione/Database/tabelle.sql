@@ -468,6 +468,11 @@ CREATE TABLE Telegram (
     IDChat INT PRIMARY KEY,
     IDUtente INT,
     Stato INT,
+    Nome varchar(32),
+    Cognome varchar(32),
+    Cellulare varchar(32),
+    Indirizzo varchar(64),
     Mail varchar(64),
+    Extra varchar(64),
     CONSTRAINT FOREIGN KEY (IDUtente) REFERENCES Utente(ID)
 );
