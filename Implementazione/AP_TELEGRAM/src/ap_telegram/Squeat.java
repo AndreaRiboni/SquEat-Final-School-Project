@@ -66,7 +66,7 @@ public class Squeat extends TelegramLongPollingBot {
                 message = message.replace("%CHATNAME", name);
             }
             if (message.contains("%IMGWELCOME")) {
-                send(pic.setPhoto("AgADBAADEK4xG-4iSFNpupg1Wg-gaN3dLBsABG53uqXnbPcmLYoAAgI"));
+                send(pic.setPhoto("AgADBAADbbAxG1cHWFMev4i89OXkaHbYLBsABL1RKopBZwJjmJsAAgI"));
                 continue;
             }
             if (message.contains("%LOGINKB")) {

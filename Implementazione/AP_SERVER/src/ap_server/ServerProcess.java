@@ -190,6 +190,9 @@ public class ServerProcess extends Thread {
                 case 41:
                     returnTelegramUserValue(msg);
                     break;
+                case 43:
+                    logTelegramUserOut(msg);
+                    break;
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
@@ -535,6 +538,11 @@ public class ServerProcess extends Thread {
 
     private void returnTelegramUserValue(String[] msg) {
         send("42;"+db.stringify(db.select("select "+getUserValue(msg[2])+" from telegram where IDChat = "+msg[1])).get(0)[0]);
+    }
+
+    private void logTelegramUserOut(String[] msg) {
+        db.update("update telegram set carrello = null, IDUtente = null, stato = 0 where IDChat = "+msg[1]);
+        send("44;idc");
     }
 
 }

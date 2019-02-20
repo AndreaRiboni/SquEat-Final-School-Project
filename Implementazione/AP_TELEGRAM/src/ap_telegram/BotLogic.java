@@ -30,6 +30,25 @@ public class BotLogic {
                 case "register":
                     System.out.println(ClientConnector.request("36;" + mittente + ";4"));
                     break;
+                case "find_restaurants":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";12"));
+                    break;
+                case "review":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";13"));
+                    break;
+                case "show_cart":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";14"));
+                    break;
+                case "show_orders":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";15"));
+                    break;
+                case "show_profile":
+                    System.out.println(ClientConnector.request("36;" + mittente + ";16"));
+                    break;
+                case "logout":
+                    //svuoto carrello
+                    ClientConnector.request("43;"+mittente);
+                    break;
             }
         } catch (Exception e) {
             System.out.println("Errore #2");
@@ -67,7 +86,7 @@ public class BotLogic {
                         ClientConnector.request("36;" + ChatID + ";11");
                         //salvo nel db la relazione ChatID <--> ID Utente
                         String[] responseid = esito.split(";");
-                        ClientConnector.request("40;"+ChatID+";6;"+responseid[responseid.length-1]);
+                        ClientConnector.request("40;" + ChatID + ";6;" + responseid[responseid.length - 1]);
                         return concat(getMessages("loginOK"), getMessages("homepage"));
                     } else {
                         //Imposto lo stato iniziale
@@ -80,53 +99,57 @@ public class BotLogic {
                     return getMessages("reg1");
                 case "5": //ho ricevuto il nome; chiedo cognome
                     //salvo il nome nel db
-                    ClientConnector.request("40;"+ChatID+";0;"+message);
+                    ClientConnector.request("40;" + ChatID + ";0;" + message);
                     //vado al livello successivo
                     ClientConnector.request("36;" + ChatID + ";6");
                     return getMessages("reg2");
                 case "6": //ho ricevuto il cognome; chiedo mail
                     //salvo cognome
-                    ClientConnector.request("40;"+ChatID+";1;"+message);
+                    ClientConnector.request("40;" + ChatID + ";1;" + message);
                     //vado al livello successivo
                     ClientConnector.request("36;" + ChatID + ";7");
                     return getMessages("reg3");
                 case "7": //ricevuto mail; chiedo indirizzo
                     //salvo mail
-                    ClientConnector.request("40;"+ChatID+";4;"+message);
+                    ClientConnector.request("40;" + ChatID + ";4;" + message);
                     //vado al livello successivo
                     ClientConnector.request("36;" + ChatID + ";8");
                     return getMessages("reg4");
                 case "8": //ho ricevuto indirizzo; chiedo cell
                     //salvo indirizzo
-                    ClientConnector.request("40;"+ChatID+";3;"+message);
+                    ClientConnector.request("40;" + ChatID + ";3;" + message);
                     //vado al livello successivo
                     ClientConnector.request("36;" + ChatID + ";9");
                     return getMessages("reg5");
                 case "9": //ho ricevuto cell; chiedo psw
                     //salvo cell
-                    ClientConnector.request("40;"+ChatID+";2;"+message);
+                    ClientConnector.request("40;" + ChatID + ";2;" + message);
                     //vado al livello successivo
                     ClientConnector.request("36;" + ChatID + ";10");
                     return getMessages("reg6");
                 case "10": //ho ricevuto psw. testo
-                    String email = ClientConnector.request("41;"+ChatID+";4").split(";")[1];
+                    String email = ClientConnector.request("41;" + ChatID + ";4").split(";")[1];
                     String psw = message;
-                    String nome = ClientConnector.request("41;"+ChatID+";0").split(";")[1];
-                    String cognome = ClientConnector.request("41;"+ChatID+";1").split(";")[1];
-                    String cell = ClientConnector.request("41;"+ChatID+";2").split(";")[1];
-                    String indirizzo = ClientConnector.request("41;"+ChatID+";3").split(";")[1];
-                    indirizzo = ClientConnector.request("29;"+indirizzo).split(";")[1];
-                    String response = ClientConnector.request("2;"+email+";"+psw+";"+nome+";"+cognome+";"+cell+";"+indirizzo+";1");
-                    if(response.contains("false")){ //registrazione fallita
+                    String nome = ClientConnector.request("41;" + ChatID + ";0").split(";")[1];
+                    String cognome = ClientConnector.request("41;" + ChatID + ";1").split(";")[1];
+                    String cell = ClientConnector.request("41;" + ChatID + ";2").split(";")[1];
+                    String indirizzo = ClientConnector.request("41;" + ChatID + ";3").split(";")[1];
+                    indirizzo = ClientConnector.request("29;" + indirizzo).split(";")[1];
+                    String response = ClientConnector.request("2;" + email + ";" + psw + ";" + nome + ";" + cognome + ";" + cell + ";" + indirizzo + ";1");
+                    if (response.contains("false")) { //registrazione fallita
                         return concat(getMessages("regERR"), getMessages("welcome"));
                     } else { //registrazione ok
                         //salvo id utente
                         String[] resp = response.split(";");
-                        String ID = resp[resp.length-1];
+                        String ID = resp[resp.length - 1];
                         //salvo nel db la relazione ChatID <--> ID Utente
-                        ClientConnector.request("40;"+ChatID+";6;"+ID);
+                        ClientConnector.request("40;" + ChatID + ";6;" + ID);
                         return concat(getMessages("regOK"), getMessages("homepage"));
                     }
+                case "11":
+                    //Cerco di indovinare il messaggio con AI
+                    //classificazione tra TROVA RISTO, RECENSISCI, MOSTRA CARRELLO, ORDINI
+                    return getMessages("unknown");
                 default:
                     return getMessages("unknown");
             }
@@ -185,6 +208,25 @@ public class BotLogic {
                 keyboard.setKeyboard(buttons);
                 sender.setReplyMarkup(keyboard);
                 break;
+            case "homepage":
+                List<List<InlineKeyboardButton>> homepagekb = new ArrayList<>();
+                List<InlineKeyboardButton> hp1 = new ArrayList<>();
+                hp1.add(new InlineKeyboardButton().setText("Trova Ristoranti").setCallbackData("find_restaurant"));
+                homepagekb.add(hp1);
+                List<InlineKeyboardButton> hp2 = new ArrayList<>();
+                hp2.add(new InlineKeyboardButton().setText("Recensisci").setCallbackData("review"));
+                homepagekb.add(hp2);
+                List<InlineKeyboardButton> hp3 = new ArrayList<>();
+                hp3.add(new InlineKeyboardButton().setText("Carrello").setCallbackData("show_cart"));
+                hp3.add(new InlineKeyboardButton().setText("Ordini").setCallbackData("show_orders"));
+                homepagekb.add(hp3);
+                List<InlineKeyboardButton> hp5 = new ArrayList<>();
+                hp5.add(new InlineKeyboardButton().setText("Mostra Profilo").setCallbackData("show_profile"));
+                hp5.add(new InlineKeyboardButton().setText("Log Out").setCallbackData("logout"));
+                homepagekb.add(hp5);
+                keyboard.setKeyboard(homepagekb);
+                break;
         }
+        sender.setReplyMarkup(keyboard);
     }
 }
