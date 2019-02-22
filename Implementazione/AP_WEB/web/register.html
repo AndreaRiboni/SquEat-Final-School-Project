@@ -12,31 +12,32 @@ and open the template in the editor.
         <script src="gestione.js"></script>
     </head>
     <body>
-        <form action="requestregister">
+        <form action="requestregister" method="post">
             nome<br>
-            <input type="text" name="nome" onchange="checkForm()"><br>
+            <input type="text" name="nome" onchange="checkFormRegister()"><br>
             cognome<br>
-            <input type="text" name="cognome" onchange="checkForm()"><br>
+            <input type="text" name="cognome" onchange="checkFormRegister()"><br>
             mail<br>
-            <input type="email" name="mail" onchange="checkForm()"><br>
+            <input type="email" name="mail" onchange="checkFormRegister()"><br>
             password<br>
-            <input type="password" name="password" onchange="checkForm()"><br>
+            <input type="password" name="password" onchange="checkFormRegister()"><br>
             cellulare<br>
-            <input type="tel" name="cell" onchange="checkForm()"><br>
+            <input type="tel" name="cell" onchange="checkFormRegister()"><br>
             indirizzo<br>
-            <input type="text" name="indirizzo" onchange="checkForm()"><br>
+            <input type="text" name="indirizzo" onchange="checkFormRegister()"><br>
             sono un
             <ul>
                 <li>
-                    <input type="radio" name="tipocliente" id="cliente" onchange="checkForm()">
+                    <input type="radio" name="tipocliente" id="cliente" onchange="checkFormRegister()">
                     cliente
                 </li>
                 <li>
-                    <input type="radio" name="tipocliente" id="gestore" onchange="checkForm()">
+                    <input type="radio" name="tipocliente" id="gestore" onchange="checkFormRegister()">
                     gestore di locali
                 </li>
             </ul>
-            <input type="submit" value="REGISTRATI" id="submittt" disabled>
+            <input type="submit" value="REGISTRATI" id="sign" disabled>
         </form>
+        <a href="login.html">ENTRA</a>
     </body>
 </html>

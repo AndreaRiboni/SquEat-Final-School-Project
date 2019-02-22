@@ -63,17 +63,11 @@ public class requestregister extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            String answer = ClientConnector.request(Pacchetto.incapsula(2, request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("mail"), request.getParameter("password"), request.getParameter("cell"), request.getParameter("indirizzo"), request.getParameter("tipocliente")));
-            request.setAttribute("esito", Pacchetto.estrai(answer)[1]);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-        } catch (ServerException ex) {
-            Logger.getLogger(loginrequest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
-     * Handles the HTTP <code>POST</code> method.
+     * Handles the HTTP <code>POST</code> method.h
      *
      * @param request servlet request
      * @param response servlet response
@@ -83,7 +77,17 @@ public class requestregister extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            String answer = ClientConnector.request(Pacchetto.incapsula(2, request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("mail"), request.getParameter("password"), request.getParameter("cell"), request.getParameter("indirizzo"), request.getParameter("tipocliente")));
+            String[] results = Pacchetto.estrai(answer);
+            request.setAttribute("BoolMail", Boolean.parseBoolean(results[1]));
+            request.setAttribute("BoolPsw", Boolean.parseBoolean(results[2]));
+            request.setAttribute("BoolCell", Boolean.parseBoolean(results[3]));
+            request.setAttribute("BoolIndirizzo", Boolean.parseBoolean(results[4]));
+            request.getRequestDispatcher("esito.jsp").forward(request, response);
+        } catch (ServerException ex) {
+            Logger.getLogger(loginrequest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

@@ -7,8 +7,6 @@ package servlet;
 
 import ap_utility.ClientConnector;
 import ap_utility.Pacchetto;
-import ap_utility.ServerException;
-import static ap_utility.utility.getLatLongPositions;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -64,20 +62,7 @@ public class getaddress extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String answer = null;
-        try {
-//            String[] coor = getLatLongPositions(request.getParameter("address"));
-//            System.out.println(coor[0]+""+coor[1]);
-            answer = ClientConnector.request(Pacchetto.incapsula(5, "45.46, 19.9"));
-            System.err.println(answer);
-            request.setAttribute("elenco", Pacchetto.estrai(answer));
-            request.getRequestDispatcher("elenco.jsp").forward(request, response);
-        } catch (Exception ex) {
-            Logger.getLogger(getaddress.class.getName()).log(Level.SEVERE, null, ex);
-        }
-//        String[] t = {"a", "b", "c"};
-//        request.setAttribute("elenco", t);
-//        request.getRequestDispatcher("elenco.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -91,7 +76,25 @@ public class getaddress extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String answer = null;
+        try {
+            String latlon = request.getParameter("address");
+            latlon = ClientConnector.request("29;"+latlon);
+//            latlon = ClientConnector.request("29;"+latlon).split(";")[1];
+//                        System.err.println(latlon);
+
+            answer = ClientConnector.request("005;"+latlon);
+            
+            System.err.println(answer);
+            request.setAttribute("elenco", Pacchetto.estrai(answer));
+            request.getRequestDispatcher("elenco.jsp").forward(request, response);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Logger.getLogger(getaddress.class.getName()).log(Level.SEVERE, null, ex);
+        }
+//        String[] t = {"a", "b", "c"};
+//        request.setAttribute("elenco", t);
+//        request.getRequestDispatcher("elenco.jsp").forward(request, response);
     }
 
     /**

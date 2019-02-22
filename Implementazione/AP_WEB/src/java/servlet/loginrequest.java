@@ -42,7 +42,7 @@ public class loginrequest extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet loginrequest</title>");            
+            out.println("<title>Servlet loginrequest</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet loginrequest at " + request.getContextPath() + "</h1>");
@@ -63,13 +63,7 @@ public class loginrequest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            String answer = ClientConnector.request(Pacchetto.incapsula(0, request.getParameter("user"), request.getParameter("psw")));
-            request.setAttribute("esito", Pacchetto.estrai(answer)[1]);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-        } catch (ServerException ex) {
-            Logger.getLogger(loginrequest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -83,7 +77,16 @@ public class loginrequest extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            if (!Boolean.parseBoolean(Pacchetto.estrai(ClientConnector.request(Pacchetto.incapsula(0, request.getParameter("user"), request.getParameter("psw"))))[1])) {
+                
+                request.getRequestDispatcher("login.html").forward(request, response);
+            } else {
+                request.getRequestDispatcher("address.html").forward(request, response);
+            }
+        } catch (ServerException ex) {
+            Logger.getLogger(loginrequest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
