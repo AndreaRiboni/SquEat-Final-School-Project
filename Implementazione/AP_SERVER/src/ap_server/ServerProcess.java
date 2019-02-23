@@ -193,6 +193,8 @@ public class ServerProcess extends Thread {
                 case 43:
                     logTelegramUserOut(msg);
                     break;
+                case 45:
+                    calculateDistance(msg);
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
@@ -241,7 +243,7 @@ public class ServerProcess extends Thread {
         }
         if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
-                String idutente = db.stringify(db.select("select id from utente where mail = '"+msg[1]+"'")).get(0)[0];
+                String idutente = db.stringify(db.select("select id from utente where mail = '" + msg[1] + "'")).get(0)[0];
                 System.out.println("   > " + client + " registrazione SUCCESSO");
                 send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + "", idutente));
             }
@@ -257,7 +259,9 @@ public class ServerProcess extends Thread {
         ArrayList<String> query = new ArrayList<>();
         for (String[] locale : locali) {
             if (Utility.integerDistance(WebUtility.getDistance(msg[1], locale[1])) <= 8) {
-                String punteggio = locale[3].equalsIgnoreCase("0") ? "Nessuna Recensione" : Integer.parseInt(locale[2]) / Integer.parseInt(locale[4]) + "";
+                System.out.println("locale2: " + locale[2]);
+                System.out.println("locale2: " + locale[4]);
+                String punteggio = locale[3].equalsIgnoreCase("0") ? "Nessuna Recensione" : Integer.parseInt(locale[2]) / Integer.parseInt(locale[3]) + "";
                 query.add(locale[0] + ";" + locale[1] + ";" + punteggio + ";" + locale[4]);
             }
         }
@@ -275,7 +279,10 @@ public class ServerProcess extends Thread {
     private void inviaInfoLocale(String[] msg) {
         //008,nome,indirizzo,punteggio,cellulare,menu
         ArrayList<String[]> locale = db.stringify(db.select("select Nome, Indirizzo, Cellulare, Punteggio, NumRecensioni from Locale where ID = " + msg[1]));
-        int punteggio = Integer.parseInt(locale.get(0)[3]) / Integer.parseInt(locale.get(0)[4]);
+        int punteggio = 0;
+        if (Integer.parseInt(locale.get(0)[4]) != 0) {
+            punteggio = Integer.parseInt(locale.get(0)[3]) / Integer.parseInt(locale.get(0)[4]);
+        }
         String nome = locale.get(0)[0];
         String cellulare = locale.get(0)[2];
         String indirizzo = locale.get(0)[1];
@@ -286,7 +293,7 @@ public class ServerProcess extends Thread {
             String[] prodotto = db.stringify(db.select("select Nome, Ingredienti from Prodotto where ID = " + menu.get(i)[0])).get(0);
             prodotti.append(prodotto[0]).append(";").append(prodotto[1]);
             if (i < menu.size() - 1) {
-                prodotti.append(";");
+                prodotti.append("-");
             }
         }
         try {
@@ -513,8 +520,8 @@ public class ServerProcess extends Thread {
         }
     }
 
-    private String getUserValue(String num){
-        switch(num){
+    private String getUserValue(String num) {
+        switch (num) {
             case "0":
                 return "nome";
             case "1":
@@ -531,18 +538,22 @@ public class ServerProcess extends Thread {
                 return "null";
         }
     }
-    
+
     private void setTelegramUserValue(String[] msg) {
-        send("44;"+((db.update("update telegram set "+getUserValue(msg[2])+" = '"+msg[3]+"' where IDChat = "+msg[1])>0)?"true":"false"));
+        send("44;" + ((db.update("update telegram set " + getUserValue(msg[2]) + " = '" + msg[3] + "' where IDChat = " + msg[1]) > 0) ? "true" : "false"));
     }
 
     private void returnTelegramUserValue(String[] msg) {
-        send("42;"+db.stringify(db.select("select "+getUserValue(msg[2])+" from telegram where IDChat = "+msg[1])).get(0)[0]);
+        send("42;" + db.stringify(db.select("select " + getUserValue(msg[2]) + " from telegram where IDChat = " + msg[1])).get(0)[0]);
     }
 
     private void logTelegramUserOut(String[] msg) {
-        db.update("update telegram set carrello = null, IDUtente = null, stato = 0 where IDChat = "+msg[1]);
+        db.update("update telegram set carrello = null, IDUtente = null, stato = 0 where IDChat = " + msg[1]);
         send("44;idc");
+    }
+
+    private void calculateDistance(String[] msg) {
+        send("46;" + WebUtility.getDistance(msg[1], msg[2]));
     }
 
 }
