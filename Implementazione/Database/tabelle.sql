@@ -79,7 +79,7 @@ CREATE TABLE Interazioni(
     FOREIGN KEY (IDCommento) REFERENCES Commenti(ID)
 );
 
-CREATE TABLE fattorini (
+CREATE TABLE Fattorini (
 	IDLocale int,
     IDCliente int,
     primary key(IDLocale, IDCliente),
@@ -475,4 +475,248 @@ CREATE TABLE Telegram (
     Mail varchar(64),
     Carrello varchar(64),
     CONSTRAINT FOREIGN KEY (IDUtente) REFERENCES Utente(ID)
+);
+
+#id 8
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Cotto e Funghi",
+    "Pomodoro, Mozzarella, Cotto, Funghi"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza con Carciofi",
+    "Pomodoro, Mozzarella, Carciofi"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Genovese",
+    "Pomodoro, Mozzarella, Olive Nere"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Rucola",
+    "Pomodoro, Mozzarella, Rucola"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Salsiccia",
+    "Pomodoro, Mozzarella, Salsiccia"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Leggera",
+    "Pomodoro Fresco, Mozzarella"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Pugliese",
+    "Pomodoro, Mozzarella, Tonno, Cipolla"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Prosciutto e Panna",
+    "Pomodoro, Mozzarella, Cotto, Panna"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza alla Bufala di Paolo",
+    "Pomodoro, Mozzarella di Bufala, Patatine fritte"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Zola",
+    "Pomodoro, Mozzarella, Gorgonzola"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Egiziana",
+    "Pomodoro, Mozzarella, Rucola, Fave, Salsa Yogurt"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Pizza Kebab",
+    "Pomodoro, Mozzarella, Carne, Insalata, Cipolla, Salsa Yogurt, Salsa Piccante"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Calzone Liscio",
+    "Pomodoro, Mozzarella, Cotto"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Insalata",
+    "Pomodoro, Rucola, Lattuga"
+);
+
+insert into Prodotto (Nome, Ingredienti) VALUES (
+	"Insalatona",
+    "Pomodoro, Tonno, Mozzarella, Insalata, Olive"
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    2,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    3,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    4,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    5,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    6,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    7,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    8,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    9,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    10,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    11,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    12,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    13,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    14,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    15,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    16,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    17,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    18,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    19,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    20,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    21,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    22,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    23,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    24,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    25,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    26,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    27,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    28,
+    5
+);
+
+insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
+	8,
+    29,
+    5
 );
