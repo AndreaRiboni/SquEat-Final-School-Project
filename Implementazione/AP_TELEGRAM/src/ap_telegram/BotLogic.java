@@ -7,6 +7,7 @@ package ap_telegram;
 
 import ap_communication.ClientConnector;
 import ap_utility.ConfigurationLoader;
+import com.vdurmont.emoji.EmojiParser;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,7 +31,7 @@ public class BotLogic {
                 case "register":
                     System.out.println(ClientConnector.request("36;" + mittente + ";4"));
                     break;
-                case "find_restaurants":
+                case "find_restaurants": //imposto lo stato a 12
                     System.out.println(ClientConnector.request("36;" + mittente + ";12"));
                     break;
                 case "review":
@@ -47,11 +48,38 @@ public class BotLogic {
                     break;
                 case "logout":
                     //svuoto carrello
-                    ClientConnector.request("43;"+mittente);
+                    ClientConnector.request("43;" + mittente);
                     break;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Errore #2");
+        }
+    }
+
+    public static SendMessage[] askLocale(String message, long mittente) {
+        try {
+            String IDLocale = message.replace("ASKDATA", "");
+            String[] locale = ClientConnector.request("7;" + IDLocale).split(";");
+            String nomelocale = locale[1];
+            String[] latlon = locale[2].split(",");
+            String indirizzo = ClientConnector.request("32;" + latlon[0].trim() + ";" + latlon[1].trim());
+            String recensioni = locale[3];
+            String cell = locale[4];
+            String[] menu = locale[5].split("-");
+            SendMessage[] messages = new SendMessage[menu.length + 1];
+//        for(String s : locale) System.out.println(s);
+            StringBuilder msg = new StringBuilder();
+
+            messages[0] = new SendMessage(mittente, "INFORMAZIONI SUL LOCALE\nNome: " + nomelocale + "\nIndirizzo: " + indirizzo + "\nTelefono: " + cell);
+            for (int i = 1; i < messages.length; i++) {
+                //menu
+                messages[i] = new SendMessage(mittente, "configura questo messaggio nel BOTLOGIC");
+            }
+            return messages;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -150,6 +178,8 @@ public class BotLogic {
                     //Cerco di indovinare il messaggio con AI
                     //classificazione tra TROVA RISTO, RECENSISCI, MOSTRA CARRELLO, ORDINI
                     return getMessages("unknown");
+                case "12": //Ho ricevuto "find-restaurant". Invio la lista di ristoranti nelle vicinanze
+                    return getMessages("sendPosition");
                 default:
                     return getMessages("unknown");
             }
@@ -158,6 +188,59 @@ public class BotLogic {
             System.err.println("ERRORE");
             return getMessages("unknown");
         }
+    }
+
+    public static SendMessage[] sendRestaurant(long mittente, float lat, float lon) {
+        SendMessage error = new SendMessage(mittente, "Non ci sono ristoranti nella tua zona.");
+        try {
+            String[] restaurants = popFirstElement(ClientConnector.request("5;" + lat + ", " + lon).split(";"));
+            if (restaurants.length > 3) {
+                //Ottengo il numero di ristoranti. Ogni ristorante ha 4 parametri.
+                SendMessage[] messages = new SendMessage[(restaurants.length) / 4];
+                StringBuilder[] contents = new StringBuilder[messages.length];
+                int RestaurantNumber = 0;
+                for (int i = 0; i < restaurants.length; i++) {
+                    switch (i % 4) {
+                        case 0:
+                            contents[RestaurantNumber] = new StringBuilder("RISTORANTE #");
+                            contents[RestaurantNumber].append(RestaurantNumber + 1).append("NEWLINENome: ").append(restaurants[i]);
+                            break;
+                        case 1:
+                            String distance = ClientConnector.request("45;" + lat + ", " + lon + ";" + restaurants[i]).split(";")[1];
+                            contents[RestaurantNumber].append("NEWLINEDistanza: ").append(distance);
+                            break;
+                        case 2:
+                            contents[RestaurantNumber].append("NEWLINEPunteggio: ").append(restaurants[i]);
+                            if (!restaurants[i].toLowerCase().contains("recension")) {
+                                for (int o = 0; o < (int) (Float.parseFloat(restaurants[i])); o++) {
+                                    contents[RestaurantNumber].append(":star:");
+                                }
+                            }
+                            break;
+                        case 3:
+                            messages[RestaurantNumber] = new SendMessage(mittente, EmojiParser.parseToUnicode(contents[RestaurantNumber].toString().replace("NEWLINE", "\n")));
+                            setKeyboard(messages[RestaurantNumber], "ASKREST" + restaurants[i]);
+                            RestaurantNumber++;
+                            break;
+                    }
+                }
+                return messages;
+            } else {
+                System.out.println("pochi risto");
+                return new SendMessage[]{error};
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new SendMessage[]{error};
+        }
+    }
+
+    private static String[] popFirstElement(String[] array) {
+        String[] elements = new String[array.length - 1];
+        for (int i = 1; i < array.length; i++) {
+            elements[i - 1] = array[i];
+        }
+        return elements;
     }
 
     private static String[] concat(String[]... answers) {
@@ -198,6 +281,16 @@ public class BotLogic {
 
     public static void setKeyboard(SendMessage sender, String type) {
         InlineKeyboardMarkup keyboard = new InlineKeyboardMarkup();
+        if (type.startsWith("ASKREST")) {
+            String IDRestaurant = type.replace("ASKREST", "");
+            List<List<InlineKeyboardButton>> buttons = new ArrayList<>();
+            List<InlineKeyboardButton> row = new ArrayList<>();
+            row.add(new InlineKeyboardButton().setText("Scegli").setCallbackData("ASKDATA" + IDRestaurant));
+            buttons.add(row);
+            keyboard.setKeyboard(buttons);
+            sender.setReplyMarkup(keyboard);
+            return;
+        }
         switch (type) {
             case "LogReg":
                 List<List<InlineKeyboardButton>> buttons = new ArrayList<>();

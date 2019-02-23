@@ -35,13 +35,29 @@ public class Squeat extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         System.out.println(update);
-        if (update.hasMessage() && update.getMessage().hasText()) {
+        if (update.getMessage() != null && update.getMessage().getLocation() != null) {
+            long mittente = update.getMessage().getChatId();
+            float lat = update.getMessage().getLocation().getLatitude();
+            float lon = update.getMessage().getLocation().getLongitude();
+            SendMessage[] restaurants = BotLogic.sendRestaurant(mittente, lat, lon);
+            for (SendMessage restaurant : restaurants) {
+                send(restaurant);
+            }
+        } else if (update.hasMessage() && update.getMessage().hasText()) {
             long mittente = update.getMessage().getChatId();
             Message received = update.getMessage();
             System.out.println(received);
-            BotLogic.callAction(received.getText(), mittente);
-            String[] answers = BotLogic.getAnswer(received.getText(), mittente, BotLogic.getStatus(mittente));
-            processAnswers(received.getChat().getFirstName(), mittente, answers);
+            if (received.getText().startsWith("ASKDATA")) { //INVIO IL MENU
+                System.err.println("FA GIUSTO");
+                SendMessage[] menu = BotLogic.askLocale(received.getText(), mittente);
+                for (SendMessage product : menu) {
+                    send(product);
+                }
+            } else {
+                BotLogic.callAction(received.getText(), mittente);
+                String[] answers = BotLogic.getAnswer(received.getText(), mittente, BotLogic.getStatus(mittente));
+                processAnswers(received.getChat().getFirstName(), mittente, answers);
+            }
         } else if (update.hasCallbackQuery()) {
             long mittente = update.getCallbackQuery().getMessage().getChatId();
             String received = update.getCallbackQuery().getData();
