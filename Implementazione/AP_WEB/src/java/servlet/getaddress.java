@@ -78,23 +78,19 @@ public class getaddress extends HttpServlet {
             throws ServletException, IOException {
         String answer = null;
         try {
-            String latlon = request.getParameter("address");
-            latlon = ClientConnector.request("29;"+latlon);
-//            latlon = ClientConnector.request("29;"+latlon).split(";")[1];
-//                        System.err.println(latlon);
-
-            answer = ClientConnector.request("005;"+latlon);
-            
-            System.err.println(answer);
-            request.setAttribute("elenco", Pacchetto.estrai(answer));
+            String[] places = Pacchetto.estrai(ClientConnector.request("5;" + ClientConnector.request("29;" + request.getParameter("address")).split(";")[1]));
+            String[] restaurants = new String[places.length - 1 / 4];
+            int in = 0;
+            for (int i = 1; i < places.length; i += 4) {
+                restaurants[in] = places[i]+";"+places[i+1]+";"+places[i+2]+";"+places[i+3];
+                in++;
+            }
+            request.setAttribute("elenco", restaurants);
             request.getRequestDispatcher("elenco.jsp").forward(request, response);
         } catch (Exception ex) {
             ex.printStackTrace();
             Logger.getLogger(getaddress.class.getName()).log(Level.SEVERE, null, ex);
         }
-//        String[] t = {"a", "b", "c"};
-//        request.setAttribute("elenco", t);
-//        request.getRequestDispatcher("elenco.jsp").forward(request, response);
     }
 
     /**

@@ -24,12 +24,8 @@ public class ClientConnector {
         Socket client = new Socket(IP_SERVER, PORT);
         PrintWriter out = new PrintWriter(client.getOutputStream(), true);
         out.println(request);
-        if (Pacchetto.needResponse(request)) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
-            return br.readLine();
-        }
-        return "null";
+        BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        return br.readLine();
     }
-    
 
 }

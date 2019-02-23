@@ -13,8 +13,27 @@
     </head>
     <body>
         <h2>Elenco Locali</h2>
-        <c:forEach var="place" items="${elenco}">
-            <c:out value="${place}"/> 
-        </c:forEach>
+        <%
+            String[] list = request.getParameter("elenco");
+            for (int i = 0; i < request.getParameter("elenco").length(); i++) {
+                
+            }
+            String[] authors = request.getParameterValues("R");
+            if (authors != null) {
+        %>
+        <h3>You have selected author(s):</h3>
+        <ul>
+            <%
+                for (int i = 0; i < authors.length; ++i) {
+            %>
+            <li><%= authors[i]%></li>
+                <%
+                    }
+                %>
+        </ul>
+        <a href="<%= request.getRequestURI()%>">BACK</a>
+        <%
+            }
+        %>
     </body>
 </html>
