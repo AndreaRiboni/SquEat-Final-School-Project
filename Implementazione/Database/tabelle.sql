@@ -553,6 +553,16 @@ insert into Prodotto (Nome, Ingredienti) VALUES (
     "Pomodoro, Tonno, Mozzarella, Insalata, Olive"
 );
 
+insert into Locale values(
+8,
+"Pizzeria San Marco",
+"45.519113, 9.360389",
+"3343301876",
+1,
+0,
+0
+);
+
 insert into MenuLoc(IDLocale, IDProdotto, Costo) values (
 	8,
     2,
