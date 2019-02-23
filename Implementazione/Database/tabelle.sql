@@ -473,6 +473,6 @@ CREATE TABLE Telegram (
     Cellulare varchar(32),
     Indirizzo varchar(64),
     Mail varchar(64),
-    Extra varchar(64),
+    Carrello varchar(64),
     CONSTRAINT FOREIGN KEY (IDUtente) REFERENCES Utente(ID)
 );
