@@ -24,14 +24,11 @@ public class Checker {
 
         Pattern pat = Pattern.compile(emailRegex);
         if (email == null) {
-            System.out.println("    > Mail non valida");
             return false;
         }
         if (pat.matcher(email).matches()) {
-            System.out.println("    > Mail valida");
             return true;
         } else {
-            System.out.println("    > Mail non valida");
             return false;
         }
     }
@@ -39,11 +36,9 @@ public class Checker {
     public static boolean hasWhitespaces(String... strings) {
         for (String s : strings) {
             if (s.contains(" ")) {
-                System.out.println("    > La stringa '" + s + "' ha spazi vuoti");
                 return true;
             }
         }
-        System.out.println("    > Nessuna stringa ha spazi vuoti");
         return false;
     }
 
@@ -62,13 +57,7 @@ public class Checker {
         else if (PhoneNumb.matches("\\(\\d{3}\\)-\\d{3}-\\d{4}")) {
             okay = true;
         } //return false if nothing matches the input
-        if (okay) {
-            System.out.println("    > Numero valido");
-            return true;
-        } else {
-            System.out.println("    > Numero non valido");
-            return false;
-        }
+        return okay;
     }
 
     /**
@@ -90,10 +79,8 @@ public class Checker {
                 return true;
             }
         } catch (Exception e) {
-            System.out.println("    > Errore. Indirizzo non valido");
             return false;
         }
-        System.out.println("    > Indirizzo non valido");
         return false;
     }
 
@@ -128,8 +115,6 @@ public class Checker {
     }
     
     public static boolean isPhoneNumberUnique(Database db, String phone){
-        System.out.println("checking per "+phone);
-        System.out.println(db.count(db.select("select Cellulare from Utente where Cellulare = '"+phone+"'")));
         return db.count(db.select("select Cellulare from Utente where Cellulare = '"+phone+"'")) == 0;
     }
     

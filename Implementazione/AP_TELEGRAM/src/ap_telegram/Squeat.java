@@ -5,7 +5,10 @@
  */
 package ap_telegram;
 
+import ap_communication.ClientConnector;
 import ap_utility.ConfigurationLoader;
+import ap_utility.Utility;
+import ap_utility.WebUtility;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,6 +38,7 @@ public class Squeat extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         System.out.println(update);
+        //Ho ricevuto una posizione
         if (update.getMessage() != null && update.getMessage().getLocation() != null) {
             long mittente = update.getMessage().getChatId();
             float lat = update.getMessage().getLocation().getLatitude();
@@ -47,17 +51,9 @@ public class Squeat extends TelegramLongPollingBot {
             long mittente = update.getMessage().getChatId();
             Message received = update.getMessage();
             System.out.println(received);
-            if (received.getText().startsWith("ASKDATA")) { //INVIO IL MENU
-                System.err.println("FA GIUSTO");
-                SendMessage[] menu = BotLogic.askLocale(received.getText(), mittente);
-                for (SendMessage product : menu) {
-                    send(product);
-                }
-            } else {
-                BotLogic.callAction(received.getText(), mittente);
-                String[] answers = BotLogic.getAnswer(received.getText(), mittente, BotLogic.getStatus(mittente));
-                processAnswers(received.getChat().getFirstName(), mittente, answers);
-            }
+            BotLogic.callAction(received.getText(), mittente);
+            String[] answers = BotLogic.getAnswer(received.getText(), mittente, BotLogic.getStatus(mittente));
+            processAnswers(received.getChat().getFirstName(), mittente, answers);
         } else if (update.hasCallbackQuery()) {
             long mittente = update.getCallbackQuery().getMessage().getChatId();
             String received = update.getCallbackQuery().getData();
@@ -93,7 +89,22 @@ public class Squeat extends TelegramLongPollingBot {
                 message = message.replace("%HOMEPAGEKB", "");
                 BotLogic.setKeyboard(msg, "homepage");
             }
-            send(msg.setText(message));
+            if (message.startsWith("IMG")) {
+                message = message.replace("IMG", "");
+                String pos = message.substring(0, message.indexOf("*"));
+                message = message.replace(pos, "");
+                File photo = WebUtility.getImage(pos);
+                if (photo != null) {
+                    send(new SendPhoto().setChatId(ChatID).setPhoto(photo));
+                }
+            }
+            String[] data = message.split(";");
+            if(data.length == 4 && Utility.areNumbers(data[1], data[2], data[3])){ //aggiungo la tastiera per il prodotto
+                String idlocale = data[1], idprodotto = data[2], costo = data[3];
+                message = message.replace(";"+idlocale+";"+idprodotto+";"+costo, "");
+                BotLogic.setFoodKeyboard(msg, idlocale, idprodotto, costo);
+            }
+            send(msg.setText(message).enableMarkdown(true));
         }
     }
 

@@ -52,14 +52,14 @@ public class ServerProcess extends Thread {
     public void run() {
         try {
             String msg = in.readLine();
-            System.out.println("msg: " + msg);
             process(msg);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
                 client.close();
-                System.out.println("Chiusura Socket");
+                db.close();
+                System.out.println("Chiusura connessioni terminata");
             } catch (IOException ex) {
                 System.out.println("Impossibile chiudere il canale di comunicazione");
             }
@@ -67,7 +67,6 @@ public class ServerProcess extends Thread {
     }
 
     private void send(String msg) {
-        System.out.println("Invio " + msg);
         out.println(msg);
     }
 
@@ -78,7 +77,6 @@ public class ServerProcess extends Thread {
      * @throws ServerException errore
      */
     private void process(String input) throws Exception {
-        System.out.println("> From: " + client + "\n--> Message: " + input);
         String msg[] = null;
         msg = Pacchetto.estrai(input);
         if (!Pacchetto.verifica(msg)) {
@@ -209,16 +207,13 @@ public class ServerProcess extends Thread {
      * @param msg 000;mail;password
      */
     private void login(String[] msg) throws Exception {
-        System.out.println("  > " + client + " chiede LOGIN");
         ResultSet table = db.select("select * from Utente where Mail = '" + msg[1] + "' and Psw = '" + msg[2] + "'");
         if (db.count(table) > 0) {
-            System.out.println("   > " + client + " login SUCCESSO");
             table.first();
             String idutente = table.getString(1);
             //l'utente esiste
             send(Pacchetto.incapsula(1, "true", idutente));
         } else {
-            System.out.println("   > " + client + " login RIFIUTATO");
             //l'utente non esiste
             send(Pacchetto.incapsula(1, "false", "null"));
         }
@@ -226,29 +221,22 @@ public class ServerProcess extends Thread {
     }
 
     private void register(String[] msg) throws ServerException {
-        System.out.println("  > " + client + " chiede REGISTRAZIONE");
         boolean[] esito = {true, true, true, true};
         if (!Checker.isMailValid(msg[1]) || !Checker.isMailUnique(db, msg[1])) {
             esito[0] = false;
-            System.out.println("Mail non valida");
         } else if (Checker.hasWhitespaces(msg[2])) {
-            System.out.println("password non valida");
             esito[1] = false;
         } else if (!Checker.isPhoneNumberValid(msg[5]) || !Checker.isPhoneNumberUnique(db, msg[5])) {
-            System.out.println("numero non valido");
             esito[2] = false;
         } else if (!Checker.isAddressValid(msg[6])) {
-            System.out.println("indirizzo non valido");
             esito[3] = false;
         }
         if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
-                String idutente = db.stringify(db.select("select id from utente where mail = '" + msg[1] + "'")).get(0)[0];
-                System.out.println("   > " + client + " registrazione SUCCESSO");
+                String idutente = db.stringify(db.select("select id from Utente where mail = '" + msg[1] + "'")).get(0)[0];
                 send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + "", idutente));
             }
         } else {
-            System.out.println("   > " + client + " registrazione RIFIUTATA");
             send(Pacchetto.incapsula(003, esito[0] + "", esito[1] + "", esito[2] + "", esito[3] + "", "null"));
         }
     }
@@ -259,8 +247,6 @@ public class ServerProcess extends Thread {
         ArrayList<String> query = new ArrayList<>();
         for (String[] locale : locali) {
             if (Utility.integerDistance(WebUtility.getDistance(msg[1], locale[1])) <= 8) {
-                System.out.println("locale2: " + locale[2]);
-                System.out.println("locale2: " + locale[4]);
                 String punteggio = locale[3].equalsIgnoreCase("0") ? "Nessuna Recensione" : Integer.parseInt(locale[2]) / Integer.parseInt(locale[3]) + "";
                 query.add(locale[0] + ";" + locale[1] + ";" + punteggio + ";" + locale[4]);
             }
@@ -291,7 +277,7 @@ public class ServerProcess extends Thread {
         StringBuilder prodotti = new StringBuilder();
         for (int i = 0; i < menu.size(); i++) {
             String[] prodotto = db.stringify(db.select("select Nome, Ingredienti from Prodotto where ID = " + menu.get(i)[0])).get(0);
-            prodotti.append(prodotto[0]).append(";").append(prodotto[1]);
+            prodotti.append(menu.get(i)[0]).append("#").append(menu.get(i)[1]).append("#").append(prodotto[0]).append("#").append(prodotto[1]);
             if (i < menu.size() - 1) {
                 prodotti.append("-");
             }
@@ -314,13 +300,12 @@ public class ServerProcess extends Thread {
         if (db.userIdExists(IdCliente)) {
             //salvo il carrello
             String[] carrello = msg[2].split("-");
-            System.out.println("si stanno comprando " + carrello.length / 3 + " prodotti");
             //acquisto ogni prodotto del carrello
             for (int i = 0; i < carrello.length; i += 3) {
                 //ottengo l'id fattorino del locale
                 String IdFattorino = db.getIdFattorinoFromLocale(carrello[i]);
                 String timestamp = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new GregorianCalendar().getTime());
-                int val = db.update("insert into ordine ("
+                int val = db.update("insert into Ordine ("
                         + "IDCliente,"
                         + "IDLocale,"
                         + "IDProdotto,"
@@ -354,24 +339,19 @@ public class ServerProcess extends Thread {
     }
 
     private void aggiungiLocale(String[] msg) {
-        System.out.println("  > " + client + " chiede AGGIUNTA LOCALE");
         try {
             if (Checker.isNumber(msg[2]) && Checker.isNumber(msg[3]) && Checker.isPhoneNumberValid(msg[4]) && (Checker.isThatTypeOfUser(db, msg[5], "1") || Checker.isThatTypeOfUser(db, msg[5], "0"))) {
                 if (db.addLocale(msg)) {
-                    System.out.println("   > " + client + " aggiunta locale RIUSCITA");
                     send(Pacchetto.incapsula(44, "true"));
                 } else {
-                    System.out.println("   > " + client + " aggiunta locale FALLITA");
                     send(Pacchetto.incapsula(44, "false"));
                 }
             }
         } catch (ServerException ex) {
-            System.out.println(ex.getMessage());
-            System.out.println("   > " + client + " aggiunta locale FALLITA");
+            System.out.println("Impossibile aggiungere il locale");
             try {
                 send(Pacchetto.incapsula(44, "false"));
             } catch (ServerException ex1) {
-                System.out.println(ex1.getMessage());
             }
 
         }
@@ -381,7 +361,7 @@ public class ServerProcess extends Thread {
         String IdLocale = msg[1];
         String IdProdotto = msg[2];
         String costo = msg[3];
-        boolean esito = db.update("insert into menuloc (IDLocale, IDProdotto, Costo) values ("
+        boolean esito = db.update("insert into MenuLoc (IDLocale, IDProdotto, Costo) values ("
                 + IdLocale + ","
                 + IdProdotto + ","
                 + costo) > 0;
@@ -390,7 +370,7 @@ public class ServerProcess extends Thread {
 
     private void getProdottiComprati(String[] msg) {
         //msg1 = idcliente
-        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino from ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino from Ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
         StringBuilder response = new StringBuilder();
         for (String[] row : table) {
             int index = 0;
@@ -411,9 +391,8 @@ public class ServerProcess extends Thread {
 
     private void getOrdiniRicevuti(String[] msg) {
         //msg1 = idcliente
-        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, IDProdotto, IDCliente, Timestamp, Costo, IDFattorino from ordine, locale where locale.ID = ordine.IDLocale and IDLocale = " + msg[1]));
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, IDProdotto, IDCliente, Timestamp, Costo, IDFattorino from Ordine, Locale where locale.ID = ordine.IDLocale and IDLocale = " + msg[1]));
         StringBuilder response = new StringBuilder();
-        System.out.println("Ho trovato " + table.size() + " prodotti");
         for (String[] row : table) {
             int index = 0;
             for (String val : row) {
@@ -462,9 +441,9 @@ public class ServerProcess extends Thread {
         String costo = msg[4];
         boolean esito = true;
         //aggiungo il prodotto al db
-        esito = db.update("insert into prodotto (Nome, Ingredienti) values ('" + nomeprod + "', '" + ingredienti + "')") > 0;
+        esito = db.update("insert into Prodotto (Nome, Ingredienti) values ('" + nomeprod + "', '" + ingredienti + "')") > 0;
 
-        ArrayList<String[]> prodotti = db.stringify(db.select("select ID from prodotto"));
+        ArrayList<String[]> prodotti = db.stringify(db.select("select ID from Prodotto"));
         String IdProdotto = null;
         try {
             IdProdotto = prodotti.get(prodotti.size() - 1)[0];
@@ -503,18 +482,18 @@ public class ServerProcess extends Thread {
     }
 
     private void aggiornaStatoUtente(String[] msg) {
-        db.update("update telegram set stato = " + msg[2] + " where IDChat = " + msg[1]);
+        db.update("update Telegram set stato = " + msg[2] + " where IDChat = " + msg[1]);
         send("44;idc");
     }
 
     private void setMailById(String[] msg) {
-        db.update("update telegram set mail = '" + msg[2] + "' where IDChat = " + msg[1]);
+        db.update("update Telegram set mail = '" + msg[2] + "' where IDChat = " + msg[1]);
         send("44;idc");
     }
 
     private void getMailById(String[] msg) {
         try {
-            send("39;" + db.stringify(db.select("select mail from telegram where IDChat = " + msg[1])).get(0)[0]);
+            send("39;" + db.stringify(db.select("select mail from Telegram where IDChat = " + msg[1])).get(0)[0]);
         } catch (Exception e) {
             send("39;null");
         }
@@ -534,21 +513,23 @@ public class ServerProcess extends Thread {
                 return "mail";
             case "6":
                 return "IDUtente";
+            case "7":
+                return "carrello";
             default:
                 return "null";
         }
     }
 
     private void setTelegramUserValue(String[] msg) {
-        send("44;" + ((db.update("update telegram set " + getUserValue(msg[2]) + " = '" + msg[3] + "' where IDChat = " + msg[1]) > 0) ? "true" : "false"));
+        send("44;" + ((db.update("update Telegram set " + getUserValue(msg[2]) + " = '" + msg[3] + "' where IDChat = " + msg[1]) > 0) ? "true" : "false"));
     }
 
     private void returnTelegramUserValue(String[] msg) {
-        send("42;" + db.stringify(db.select("select " + getUserValue(msg[2]) + " from telegram where IDChat = " + msg[1])).get(0)[0]);
+        send("42;" + db.stringify(db.select("select " + getUserValue(msg[2]) + " from Telegram where IDChat = " + msg[1])).get(0)[0]);
     }
 
     private void logTelegramUserOut(String[] msg) {
-        db.update("update telegram set carrello = null, IDUtente = null, stato = 0 where IDChat = " + msg[1]);
+        db.update("update Telegram set carrello = null, IDUtente = null, stato = 0 where IDChat = " + msg[1]);
         send("44;idc");
     }
 

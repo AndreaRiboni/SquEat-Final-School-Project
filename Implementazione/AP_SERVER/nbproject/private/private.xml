@@ -17,8 +17,10 @@
             <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_database/Database.java</file>
             <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_web/WebUtility.java</file>
             <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_server/ServerProcess.java</file>
+            <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_utility/Checker.java</file>
             <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_utility/Pacchetto.java</file>
             <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_server/ServerException.java</file>
+            <file>file:/F:/AreaProgetto-master/Implementazione/AP_SERVER/src/ap_utility/ConfigurationLoader.java</file>
         </group>
     </open-files>
 </project-private>

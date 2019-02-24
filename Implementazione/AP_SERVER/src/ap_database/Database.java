@@ -57,7 +57,6 @@ public class Database {
     }
 
     public ResultSet select(String query) {
-        System.out.println(query);
         try {
             return this.query.executeQuery(query);
         } catch (SQLException ex) {
@@ -77,10 +76,10 @@ public class Database {
 
     public boolean register(String[] msg) {
         try {
-            query.executeUpdate(String.format("insert into utente (Nome, Cognome, Cellulare, Indirizzo, Mail, Psw, Privilegio)"
+            query.executeUpdate(String.format("insert into Utente (Nome, Cognome, Cellulare, Indirizzo, Mail, Psw, Privilegio)"
                     + "values ('%1$s', '%2$s', '%3$s', '%4$s', '%5$s', '%6$s', '%7$s')", msg[3], msg[4], msg[5], msg[6], msg[1], msg[2], msg[7]));
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("Errore nella registrazione");
             return false;
         }
         return true;
@@ -88,7 +87,7 @@ public class Database {
 
     public boolean addLocale(String[] msg) {
         try {
-            query.executeUpdate(String.format("insert into locale (Nome, Indirizzo, Cellulare, IDAdmin, Punteggio, NumRecensioni)"
+            query.executeUpdate(String.format("insert into Locale (Nome, Indirizzo, Cellulare, IDAdmin, Punteggio, NumRecensioni)"
                     + "values ('%1$s', '%2$s', '%3$s', '%4$s', '%5$s', '%6$s')", msg[1], msg[2] + ", " + msg[3], msg[4], msg[5], "0", "0"));
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -98,8 +97,8 @@ public class Database {
     }
     
     public int update(String query){
-        System.out.println(query);
         try {
+            System.out.println(query);
             return this.query.executeUpdate(query);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -108,7 +107,7 @@ public class Database {
     }
     
     public boolean userIdExists(String id){
-        return count(select("select * from utente where ID = "+id))>0;
+        return count(select("select * from Utente where ID = "+id))>0;
     }
     
     public String[] getFirstRow(ResultSet res){
@@ -116,7 +115,15 @@ public class Database {
     }
     
     public String getIdFattorinoFromLocale(String id){
-        return getFirstRow(select("select IdCliente from fattorini where IdLocale = "+id))[0];
+        return getFirstRow(select("select IdCliente from Fattorini where IdLocale = "+id))[0];
+    }
+    
+    public void close(){
+        try {
+            conn.close();
+        } catch (SQLException ex) {
+            System.out.println("Impossibile chiudere la connessione al db");
+        }
     }
     
     

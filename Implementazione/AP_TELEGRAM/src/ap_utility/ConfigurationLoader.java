@@ -25,6 +25,7 @@ import org.xml.sax.SAXException;
 public class ConfigurationLoader {
 
     private static final String CONFIG_PATH = "config.xml";
+//    private static final String CONFIG_PATH = "AP_TELEGRAM/config.xml";
     private static File CONFIG_FILE;
 
     private static File getConfigFile() {

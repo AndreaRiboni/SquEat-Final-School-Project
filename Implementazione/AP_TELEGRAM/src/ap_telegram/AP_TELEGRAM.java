@@ -25,7 +25,8 @@ public class AP_TELEGRAM {
         Squeat bot = new Squeat();
 
         try {
-            botsApi.registerBot(bot);
+            botsApi.registerBot(bot); //VERIFICA CHE CHI MANDA LE POSIZIONI ABBIA UN ACCOUNT. 
+            //VERIFICA IL REMOVE FROM CART
         } catch (Exception e) {
             e.printStackTrace();
         }
