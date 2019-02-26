@@ -78,7 +78,7 @@ public class Squeat extends TelegramLongPollingBot {
                 message = message.replace("%CHATNAME", name);
             }
             if (message.contains("%IMGWELCOME")) {
-                send(pic.setPhoto("AgADBAADbbAxG1cHWFMev4i89OXkaHbYLBsABL1RKopBZwJjmJsAAgI"));
+                send(pic.setPhoto("AgADBAADOK4xGzx5oFMBP4zKdBHtW7vPLBsABD1DP-6xiPj5a-IAAgI"));
                 continue;
             }
             if (message.contains("%LOGINKB")) {
@@ -98,13 +98,17 @@ public class Squeat extends TelegramLongPollingBot {
                     send(new SendPhoto().setChatId(ChatID).setPhoto(photo));
                 }
             }
+            if(message.contains("%CARTKB")){
+                message = message.replace("%CARTKB", "");
+                BotLogic.setKeyboard(msg, "addremovecart");
+            }
             String[] data = message.split(";");
             if(data.length == 4 && Utility.areNumbers(data[1], data[2], data[3])){ //aggiungo la tastiera per il prodotto
                 String idlocale = data[1], idprodotto = data[2], costo = data[3];
                 message = message.replace(";"+idlocale+";"+idprodotto+";"+costo, "");
                 BotLogic.setFoodKeyboard(msg, idlocale, idprodotto, costo);
             }
-            send(msg.setText(message).enableMarkdown(true));
+            send(msg.setText(message.trim()).enableMarkdown(true));
         }
     }
 

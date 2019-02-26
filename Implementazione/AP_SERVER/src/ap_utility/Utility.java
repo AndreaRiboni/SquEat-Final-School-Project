@@ -14,8 +14,6 @@ import java.util.ArrayList;
 public class Utility {
 
     public static int integerDistance(String dist) {
-        System.out.println("DIST: " + dist);
-        System.out.println("DISTTT: " + dist.substring(0, dist.length() - 3));
         return (int) (Float.parseFloat(dist.substring(0, dist.length() - 3)));
     }
 

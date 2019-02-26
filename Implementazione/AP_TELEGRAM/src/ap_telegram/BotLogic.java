@@ -11,8 +11,6 @@ import ap_utility.Utility;
 import com.vdurmont.emoji.EmojiParser;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -25,32 +23,40 @@ public class BotLogic {
 
     public static void callAction(String message, long mittente) {
         try {
-            switch (message) {
-                case "login": //se ricevo "login", imposto lo stato a 1
-                    System.out.println(ClientConnector.request("36;" + mittente + ";1"));
-                    break; //se ricevo "register", imposto lo stato a 4
-                case "register":
-                    System.out.println(ClientConnector.request("36;" + mittente + ";4"));
-                    break;
-                case "find_restaurant": //imposto lo stato a 12
-                    System.out.println(ClientConnector.request("36;" + mittente + ";12"));
-                    break;
-                case "review":
-                    System.out.println(ClientConnector.request("36;" + mittente + ";13"));
-                    break;
-                case "show_cart":
-                    System.out.println(ClientConnector.request("36;" + mittente + ";14"));
-                    break;
-                case "show_orders":
-                    System.out.println(ClientConnector.request("36;" + mittente + ";15"));
-                    break;
-                case "show_profile":
-                    System.out.println(ClientConnector.request("36;" + mittente + ";16"));
-                    break;
-                case "logout":
-                    //svuoto carrello
-                    ClientConnector.request("43;" + mittente);
-                    break;
+            if (message.startsWith("ASKDATA")) {
+                ClientConnector.request("36;" + mittente + ";19");
+            } else if (message.equalsIgnoreCase("GOBACKHOME")) {
+                ClientConnector.request("36;" + mittente + ";11");
+            } else if (message.startsWith("CART")) {
+                ClientConnector.request("36;" + mittente + ";20");
+            } else {
+                switch (message) {
+                    case "login": //se ricevo "login", imposto lo stato a 1
+                        System.out.println(ClientConnector.request("36;" + mittente + ";1"));
+                        break; //se ricevo "register", imposto lo stato a 4
+                    case "register":
+                        System.out.println(ClientConnector.request("36;" + mittente + ";4"));
+                        break;
+                    case "find_restaurant": //imposto lo stato a 12
+                        System.out.println(ClientConnector.request("36;" + mittente + ";12"));
+                        break;
+                    case "review":
+                        System.out.println(ClientConnector.request("36;" + mittente + ";13"));
+                        break;
+                    case "show_cart":
+                        System.out.println(ClientConnector.request("36;" + mittente + ";14"));
+                        break;
+                    case "show_orders":
+                        System.out.println(ClientConnector.request("36;" + mittente + ";15"));
+                        break;
+                    case "show_profile":
+                        System.out.println(ClientConnector.request("36;" + mittente + ";16"));
+                        break;
+                    case "logout":
+                        //svuoto carrello
+                        ClientConnector.request("43;" + mittente);
+                        break;
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -165,7 +171,7 @@ public class BotLogic {
                     String indirizzo = ClientConnector.request("41;" + ChatID + ";3").split(";")[1];
                     indirizzo = ClientConnector.request("29;" + indirizzo).split(";")[1];
                     String response = ClientConnector.request("2;" + email + ";" + psw + ";" + nome + ";" + cognome + ";" + cell + ";" + indirizzo + ";1");
-                    System.out.println("RESPONSE REGISTER: "+response);
+                    System.out.println("RESPONSE REGISTER: " + response);
                     if (response.contains("false")) { //registrazione fallita
                         return concat(getMessages("regERR"), getMessages("welcome"));
                     } else { //registrazione ok
@@ -184,6 +190,14 @@ public class BotLogic {
                     return getMessages("homepage");
                 case "12": //Ho ricevuto "find-restaurant". chiedo la posizione
                     return getMessages("findrest");
+                case "14": //mostro il carrello
+                    //ottengo il carrello
+                    String cart = Utility.getCart(ChatID);
+                    if (!cart.toLowerCase().contains("vuoto")) {
+                        return Utility.getCartMessages(cart).split("END");
+                    } else {
+                        return getMessages("emptycart");
+                    }
                 case "19": //ho ricevuto la richiesta di informazioni su un ristorante
                     if (message.startsWith("ASKDATA")) {
                         //vado al livello successivo
@@ -193,12 +207,13 @@ public class BotLogic {
                         return getMessages("NoRest");
                     }
                 case "20":
-                    if(message.startsWith("CART")){
+                    if (message.startsWith("CART")) {
                         String[] prod = message.split(";");
-                        if(prod[1].equalsIgnoreCase("ADD")){
+                        if (prod[1].equalsIgnoreCase("ADD")) {
                             Utility.addToCart(ChatID, prod[2], prod[3], prod[4]);
                             return getMessages("addcart");
-                        } else if(prod[1].equalsIgnoreCase("REMOVE")){
+                        } else if (prod[1].equalsIgnoreCase("REMOVE")) {
+                            System.out.println("devo rimuovere");
                             Utility.removeFromCart(ChatID, prod[2], prod[3], prod[4]);
                             return getMessages("removecart");
                         } else {
@@ -388,6 +403,17 @@ public class BotLogic {
                 homepagekb.add(hp5);
                 keyboard.setKeyboard(homepagekb);
                 break;
+            case "addremovecart":
+                List<List<InlineKeyboardButton>> buttons2 = new ArrayList<>();
+                List<InlineKeyboardButton> row2 = new ArrayList<>();
+                List<InlineKeyboardButton> row3 = new ArrayList<>();
+                row2.add(new InlineKeyboardButton().setText("Visualizza Carrello").setCallbackData("show_cart"));
+                row3.add(new InlineKeyboardButton().setText("Torna alla home").setCallbackData("GOBACKHOME"));
+                buttons2.add(row2);
+                buttons2.add(row3);
+                keyboard.setKeyboard(buttons2);
+                sender.setReplyMarkup(keyboard);
+                break;
         }
         sender.setReplyMarkup(keyboard);
     }
@@ -396,8 +422,8 @@ public class BotLogic {
         InlineKeyboardMarkup keyboard = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> buttons = new ArrayList<>();
         List<InlineKeyboardButton> row = new ArrayList<>();
-        row.add(new InlineKeyboardButton().setText(EmojiParser.parseToUnicode("Aggiungi:gift:")).setCallbackData("CART;ADD;"+idlocale+";"+idprodotto+";"+costo));
-        row.add(new InlineKeyboardButton().setText(EmojiParser.parseToUnicode("Rimuovi:gift:")).setCallbackData("CART;REMOVE;"+idlocale+";"+idprodotto+";"+costo));
+        row.add(new InlineKeyboardButton().setText(EmojiParser.parseToUnicode("Aggiungi:gift:")).setCallbackData("CART;ADD;" + idlocale + ";" + idprodotto + ";" + costo));
+        row.add(new InlineKeyboardButton().setText(EmojiParser.parseToUnicode("Rimuovi:gift:")).setCallbackData("CART;REMOVE;" + idlocale + ";" + idprodotto + ";" + costo));
         buttons.add(row);
         keyboard.setKeyboard(buttons);
         msg.setReplyMarkup(keyboard);

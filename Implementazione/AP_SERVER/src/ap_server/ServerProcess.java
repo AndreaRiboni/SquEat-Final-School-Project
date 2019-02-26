@@ -193,6 +193,10 @@ public class ServerProcess extends Thread {
                     break;
                 case 45:
                     calculateDistance(msg);
+                    break;
+                case 47:
+                    getNomeProdotto(msg);
+                    break;
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
@@ -521,7 +525,11 @@ public class ServerProcess extends Thread {
     }
 
     private void setTelegramUserValue(String[] msg) {
-        send("44;" + ((db.update("update Telegram set " + getUserValue(msg[2]) + " = '" + msg[3] + "' where IDChat = " + msg[1]) > 0) ? "true" : "false"));
+        if (msg[3].equalsIgnoreCase("null")) {
+            send("44;" + ((db.update("update Telegram set " + getUserValue(msg[2]) + " = null where IDChat = " + msg[1]) > 0) ? "true" : "false"));
+        } else {
+            send("44;" + ((db.update("update Telegram set " + getUserValue(msg[2]) + " = '" + msg[3] + "' where IDChat = " + msg[1]) > 0) ? "true" : "false"));
+        }
     }
 
     private void returnTelegramUserValue(String[] msg) {
@@ -535,6 +543,12 @@ public class ServerProcess extends Thread {
 
     private void calculateDistance(String[] msg) {
         send("46;" + WebUtility.getDistance(msg[1], msg[2]));
+    }
+
+    private void getNomeProdotto(String[] msg) throws Exception {
+        ResultSet res = db.select("select Nome from Prodotto where ID = " + msg[1]);
+        res.first();
+        send("48;" + res.getString(1));
     }
 
 }

@@ -26,7 +26,7 @@ public class AP_TELEGRAM {
 
         try {
             botsApi.registerBot(bot); //VERIFICA CHE CHI MANDA LE POSIZIONI ABBIA UN ACCOUNT. 
-            //VERIFICA IL REMOVE FROM CART
+            //CARERLLO: SVUOTA || COMPRA (KEYBOARD)
         } catch (Exception e) {
             e.printStackTrace();
         }

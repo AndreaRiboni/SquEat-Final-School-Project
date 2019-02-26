@@ -78,7 +78,6 @@ public class WebUtility {
     }
 
     public static JSONObject readJSONFromUrl(String url) throws IOException, JSONException {
-        System.out.println(url.replace(" ", "%20"));
         InputStream is = new URL(url.replace(" ", "%20")).openStream();
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));

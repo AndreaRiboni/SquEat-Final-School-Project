@@ -17,7 +17,7 @@ public class Pacchetto {
         -1, 2, 1, 2, -1, -1, 5, -1, -1, 4,
         1, 7, 1, 6, -1, -1, -1, -1, -1, 1,
         1, 3, 2, 1, 1, 1, 2, 2, 1, 1,
-        3, 2, 1, 1, 1, 2, 1
+        3, 2, 1, 1, 1, 2, 1, 1, 1
     };
 
     /**
@@ -70,7 +70,6 @@ public class Pacchetto {
      * @throws ServerException errore
      */
     public static boolean verifica(String[] msg) throws ServerException {
-        System.out.println("ci sono pacchetti " + PARAM_NUM.length);
         try {
             if (msg[0].equalsIgnoreCase("11")) {
                 return true;
