@@ -94,16 +94,73 @@ public class Utility {
 
     public static String getCartMessages(String cart) {
         String[] products = cart.split("-");
-        StringBuilder msg = new StringBuilder("*CARRELLO* END ");
+        StringBuilder msg = new StringBuilder();
+        float costo = 0;
         for (int i = 0; i < products.length; i += 3) {
             try {
                 String nomeprod = ClientConnector.request("47;" + products[i + 1]).split(";")[1];
-                msg.append("*Prodotto:* ").append(nomeprod).append("\n");
-                msg.append("*Costo:* ").append(products[i + 2]).append("€ END");
+                msg.append("\n\n*Prodotto:* ").append(nomeprod).append("\n");
+                msg.append("*Costo:* ").append(products[i + 2]).append("€");
+                costo += Float.parseFloat(products[i + 2]);
             } catch (Exception ex) {
                 System.out.println("Errore nel carrello");
             }
         }
+        msg.append("\n\n*Costo Totale:* ").append(costo).append("€%SHOWCARTKB");
         return msg.toString();
+    }
+
+    public static String[] formatLatLong(String latlon) {
+        String[] formatted = latlon.split(" ");
+        formatted[0] = formatted[0].replace(",", "");
+        return formatted;
+    }
+
+    public static String getAddress(long ChatID) {
+        try {
+            //ottengo idcliente
+            String IDCliente = getIDCliente(ChatID);
+            //ottengo cognome
+            String latlon = ClientConnector.request("50;"+IDCliente+";3").split(";")[1];
+            String[] formll = formatLatLong(latlon);
+            return ClientConnector.request("32;"+formll[0]+";"+formll[1]).split(";")[1];
+        } catch (Exception ex) {
+            return "address_not_available_:(";
+        }
+    }
+
+    public static String getIDCliente(long ChatID) {
+        try {
+            return ClientConnector.request("41;" + ChatID + ";" + 6).split(";")[1];
+        } catch (Exception ex) {
+            return null;
+        }
+    }
+
+    public static String getSurname(long ChatID) {
+        try {
+            //ottengo idcliente
+            String IDCliente = getIDCliente(ChatID);
+            //ottengo cognome
+            return ClientConnector.request("50;"+IDCliente+";1").split(";")[1];
+        } catch (Exception ex) {
+            return "surname_not_available_:(";
+        }
+    }
+
+    public static boolean isLogged(long mittente) {
+        try {
+            return !ClientConnector.request("41;" + mittente + ";6").contains("null");
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    public static String getTelegramAddress(long mittente) {
+        try {
+            return ClientConnector.request("41;"+mittente+";3").split(";")[1];
+        } catch (Exception ex) {
+            return "casa tua";
+        }
     }
 }

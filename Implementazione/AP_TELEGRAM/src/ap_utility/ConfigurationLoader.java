@@ -44,8 +44,8 @@ public class ConfigurationLoader {
             Element root = doc.getDocumentElement();
             NodeList nList = root.getElementsByTagName(node);
             return nList.item(0).getTextContent();
-        } catch (ParserConfigurationException | SAXException | IOException ex) {
-            Logger.getLogger(ConfigurationLoader.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return null;
     }

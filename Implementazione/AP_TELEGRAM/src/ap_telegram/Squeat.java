@@ -41,6 +41,9 @@ public class Squeat extends TelegramLongPollingBot {
         //Ho ricevuto una posizione
         if (update.getMessage() != null && update.getMessage().getLocation() != null) {
             long mittente = update.getMessage().getChatId();
+            if (!Utility.isLogged(mittente)) {
+                return;
+            }
             float lat = update.getMessage().getLocation().getLatitude();
             float lon = update.getMessage().getLocation().getLongitude();
             SendMessage[] restaurants = BotLogic.sendRestaurant(mittente, lat, lon);
@@ -98,15 +101,27 @@ public class Squeat extends TelegramLongPollingBot {
                     send(new SendPhoto().setChatId(ChatID).setPhoto(photo));
                 }
             }
-            if(message.contains("%CARTKB")){
+            if (message.contains("%CARTKB")) {
                 message = message.replace("%CARTKB", "");
                 BotLogic.setKeyboard(msg, "addremovecart");
             }
             String[] data = message.split(";");
-            if(data.length == 4 && Utility.areNumbers(data[1], data[2], data[3])){ //aggiungo la tastiera per il prodotto
+            if (data.length == 4 && Utility.areNumbers(data[1], data[2], data[3])) { //aggiungo la tastiera per il prodotto
                 String idlocale = data[1], idprodotto = data[2], costo = data[3];
-                message = message.replace(";"+idlocale+";"+idprodotto+";"+costo, "");
+                message = message.replace(";" + idlocale + ";" + idprodotto + ";" + costo, "");
                 BotLogic.setFoodKeyboard(msg, idlocale, idprodotto, costo);
+            }
+            if (message.contains("%SHOWCARTKB")) {
+                message = message.replace("%SHOWCARTKB", "");
+                BotLogic.setKeyboard(msg, "showcart");
+            }
+            if (message.contains("%ADDRESS")) {
+                String address = Utility.getAddress(ChatID);
+                message = message.replace("%ADDRESS", address);
+            }
+            if (message.contains("%SURNAME")) {
+                String surname = Utility.getSurname(ChatID);
+                message = message.replace("%SURNAME", surname);
             }
             send(msg.setText(message.trim()).enableMarkdown(true));
         }

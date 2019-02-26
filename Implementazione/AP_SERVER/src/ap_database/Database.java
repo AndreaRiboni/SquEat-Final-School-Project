@@ -111,11 +111,21 @@ public class Database {
     }
     
     public String[] getFirstRow(ResultSet res){
-        return stringify(res).get(0);
+        try {
+            res.next();
+            int col = res.getMetaData().getColumnCount();
+            StringBuilder row = new StringBuilder();
+            for(int i = 0; i < col; i++) row.append(res.getString(i+1)).append("%%%");
+            return row.toString().split("%%%");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return null;
     }
     
     public String getIdFattorinoFromLocale(String id){
-        return getFirstRow(select("select IdCliente from Fattorini where IdLocale = "+id))[0];
+        System.out.println(id);
+        return getFirstRow(select("select IDCliente from Fattorini where IDLocale = "+id))[0];
     }
     
     public void close(){

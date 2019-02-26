@@ -36,6 +36,7 @@ public class ServerProcess extends Thread {
      * @param client Socket relativo alla richiesta da eseguire
      */
     public ServerProcess(Socket client) {
+        System.out.println("Client connesso");
         this.client = client;
         db = new Database();
         try {
@@ -52,6 +53,7 @@ public class ServerProcess extends Thread {
     public void run() {
         try {
             String msg = in.readLine();
+            System.out.println("Received: " + msg);
             process(msg);
         } catch (Exception e) {
             e.printStackTrace();
@@ -197,6 +199,12 @@ public class ServerProcess extends Thread {
                 case 47:
                     getNomeProdotto(msg);
                     break;
+                case 49:
+                    svotaCarrello(msg);
+                    break;
+                case 50:
+                    returnUserValue(msg);
+                    break;
                 default:
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
@@ -228,12 +236,16 @@ public class ServerProcess extends Thread {
         boolean[] esito = {true, true, true, true};
         if (!Checker.isMailValid(msg[1]) || !Checker.isMailUnique(db, msg[1])) {
             esito[0] = false;
+            System.out.println("mail non valida");
         } else if (Checker.hasWhitespaces(msg[2])) {
             esito[1] = false;
+            System.out.println("psw non valida");
         } else if (!Checker.isPhoneNumberValid(msg[5]) || !Checker.isPhoneNumberUnique(db, msg[5])) {
             esito[2] = false;
+            System.out.println("telefono non valido");
         } else if (!Checker.isAddressValid(msg[6])) {
             esito[3] = false;
+            System.out.println("indirizzo non valido");
         }
         if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
@@ -299,6 +311,7 @@ public class ServerProcess extends Thread {
         //msg[1] = idcliente, msg[2] = carrello
         //carrello: idlocale, idprodotto, costo
         String IdCliente = msg[1];
+        String indirizzo = msg[3];
         boolean esito = true;
         //esiste?
         if (db.userIdExists(IdCliente)) {
@@ -316,7 +329,8 @@ public class ServerProcess extends Thread {
                         + "Timestamp,"
                         + "Costo,"
                         + "Stato,"
-                        + "IDFattorino) values (" + IdCliente + ", " + carrello[i] + ", " + carrello[i + 1] + ", '" + timestamp + "', " + carrello[i + 2] + ", 0, " + IdFattorino + ")");
+                        + "IDFattorino,"
+                        + "Indirizzo) values (" + IdCliente + ", " + carrello[i] + ", " + carrello[i + 1] + ", '" + timestamp + "', " + carrello[i + 2] + ", 0, " + IdFattorino + ", '" + indirizzo + "')");
                 if (val <= 0) {
                     esito = false;
                 }
@@ -374,7 +388,7 @@ public class ServerProcess extends Thread {
 
     private void getProdottiComprati(String[] msg) {
         //msg1 = idcliente
-        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino from Ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino, Ordine.Indirizzo from Ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
         StringBuilder response = new StringBuilder();
         for (String[] row : table) {
             int index = 0;
@@ -549,6 +563,15 @@ public class ServerProcess extends Thread {
         ResultSet res = db.select("select Nome from Prodotto where ID = " + msg[1]);
         res.first();
         send("48;" + res.getString(1));
+    }
+
+    private void svotaCarrello(String[] msg) {
+        db.update("update Telegram set carrello = null where IDChat = " + msg[1]);
+        send("44;idc");
+    }
+
+    private void returnUserValue(String[] msg) {
+        send("51;" + db.stringify(db.select("select " + getUserValue(msg[2]) + " from Utente where ID = " + msg[1])).get(0)[0]);
     }
 
 }

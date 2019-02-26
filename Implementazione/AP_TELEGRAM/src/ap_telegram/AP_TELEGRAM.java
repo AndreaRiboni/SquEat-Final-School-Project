@@ -25,8 +25,7 @@ public class AP_TELEGRAM {
         Squeat bot = new Squeat();
 
         try {
-            botsApi.registerBot(bot); //VERIFICA CHE CHI MANDA LE POSIZIONI ABBIA UN ACCOUNT. 
-            //CARERLLO: SVUOTA || COMPRA (KEYBOARD)
+            botsApi.registerBot(bot); //ORDINI EFFETTUATI
         } catch (Exception e) {
             e.printStackTrace();
         }

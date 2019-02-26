@@ -55,6 +55,25 @@ public class BotLogic {
                     case "logout":
                         //svuoto carrello
                         ClientConnector.request("43;" + mittente);
+                        //imposto lo stato a 0
+                        System.out.println(ClientConnector.request("36;" + mittente + ";0"));
+                        break;
+                    case "purchase":
+                        String IDCliente = Utility.getIDCliente(mittente);
+                        String carrello = Utility.getCart(mittente);
+                        if (carrello.contains("vuoto")) {
+                            throw new Exception("il carrello è vuoto.");
+                        }
+                        //stato acquisto
+                        String address = Utility.getTelegramAddress(mittente);
+                        System.out.println("ESITO  ACQ: " + ClientConnector.request("11;" + IDCliente + ";" + carrello + ";" + address));
+                        ClientConnector.request("36;" + mittente + ";21");
+                        System.out.println("ESITO CART: " + ClientConnector.request("49;" + mittente));
+                        break;
+                    case "unsetcart":
+                        ClientConnector.request("49;" + mittente);
+                        //torno alla home
+                        System.out.println(ClientConnector.request("36;" + mittente + ";11"));
                         break;
                 }
             }
@@ -194,7 +213,7 @@ public class BotLogic {
                     //ottengo il carrello
                     String cart = Utility.getCart(ChatID);
                     if (!cart.toLowerCase().contains("vuoto")) {
-                        return Utility.getCartMessages(cart).split("END");
+                        return new String[]{Utility.getCartMessages(cart)};
                     } else {
                         return getMessages("emptycart");
                     }
@@ -220,6 +239,11 @@ public class BotLogic {
                             return getMessages("notvalidprod");
                         }
                     }
+                    return getMessages("unknown");
+                case "21":
+                    //torno alla home
+                    ClientConnector.request("36;" + ChatID + ";11");
+                    return concat(getMessages("purchased"),  getMessages("homepage"));
                 default:
                     return getMessages("unknown");
             }
@@ -234,6 +258,8 @@ public class BotLogic {
         //attendo la ricezione di un ristorante
         SendMessage error = new SendMessage(mittente, "Non ci sono ristoranti nella tua zona.");
         try {
+            //salvo l'indirizzo nel db
+            ClientConnector.request("40;" + mittente + ";3;" + lat + ", " + lon);
             String[] restaurants = popFirstElement(ClientConnector.request("5;" + lat + ", " + lon).split(";"));
             if (restaurants.length > 3) {
                 //vado alla ricezione di ristoranti
@@ -318,6 +344,7 @@ public class BotLogic {
         try {
             return ConfigurationLoader.getNodeValue(NodeName).split("END");
         } catch (Exception e) {
+            e.printStackTrace();
             return new String[]{"Errore #1"};
         }
     }
@@ -412,6 +439,17 @@ public class BotLogic {
                 buttons2.add(row2);
                 buttons2.add(row3);
                 keyboard.setKeyboard(buttons2);
+                sender.setReplyMarkup(keyboard);
+                break;
+            case "showcart": //COMPRA TUTTO || SVUOTA
+                List<List<InlineKeyboardButton>> buttons3 = new ArrayList<>();
+                List<InlineKeyboardButton> row4 = new ArrayList<>();
+                List<InlineKeyboardButton> row5 = new ArrayList<>();
+                row4.add(new InlineKeyboardButton().setText("Acquista").setCallbackData("purchase"));
+                row5.add(new InlineKeyboardButton().setText("Svuota").setCallbackData("unsetcart"));
+                buttons3.add(row4);
+                buttons3.add(row5);
+                keyboard.setKeyboard(buttons3);
                 sender.setReplyMarkup(keyboard);
                 break;
         }

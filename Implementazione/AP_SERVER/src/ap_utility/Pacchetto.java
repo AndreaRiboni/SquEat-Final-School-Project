@@ -12,12 +12,13 @@ public class Pacchetto {
     //l'array contiene il numero di parametri che ogni messaggio deve avere, secondo il protocollo di comunicazione prestabilito.
     //si utilizzi il codice del messaggio come index.
     //es: PARAM_NUM[0] ritorna il numero di parametri che deve avere la richiesta con codice 000, ovvero 2.
-    private final static int[] PARAM_NUM = {
+    private final static int[] PARAM_NUM = {//21+1
         2, 2, 7, 5, -1, 1, 4, 1, 5, -1,
-        -1, 2, 1, 2, -1, -1, 5, -1, -1, 4,
-        1, 7, 1, 6, -1, -1, -1, -1, -1, 1,
+        -1, 3, 1, 2, -1, -1, 5, -1, -1, 4,
+        1, 8, 1, 6, -1, -1, -1, -1, -1, 1,
         1, 3, 2, 1, 1, 1, 2, 2, 1, 1,
-        3, 2, 1, 1, 1, 2, 1, 1, 1
+        3, 2, 1, 1, 1, 2, 1, 1, 1, 1,
+        2, 1
     };
 
     /**
