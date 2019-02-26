@@ -7,6 +7,7 @@ package servlet;
 
 import ap_utility.ClientConnector;
 import ap_utility.Pacchetto;
+import ap_utility.ServerException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -21,8 +22,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author saponaro.andrea
  */
-@WebServlet(name = "getaddress", urlPatterns = {"/getaddress"})
-public class getaddress extends HttpServlet {
+@WebServlet(name = "getrestaurant", urlPatterns = {"/getrestaurant"})
+public class getrestaurant extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +42,10 @@ public class getaddress extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet getaddress</title>");
+            out.println("<title>Servlet getrestaurant</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet getaddress at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet getrestaurant at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,17 +78,12 @@ public class getaddress extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            String[] places = Pacchetto.estrai(ClientConnector.request("5;" + ClientConnector.request("29;" + request.getParameter("address")).split(";")[1]));
-            String[] restaurants = new String[places.length / 4];
-            int in = 0;
-            for (int i = 1; i < places.length; i += 4) {
-                restaurants[in] = places[i]+";"+places[i+1]+";"+places[i+2]+";"+places[i+3];
-                in++;
-            }
-            request.setAttribute("elenco", restaurants);
-            request.setAttribute("ss", "ciao");
-            request.getRequestDispatcher("elenco.jsp").forward(request, response);
-        } catch (Exception ex) {
+            String p = request.getParameter("ID");
+            String o = ClientConnector.request("7;" + request.getParameter("ID"));
+            String[] data = Pacchetto.estrai(ClientConnector.request("7;" + request.getParameter("ID")));
+            System.out.println(data);
+            request.getRequestDispatcher("restaurant.jsp").forward(request, response);
+        } catch (ServerException ex) {
             ex.printStackTrace();
         }
     }

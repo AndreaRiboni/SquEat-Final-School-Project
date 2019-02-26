@@ -13,27 +13,15 @@
     </head>
     <body>
         <h2>Elenco Locali</h2>
-        <%
-            String[] list = request.getParameter("elenco");
-            for (int i = 0; i < request.getParameter("elenco").length(); i++) {
-                
-            }
-            String[] authors = request.getParameterValues("R");
-            if (authors != null) {
-        %>
-        <h3>You have selected author(s):</h3>
-        <ul>
-            <%
-                for (int i = 0; i < authors.length; ++i) {
-            %>
-            <li><%= authors[i]%></li>
-                <%
-                    }
-                %>
-        </ul>
-        <a href="<%= request.getRequestURI()%>">BACK</a>
-        <%
-            }
-        %>
+            <%for (String place : (String[]) request.getAttribute("elenco")) {
+                    String[] data = place.split(";");
+                    out.println("<form action='getrestaurant' method='post'>");
+                    out.println("Nome: " + data[0] + "<br>");
+                    out.println(data[1] + "<br>");
+                    out.println("Recensione: " + data[2] + "<br>");
+                    out.println("<input name='ID' type='number' value="+data[3]+" hidden>");
+                    out.println("<input type='submit' value='RICHIEDI INFO'><br><br>");
+                    out.println("</form>");
+            }%>
     </body>
 </html>
