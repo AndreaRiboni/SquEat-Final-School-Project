@@ -10,8 +10,6 @@ import ap_utility.Pacchetto;
 import ap_utility.ServerException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -78,10 +76,8 @@ public class getrestaurant extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            String p = request.getParameter("ID");
-            String o = ClientConnector.request("7;" + request.getParameter("ID"));
             String[] data = Pacchetto.estrai(ClientConnector.request("7;" + request.getParameter("ID")));
-            System.out.println(data);
+            request.setAttribute("info", data);;
             request.getRequestDispatcher("restaurant.jsp").forward(request, response);
         } catch (ServerException ex) {
             ex.printStackTrace();

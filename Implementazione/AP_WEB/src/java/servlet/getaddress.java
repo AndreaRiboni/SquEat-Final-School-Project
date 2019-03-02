@@ -9,8 +9,6 @@ import ap_utility.ClientConnector;
 import ap_utility.Pacchetto;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -77,6 +75,8 @@ public class getaddress extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            String s = request.getParameter("address");
+            String t = ClientConnector.request("29;" + request.getParameter("address")).split(";")[1];
             String[] places = Pacchetto.estrai(ClientConnector.request("5;" + ClientConnector.request("29;" + request.getParameter("address")).split(";")[1]));
             String[] restaurants = new String[places.length / 4];
             int in = 0;
@@ -85,7 +85,6 @@ public class getaddress extends HttpServlet {
                 in++;
             }
             request.setAttribute("elenco", restaurants);
-            request.setAttribute("ss", "ciao");
             request.getRequestDispatcher("elenco.jsp").forward(request, response);
         } catch (Exception ex) {
             ex.printStackTrace();
