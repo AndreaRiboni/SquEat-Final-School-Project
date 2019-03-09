@@ -116,7 +116,7 @@ public class Squeat extends TelegramLongPollingBot {
                 BotLogic.setKeyboard(msg, "showcart");
             }
             if (message.contains("%ADDRESS")) {
-                String address = Utility.getAddress(ChatID);
+                String address = Utility.getTelegramAddress(ChatID);
                 message = message.replace("%ADDRESS", address);
             }
             if (message.contains("%SURNAME")) {

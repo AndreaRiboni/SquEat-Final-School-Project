@@ -15,8 +15,6 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Thread utilizzato per gestire le richieste
@@ -29,6 +27,7 @@ public class ServerProcess extends Thread {
     private BufferedReader in;
     private PrintWriter out;
     private Database db;
+    private org.apache.log4j.Logger log;
 
     /**
      * Costruttore
@@ -36,6 +35,7 @@ public class ServerProcess extends Thread {
      * @param client Socket relativo alla richiesta da eseguire
      */
     public ServerProcess(Socket client) {
+        log = AP_SERVER.log;
         System.out.println("Client connesso");
         this.client = client;
         db = new Database();
@@ -43,32 +43,34 @@ public class ServerProcess extends Thread {
             in = new BufferedReader(new InputStreamReader(client.getInputStream()));
             out = new PrintWriter(client.getOutputStream(), true);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e);
         }
     }
 
     /**
      * Processa una singola richiesta
      */
+    @Override
     public void run() {
         try {
             String msg = in.readLine();
-            System.out.println("Received: " + msg);
+            log.info("ricevuto: " + msg);
             process(msg);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e);
         } finally {
             try {
                 client.close();
                 db.close();
-                System.out.println("Chiusura connessioni terminata");
+                log.debug("chiusura connessioni terminata: " + client);
             } catch (IOException ex) {
-                System.out.println("Impossibile chiudere il canale di comunicazione");
+                log.error("impossibile chiudere i canali di comunicazione");
             }
         }
     }
 
     private void send(String msg) {
+        log.info("invio di un messaggio: "+msg);
         out.println(msg);
     }
 
@@ -89,34 +91,19 @@ public class ServerProcess extends Thread {
                 case 0:
                     login(msg);
                     break;
-                case 1:
-                    //richiesta SC
-                    break;
                 case 2:
                     register(msg);
-                    break;
-                case 3:
-                    //richiesta alla servlet
                     break;
                 case 4:
                     break;
                 case 5:
                     inviaLocali(msg);
                     break;
-                case 6:
-                    //richiesta sc
-                    break;
                 case 7:
                     inviaInfoLocale(msg);
                     break;
-                case 8:
-                    //richiesta sc
-                    break;
                 case 11:
                     acquista(msg);
-                    break;
-                case 12:
-                    //richiesta sc
                     break;
                 case 13:
                     recensici(msg);
@@ -124,14 +111,8 @@ public class ServerProcess extends Thread {
                 case 14:
                     track(msg);
                     break;
-                case 15:
-                    //richiesta sc
-                    break;
                 case 16:
                     aggiungiLocale(msg);
-                    break;
-                case 17:
-                    //richiesta sc
                     break;
                 case 19:
                     aggiungiNuovoProdMenu(msg);
@@ -139,23 +120,14 @@ public class ServerProcess extends Thread {
                 case 20:
                     getProdottiComprati(msg);
                     break;
-                case 21:
-                    //richiesta sc
-                    break;
                 case 22:
                     getOrdiniRicevuti(msg);
-                    break;
-                case 23:
-                    //richiesta sc
                     break;
                 case 24:
                     aggiungiPost(msg);
                     break;
                 case 25:
                     getFeed(msg);
-                    break;
-                case 26:
-                    //richiesta sc
                     break;
                 case 27:
                     aggiungiCommento(msg);
@@ -206,6 +178,7 @@ public class ServerProcess extends Thread {
                     returnUserValue(msg);
                     break;
                 default:
+                    log.warn("ricevuto un messaggio sconosciuto: " + msg[0]);
                     throw new ServerException("Tipo di messaggio non riconosciuto. Codice messaggio: " + msg[0]);
             }
         } catch (NumberFormatException e) {
@@ -236,16 +209,13 @@ public class ServerProcess extends Thread {
         boolean[] esito = {true, true, true, true};
         if (!Checker.isMailValid(msg[1]) || !Checker.isMailUnique(db, msg[1])) {
             esito[0] = false;
-            System.out.println("mail non valida");
-        } else if (Checker.hasWhitespaces(msg[2])) {
-            esito[1] = false;
-            System.out.println("psw non valida");
+            log.warn("mail non valida");
         } else if (!Checker.isPhoneNumberValid(msg[5]) || !Checker.isPhoneNumberUnique(db, msg[5])) {
             esito[2] = false;
-            System.out.println("telefono non valido");
+            log.warn("cellulare non valido");
         } else if (!Checker.isAddressValid(msg[6])) {
             esito[3] = false;
-            System.out.println("indirizzo non valido");
+            log.warn("cellulare non valido");
         }
         if (esito[0] && esito[1] && esito[2] && esito[3]) {
             if (db.register(msg)) {
@@ -302,7 +272,7 @@ public class ServerProcess extends Thread {
             send(Pacchetto.incapsula(8, nome, indirizzo, punteggio + "", cellulare, prodotti.toString()));
         } catch (ServerException ex) {
             send("8;null;null;null;null;null");
-            Logger.getLogger(ServerProcess.class.getName()).log(Level.SEVERE, null, ex);
+            log.error(ex);
         }
 
     }
@@ -337,7 +307,6 @@ public class ServerProcess extends Thread {
             }
             send("44;" + esito);
         } else {
-            System.out.println("L'ID cliente non esiste");
             send("44;false");
         }
 
@@ -366,12 +335,11 @@ public class ServerProcess extends Thread {
                 }
             }
         } catch (ServerException ex) {
-            System.out.println("Impossibile aggiungere il locale");
+            log.warn("impossibile aggiungere un locale: " + ex);
             try {
                 send(Pacchetto.incapsula(44, "false"));
             } catch (ServerException ex1) {
             }
-
         }
     }
 
@@ -388,7 +356,7 @@ public class ServerProcess extends Thread {
 
     private void getProdottiComprati(String[] msg) {
         //msg1 = idcliente
-        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino, Ordine.Indirizzo from Ordine, locale where locale.ID = ordine.IDLocale and IDCliente = " + msg[1]));
+        ArrayList<String[]> table = db.stringify(db.select("SELECT IDOrdine, Nome, IDLocale, IDProdotto, Timestamp, Costo, IDFattorino, Ordine.Indirizzo from Ordine, Locale where Locale.ID = Ordine.IDLocale and IDCliente = " + msg[1] + " order by IDOrdine DESC LIMIT 10"));
         StringBuilder response = new StringBuilder();
         for (String[] row : table) {
             int index = 0;
@@ -404,7 +372,11 @@ public class ServerProcess extends Thread {
             }
         }
         String risp = response.toString();
+        try{
         send("21;" + risp.substring(0, risp.length() - 1));
+        } catch (Exception e){
+            send("21;null");
+        }
     }
 
     private void getOrdiniRicevuti(String[] msg) {

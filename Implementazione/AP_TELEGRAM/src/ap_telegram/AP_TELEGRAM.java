@@ -25,7 +25,7 @@ public class AP_TELEGRAM {
         Squeat bot = new Squeat();
 
         try {
-            botsApi.registerBot(bot); //ORDINI EFFETTUATI
+            botsApi.registerBot(bot);
         } catch (Exception e) {
             e.printStackTrace();
         }

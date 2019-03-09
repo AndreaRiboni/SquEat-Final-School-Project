@@ -1,0 +1,1509 @@
+2019-03-03 19:48:06 INFO  AP_SERVER:58 - Server attivo
+2019-03-03 19:48:23 INFO  AP_SERVER:67 - Connesso: Socket[addr=/0:0:0:0:0:0:0:1,port=52275,localport=60240]
+2019-03-03 19:48:36 ERROR AP_SERVER:60 - ap_server.ServerException: è stato riscontrato un errore con il seguente pacchetto: 18;10;12;12;13;13;
+2019-03-03 19:48:47 INFO  AP_SERVER:67 - Connesso: Socket[addr=/0:0:0:0:0:0:0:1,port=52295,localport=60240]
+2019-03-03 19:48:53 INFO  AP_SERVER:73 - invio di un messaggio: 1;false;null
+2019-03-03 19:49:46 INFO  AP_SERVER:58 - Server attivo
+2019-03-03 19:49:51 INFO  AP_SERVER:67 - Connesso: Socket[addr=/0:0:0:0:0:0:0:1,port=52348,localport=60240]
+2019-03-03 19:50:00 INFO  AP_SERVER:73 - invio di un messaggio: 1;true;1
+2019-03-08 18:01:42 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:03:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=57756,localport=60240]
+2019-03-08 18:03:07 INFO  AP_SERVER:57 - ricevuto: 20;1
+2019-03-08 18:03:07 ERROR AP_SERVER:66 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'areaprogetto.locale' doesn't exist
+2019-03-08 18:03:07 WARN  AP_SERVER:43 - si è cercato di effettuare operazioni su un resultset vuoto
+2019-03-08 18:03:07 ERROR AP_SERVER:60 - java.lang.NullPointerException
+2019-03-08 18:04:41 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:04:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=57830,localport=60240]
+2019-03-08 18:04:44 INFO  AP_SERVER:57 - ricevuto: 20;1
+2019-03-08 18:04:44 ERROR AP_SERVER:60 - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+2019-03-08 18:05:32 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:05:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=57869,localport=60240]
+2019-03-08 18:05:36 INFO  AP_SERVER:57 - ricevuto: 20;1
+2019-03-08 18:05:46 ERROR AP_SERVER:60 - java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+2019-03-08 18:07:29 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:07:36 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:07:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=57963,localport=60240]
+2019-03-08 18:07:38 INFO  AP_SERVER:57 - ricevuto: 11;1;2-1-4-1-2-5
+2019-03-08 18:07:38 ERROR AP_SERVER:60 - java.lang.ArrayIndexOutOfBoundsException: 3
+2019-03-08 18:07:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=57965,localport=60240]
+2019-03-08 18:07:39 INFO  AP_SERVER:57 - ricevuto: 20;1
+2019-03-08 18:07:39 INFO  AP_SERVER:73 - invio di un messaggio: 21;null
+2019-03-08 18:10:57 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:11:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=58141,localport=60240]
+2019-03-08 18:11:00 INFO  AP_SERVER:57 - ricevuto: 11;1;2-1-4-1-2-5
+2019-03-08 18:11:00 ERROR AP_SERVER:60 - java.lang.ArrayIndexOutOfBoundsException: 3
+2019-03-08 18:11:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=58144,localport=60240]
+2019-03-08 18:11:01 INFO  AP_SERVER:57 - ricevuto: 20;1
+2019-03-08 18:11:01 INFO  AP_SERVER:73 - invio di un messaggio: 21;null
+2019-03-08 18:11:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=58168,localport=60240]
+2019-03-08 18:11:33 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-08 18:11:33 INFO  AP_SERVER:73 - invio di un messaggio: 21;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-08 18:14:14 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:14:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=58351,localport=60240]
+2019-03-08 18:14:18 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-08 18:14:18 ERROR AP_SERVER:66 - com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'by IDOrdine DESC LIMIT 10' at line 1
+2019-03-08 18:14:18 WARN  AP_SERVER:43 - si è cercato di effettuare operazioni su un resultset vuoto
+2019-03-08 18:14:18 ERROR AP_SERVER:60 - java.lang.NullPointerException
+2019-03-08 18:14:41 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:14:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=58373,localport=60240]
+2019-03-08 18:14:45 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-08 18:14:46 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-08 18:28:44 INFO  AP_SERVER:57 - Server attivo
+2019-03-08 18:34:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=59397,localport=60240]
+2019-03-08 18:34:02 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-08 18:34:02 INFO  AP_SERVER:73 - invio di un messaggio: 35;11
+2019-03-08 18:35:26 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=59469,localport=60240]
+2019-03-08 18:35:26 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-08 18:35:26 INFO  AP_SERVER:73 - invio di un messaggio: 35;11
+2019-03-09 15:41:49 INFO  AP_SERVER:57 - Server attivo
+2019-03-09 15:43:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65331,localport=60240]
+2019-03-09 15:43:51 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 15:43:51 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:43:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65333,localport=60240]
+2019-03-09 15:43:51 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:43:51 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 15:43:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65343,localport=60240]
+2019-03-09 15:43:57 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:43:57 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:43:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65345,localport=60240]
+2019-03-09 15:43:57 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526184, 9.38829
+2019-03-09 15:43:57 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:43:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65347,localport=60240]
+2019-03-09 15:43:57 INFO  AP_SERVER:57 - ricevuto: 5;45.526184, 9.38829
+2019-03-09 15:44:00 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 15:44:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65352,localport=60240]
+2019-03-09 15:44:00 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 15:44:00 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65355,localport=60240]
+2019-03-09 15:44:00 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.53, 9.40
+2019-03-09 15:44:01 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.1 km
+2019-03-09 15:44:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65358,localport=60240]
+2019-03-09 15:44:01 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.519113, 9.360389
+2019-03-09 15:44:01 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.9 km
+2019-03-09 15:44:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65361,localport=60240]
+2019-03-09 15:44:03 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 15:44:03 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65363,localport=60240]
+2019-03-09 15:44:04 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:04 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 15:44:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65366,localport=60240]
+2019-03-09 15:44:04 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:04 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65368,localport=60240]
+2019-03-09 15:44:04 INFO  AP_SERVER:57 - ricevuto: 7;8
+2019-03-09 15:44:05 INFO  AP_SERVER:73 - invio di un messaggio: 8;Pizzeria San Marco;45.519113, 9.360389;0;3343301876;2#5#Pizza con Porcini#Pomodoro, Mozzarella, Funghi-3#5#Pizza Siciliana#Pomodoro, Fior di Latte, Melanzane, Cotto-4#5#Pizza Tonno e Cipolla#Pomodoro, Mozzarella, Tonno, Cipolla-5#5#Pizza Diavola#Pomodoro, Mozzarella, Salame Piccante-6#5#Pizza Ortolana#Pomodoro, Mozzarella, Peperoni, Melanzane, Funghi-7#5#Pizza Sfiziosa#Pomodoro, Mozzarella, Porcini, Patate-8#5#Pizza Marinara#Aglio, Pomodoro, Origano-9#5#Pizza 4 Stagioni#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Melanzane-10#5#Pizza Capricciosa#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Olive-11#5#Pizza 4 Formaggi#Panna, Mozzarella, Gorgonzola, Emmenthal, Provolone-12#5#Pizza Americana#Pomodoro, Mozzarella, Patatine, Wurstel-13#5#Pizza Romana#Pomodoro, Mozzarella, Acciughe-14#5#Pizza Napoli#Pomodoro, Aglio, Alici, Acciughe-15#5#Acqua Naturale#Acqua Naturale-16#5#Acqua Frizzante#Acqua Frizzante-17#5#Coca Cola#Coca Cola-18#5#Sprite#Sprite-19#5#Fanta#Fanta-20#5#Birra#Birra-21#5#Pizza Cotto e Funghi#Pomodoro, Mozzarella, Cotto, Funghi-22#5#Pizza con Carciofi#Pomodoro, Mozzarella, Carciofi-23#5#Pizza Genovese#Pomodoro, Mozzarella, Olive Nere-24#5#Pizza Rucola#Pomodoro, Mozzarella, Rucola-25#5#Pizza Salsiccia#Pomodoro, Mozzarella, Salsiccia-26#5#Pizza Leggera#Pomodoro Fresco, Mozzarella-27#5#Pizza Pugliese#Pomodoro, Mozzarella, Tonno, Cipolla-28#5#Pizza Prosciutto e Panna#Pomodoro, Mozzarella, Cotto, Panna-29#5#Pizza alla Bufala di Paolo#Pomodoro, Mozzarella di Bufala, Patatine fritte
+2019-03-09 15:44:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65371,localport=60240]
+2019-03-09 15:44:05 INFO  AP_SERVER:57 - ricevuto: 32;45.519113; 9.360389
+2019-03-09 15:44:05 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Donatori di Sangue, 4, 20060 Cassina De' Pecchi MI, Italy
+2019-03-09 15:44:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65376,localport=60240]
+2019-03-09 15:44:10 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:10 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:10 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65379,localport=60240]
+2019-03-09 15:44:10 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:10 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:10 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65381,localport=60240]
+2019-03-09 15:44:10 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:10 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 15:44:10 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65383,localport=60240]
+2019-03-09 15:44:11 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-
+2019-03-09 15:44:11 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65385,localport=60240]
+2019-03-09 15:44:11 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:11 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65388,localport=60240]
+2019-03-09 15:44:11 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:11 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65390,localport=60240]
+2019-03-09 15:44:12 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:12 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-
+2019-03-09 15:44:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65392,localport=60240]
+2019-03-09 15:44:12 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-
+2019-03-09 15:44:12 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65394,localport=60240]
+2019-03-09 15:44:12 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:12 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65396,localport=60240]
+2019-03-09 15:44:13 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:13 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65399,localport=60240]
+2019-03-09 15:44:13 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:13 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-
+2019-03-09 15:44:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65401,localport=60240]
+2019-03-09 15:44:13 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-8-25-5-
+2019-03-09 15:44:13 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65403,localport=60240]
+2019-03-09 15:44:14 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:14 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65405,localport=60240]
+2019-03-09 15:44:14 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:14 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65408,localport=60240]
+2019-03-09 15:44:14 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:14 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-
+2019-03-09 15:44:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65410,localport=60240]
+2019-03-09 15:44:15 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-8-25-5-8-29-5-
+2019-03-09 15:44:15 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65412,localport=60240]
+2019-03-09 15:44:15 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:15 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65414,localport=60240]
+2019-03-09 15:44:15 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:15 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65417,localport=60240]
+2019-03-09 15:44:16 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:16 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-8-29-5-
+2019-03-09 15:44:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65419,localport=60240]
+2019-03-09 15:44:16 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-
+2019-03-09 15:44:16 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65421,localport=60240]
+2019-03-09 15:44:16 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:16 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65423,localport=60240]
+2019-03-09 15:44:17 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:17 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65425,localport=60240]
+2019-03-09 15:44:17 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:17 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-
+2019-03-09 15:44:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65428,localport=60240]
+2019-03-09 15:44:17 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-
+2019-03-09 15:44:17 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65430,localport=60240]
+2019-03-09 15:44:18 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 15:44:18 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65432,localport=60240]
+2019-03-09 15:44:18 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:18 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 15:44:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65434,localport=60240]
+2019-03-09 15:44:18 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:18 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-
+2019-03-09 15:44:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65436,localport=60240]
+2019-03-09 15:44:19 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-8-21-5-
+2019-03-09 15:44:19 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 15:44:19 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65439,localport=60240]
+2019-03-09 15:44:19 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 15:44:19 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:19 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65441,localport=60240]
+2019-03-09 15:44:19 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:19 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 15:44:19 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65443,localport=60240]
+2019-03-09 15:44:20 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:20 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-8-21-5-
+2019-03-09 15:44:20 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65445,localport=60240]
+2019-03-09 15:44:20 INFO  AP_SERVER:57 - ricevuto: 47;27
+2019-03-09 15:44:20 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Pugliese
+2019-03-09 15:44:20 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65448,localport=60240]
+2019-03-09 15:44:20 INFO  AP_SERVER:57 - ricevuto: 47;26
+2019-03-09 15:44:20 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Leggera
+2019-03-09 15:44:20 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65450,localport=60240]
+2019-03-09 15:44:21 INFO  AP_SERVER:57 - ricevuto: 47;25
+2019-03-09 15:44:21 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Salsiccia
+2019-03-09 15:44:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65453,localport=60240]
+2019-03-09 15:44:21 INFO  AP_SERVER:57 - ricevuto: 47;29
+2019-03-09 15:44:21 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza alla Bufala di Paolo
+2019-03-09 15:44:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65455,localport=60240]
+2019-03-09 15:44:21 INFO  AP_SERVER:57 - ricevuto: 47;28
+2019-03-09 15:44:21 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Prosciutto e Panna
+2019-03-09 15:44:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65457,localport=60240]
+2019-03-09 15:44:21 INFO  AP_SERVER:57 - ricevuto: 47;22
+2019-03-09 15:44:21 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza con Carciofi
+2019-03-09 15:44:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65460,localport=60240]
+2019-03-09 15:44:22 INFO  AP_SERVER:57 - ricevuto: 47;21
+2019-03-09 15:44:22 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Cotto e Funghi
+2019-03-09 15:44:24 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65464,localport=60240]
+2019-03-09 15:44:24 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:44:24 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:44:24 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65466,localport=60240]
+2019-03-09 15:44:24 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 15:44:24 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-8-21-5-
+2019-03-09 15:44:24 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65468,localport=60240]
+2019-03-09 15:44:25 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 15:44:25 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 15:44:25 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65471,localport=60240]
+2019-03-09 15:44:25 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 15:44:25 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 15:44:25 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65474,localport=60240]
+2019-03-09 15:44:25 INFO  AP_SERVER:57 - ricevuto: 11;2;8-27-5-8-26-5-8-25-5-8-29-5-8-28-5-8-22-5-8-21-5-;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 15:44:25 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:25 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 15:44:26 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 15:44:26 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65476,localport=60240]
+2019-03-09 15:44:26 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 15:44:26 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:26 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65479,localport=60240]
+2019-03-09 15:44:26 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 15:44:26 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:26 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65481,localport=60240]
+2019-03-09 15:44:27 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:27 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 15:44:27 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65484,localport=60240]
+2019-03-09 15:44:27 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 15:44:27 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:27 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65486,localport=60240]
+2019-03-09 15:44:27 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 15:44:27 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 15:44:27 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65488,localport=60240]
+2019-03-09 15:44:28 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 15:44:28 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 15:44:28 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65491,localport=60240]
+2019-03-09 15:44:28 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:44:28 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:44:28 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65493,localport=60240]
+2019-03-09 15:44:28 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 15:44:28 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 15:44:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65497,localport=60240]
+2019-03-09 15:44:31 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 15:44:31 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:44:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65499,localport=60240]
+2019-03-09 15:44:32 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:44:32 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 15:44:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65501,localport=60240]
+2019-03-09 15:44:32 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:44:32 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:44:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=65504,localport=60240]
+2019-03-09 15:44:32 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 15:44:33 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 15:58:23 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=49954,localport=60240]
+2019-03-09 15:58:23 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 15:58:23 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:58:23 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=49956,localport=60240]
+2019-03-09 15:58:23 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:58:23 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 15:58:23 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=49958,localport=60240]
+2019-03-09 15:58:24 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:58:24 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:58:24 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=49960,localport=60240]
+2019-03-09 15:58:24 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 15:58:24 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 15:59:28 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50009,localport=60240]
+2019-03-09 15:59:28 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 15:59:28 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 15:59:28 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50011,localport=60240]
+2019-03-09 15:59:28 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 15:59:28 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 15:59:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50019,localport=60240]
+2019-03-09 15:59:36 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 15:59:36 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 15:59:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50022,localport=60240]
+2019-03-09 15:59:36 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 15:59:37 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:01:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50106,localport=60240]
+2019-03-09 16:01:15 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:01:15 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:01:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50108,localport=60240]
+2019-03-09 16:01:15 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:01:15 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:01:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50111,localport=60240]
+2019-03-09 16:01:15 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:01:15 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:01:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50113,localport=60240]
+2019-03-09 16:01:15 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:01:16 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:02:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50172,localport=60240]
+2019-03-09 16:02:34 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:02:34 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:02:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50174,localport=60240]
+2019-03-09 16:02:35 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:02:35 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:02:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50176,localport=60240]
+2019-03-09 16:02:35 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:02:35 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:02:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50179,localport=60240]
+2019-03-09 16:02:36 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:02:36 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:02:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50181,localport=60240]
+2019-03-09 16:02:37 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:02:37 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:02:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50184,localport=60240]
+2019-03-09 16:02:37 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:02:37 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:02:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50186,localport=60240]
+2019-03-09 16:02:37 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:02:38 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:03:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50245,localport=60240]
+2019-03-09 16:03:55 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:03:55 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:03:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50247,localport=60240]
+2019-03-09 16:03:55 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:03:55 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:03:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50250,localport=60240]
+2019-03-09 16:03:55 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:03:55 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:03:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50252,localport=60240]
+2019-03-09 16:03:56 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:03:56 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:04:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50300,localport=60240]
+2019-03-09 16:04:30 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:04:30 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:04:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50302,localport=60240]
+2019-03-09 16:04:30 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:04:30 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:04:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50304,localport=60240]
+2019-03-09 16:04:31 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:04:31 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:04:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50307,localport=60240]
+2019-03-09 16:04:31 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:04:31 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:04:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50326,localport=60240]
+2019-03-09 16:04:54 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:04:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:04:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50329,localport=60240]
+2019-03-09 16:04:54 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:04:54 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:04:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50331,localport=60240]
+2019-03-09 16:04:54 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:04:54 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:04:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50333,localport=60240]
+2019-03-09 16:04:55 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:04:55 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:05:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50369,localport=60240]
+2019-03-09 16:05:41 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:05:41 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:05:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50372,localport=60240]
+2019-03-09 16:05:42 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:05:42 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:05:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50374,localport=60240]
+2019-03-09 16:05:42 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:05:42 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:05:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50376,localport=60240]
+2019-03-09 16:05:42 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:05:43 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:05:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50387,localport=60240]
+2019-03-09 16:05:53 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:05:53 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:05:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50389,localport=60240]
+2019-03-09 16:05:53 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:05:54 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:05:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50392,localport=60240]
+2019-03-09 16:05:54 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:05:54 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:05:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50394,localport=60240]
+2019-03-09 16:05:54 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:05:54 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:06:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50438,localport=60240]
+2019-03-09 16:06:52 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:06:52 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:06:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50441,localport=60240]
+2019-03-09 16:06:53 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:06:53 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:06:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50443,localport=60240]
+2019-03-09 16:06:53 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:06:53 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:06:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50445,localport=60240]
+2019-03-09 16:06:53 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:06:53 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:08:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50524,localport=60240]
+2019-03-09 16:08:31 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:08:31 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:08:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50526,localport=60240]
+2019-03-09 16:08:31 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:08:31 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:08:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50532,localport=60240]
+2019-03-09 16:08:37 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:08:37 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:09:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50556,localport=60240]
+2019-03-09 16:09:08 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:09:08 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:09:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50558,localport=60240]
+2019-03-09 16:09:09 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:09:09 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:09:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50566,localport=60240]
+2019-03-09 16:09:16 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:09:16 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:09:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50570,localport=60240]
+2019-03-09 16:09:18 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:09:19 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:11:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50672,localport=60240]
+2019-03-09 16:11:32 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:11:32 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:11:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50674,localport=60240]
+2019-03-09 16:11:33 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:11:33 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:11:33 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50676,localport=60240]
+2019-03-09 16:11:33 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:11:33 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:11:33 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50678,localport=60240]
+2019-03-09 16:11:33 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:11:34 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:12:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50741,localport=60240]
+2019-03-09 16:12:53 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:12:53 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:12:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50744,localport=60240]
+2019-03-09 16:12:53 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:12:53 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:12:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50746,localport=60240]
+2019-03-09 16:12:54 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:12:54 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:12:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50748,localport=60240]
+2019-03-09 16:12:54 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:12:54 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:14:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50811,localport=60240]
+2019-03-09 16:14:14 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:14:14 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:14:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50813,localport=60240]
+2019-03-09 16:14:14 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:14:14 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:14:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50815,localport=60240]
+2019-03-09 16:14:15 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:14:15 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:14:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50818,localport=60240]
+2019-03-09 16:14:15 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:14:15 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:14:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50846,localport=60240]
+2019-03-09 16:14:50 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:14:50 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:14:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50848,localport=60240]
+2019-03-09 16:14:50 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:14:50 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:14:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50853,localport=60240]
+2019-03-09 16:14:55 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:14:55 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:14:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=50856,localport=60240]
+2019-03-09 16:14:55 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:14:56 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:18:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51010,localport=60240]
+2019-03-09 16:18:21 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:18:21 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:21 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51012,localport=60240]
+2019-03-09 16:18:22 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:22 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:18:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51032,localport=60240]
+2019-03-09 16:18:43 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:18:43 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:18:43 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51034,localport=60240]
+2019-03-09 16:18:43 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526184, 9.38829
+2019-03-09 16:18:43 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:18:43 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51036,localport=60240]
+2019-03-09 16:18:44 INFO  AP_SERVER:57 - ricevuto: 5;45.526184, 9.38829
+2019-03-09 16:18:45 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:18:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51041,localport=60240]
+2019-03-09 16:18:46 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:18:46 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:46 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51043,localport=60240]
+2019-03-09 16:18:46 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.53, 9.40
+2019-03-09 16:18:46 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.1 km
+2019-03-09 16:18:46 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51045,localport=60240]
+2019-03-09 16:18:47 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.519113, 9.360389
+2019-03-09 16:18:47 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.9 km
+2019-03-09 16:18:48 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51049,localport=60240]
+2019-03-09 16:18:49 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:18:49 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51051,localport=60240]
+2019-03-09 16:18:49 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:49 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:18:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51053,localport=60240]
+2019-03-09 16:18:49 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:49 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51055,localport=60240]
+2019-03-09 16:18:50 INFO  AP_SERVER:57 - ricevuto: 7;8
+2019-03-09 16:18:50 INFO  AP_SERVER:73 - invio di un messaggio: 8;Pizzeria San Marco;45.519113, 9.360389;0;3343301876;2#5#Pizza con Porcini#Pomodoro, Mozzarella, Funghi-3#5#Pizza Siciliana#Pomodoro, Fior di Latte, Melanzane, Cotto-4#5#Pizza Tonno e Cipolla#Pomodoro, Mozzarella, Tonno, Cipolla-5#5#Pizza Diavola#Pomodoro, Mozzarella, Salame Piccante-6#5#Pizza Ortolana#Pomodoro, Mozzarella, Peperoni, Melanzane, Funghi-7#5#Pizza Sfiziosa#Pomodoro, Mozzarella, Porcini, Patate-8#5#Pizza Marinara#Aglio, Pomodoro, Origano-9#5#Pizza 4 Stagioni#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Melanzane-10#5#Pizza Capricciosa#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Olive-11#5#Pizza 4 Formaggi#Panna, Mozzarella, Gorgonzola, Emmenthal, Provolone-12#5#Pizza Americana#Pomodoro, Mozzarella, Patatine, Wurstel-13#5#Pizza Romana#Pomodoro, Mozzarella, Acciughe-14#5#Pizza Napoli#Pomodoro, Aglio, Alici, Acciughe-15#5#Acqua Naturale#Acqua Naturale-16#5#Acqua Frizzante#Acqua Frizzante-17#5#Coca Cola#Coca Cola-18#5#Sprite#Sprite-19#5#Fanta#Fanta-20#5#Birra#Birra-21#5#Pizza Cotto e Funghi#Pomodoro, Mozzarella, Cotto, Funghi-22#5#Pizza con Carciofi#Pomodoro, Mozzarella, Carciofi-23#5#Pizza Genovese#Pomodoro, Mozzarella, Olive Nere-24#5#Pizza Rucola#Pomodoro, Mozzarella, Rucola-25#5#Pizza Salsiccia#Pomodoro, Mozzarella, Salsiccia-26#5#Pizza Leggera#Pomodoro Fresco, Mozzarella-27#5#Pizza Pugliese#Pomodoro, Mozzarella, Tonno, Cipolla-28#5#Pizza Prosciutto e Panna#Pomodoro, Mozzarella, Cotto, Panna-29#5#Pizza alla Bufala di Paolo#Pomodoro, Mozzarella di Bufala, Patatine fritte
+2019-03-09 16:18:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51058,localport=60240]
+2019-03-09 16:18:51 INFO  AP_SERVER:57 - ricevuto: 32;45.519113; 9.360389
+2019-03-09 16:18:51 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Donatori di Sangue, 4, 20060 Cassina De' Pecchi MI, Italy
+2019-03-09 16:18:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51063,localport=60240]
+2019-03-09 16:18:53 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:53 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51065,localport=60240]
+2019-03-09 16:18:54 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:54 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:18:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51067,localport=60240]
+2019-03-09 16:18:54 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:18:54 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:18:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51069,localport=60240]
+2019-03-09 16:18:54 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-25-5-
+2019-03-09 16:18:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:18:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51072,localport=60240]
+2019-03-09 16:18:55 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:55 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51074,localport=60240]
+2019-03-09 16:18:55 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:55 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:18:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51076,localport=60240]
+2019-03-09 16:18:55 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:18:55 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-
+2019-03-09 16:18:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51078,localport=60240]
+2019-03-09 16:18:56 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-25-5-8-27-5-
+2019-03-09 16:18:56 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:18:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51081,localport=60240]
+2019-03-09 16:18:56 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:56 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51083,localport=60240]
+2019-03-09 16:18:56 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:56 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:18:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51087,localport=60240]
+2019-03-09 16:18:57 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:18:57 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-8-27-5-
+2019-03-09 16:18:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51089,localport=60240]
+2019-03-09 16:18:57 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-25-5-8-27-5-8-26-5-
+2019-03-09 16:18:57 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:18:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51091,localport=60240]
+2019-03-09 16:18:57 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:57 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:57 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51095,localport=60240]
+2019-03-09 16:18:57 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:58 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:18:58 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51097,localport=60240]
+2019-03-09 16:18:58 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:18:58 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-8-27-5-8-26-5-
+2019-03-09 16:18:58 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51099,localport=60240]
+2019-03-09 16:18:58 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-25-5-8-27-5-8-26-5-8-26-5-
+2019-03-09 16:18:58 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:18:58 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51101,localport=60240]
+2019-03-09 16:18:58 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:18:59 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:18:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51103,localport=60240]
+2019-03-09 16:18:59 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:18:59 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:18:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51106,localport=60240]
+2019-03-09 16:18:59 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:18:59 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-8-27-5-8-26-5-8-26-5-
+2019-03-09 16:18:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51108,localport=60240]
+2019-03-09 16:18:59 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;8-25-5-8-27-5-8-26-5-8-26-5-8-25-5-
+2019-03-09 16:18:59 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:19:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51110,localport=60240]
+2019-03-09 16:19:00 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:19:00 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:19:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51112,localport=60240]
+2019-03-09 16:19:00 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:19:00 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:19:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51115,localport=60240]
+2019-03-09 16:19:00 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:19:00 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-8-27-5-8-26-5-8-26-5-8-25-5-
+2019-03-09 16:19:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51117,localport=60240]
+2019-03-09 16:19:01 INFO  AP_SERVER:57 - ricevuto: 47;25
+2019-03-09 16:19:01 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Salsiccia
+2019-03-09 16:19:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51119,localport=60240]
+2019-03-09 16:19:01 INFO  AP_SERVER:57 - ricevuto: 47;27
+2019-03-09 16:19:01 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Pugliese
+2019-03-09 16:19:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51121,localport=60240]
+2019-03-09 16:19:01 INFO  AP_SERVER:57 - ricevuto: 47;26
+2019-03-09 16:19:01 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Leggera
+2019-03-09 16:19:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51123,localport=60240]
+2019-03-09 16:19:02 INFO  AP_SERVER:57 - ricevuto: 47;26
+2019-03-09 16:19:02 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Leggera
+2019-03-09 16:19:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51126,localport=60240]
+2019-03-09 16:19:02 INFO  AP_SERVER:57 - ricevuto: 47;25
+2019-03-09 16:19:02 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Salsiccia
+2019-03-09 16:19:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51129,localport=60240]
+2019-03-09 16:19:04 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:19:04 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:19:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51131,localport=60240]
+2019-03-09 16:19:04 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:19:04 INFO  AP_SERVER:73 - invio di un messaggio: 42;8-25-5-8-27-5-8-26-5-8-26-5-8-25-5-
+2019-03-09 16:19:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51133,localport=60240]
+2019-03-09 16:19:04 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:19:04 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:19:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51135,localport=60240]
+2019-03-09 16:19:05 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:05 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51139,localport=60240]
+2019-03-09 16:19:05 INFO  AP_SERVER:57 - ricevuto: 11;2;8-25-5-8-27-5-8-26-5-8-26-5-8-25-5-;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:05 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:19:06 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:19:06 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:19:06 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:19:06 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:19:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 16:19:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51141,localport=60240]
+2019-03-09 16:19:06 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:19:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:19:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51144,localport=60240]
+2019-03-09 16:19:07 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:19:07 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:19:07 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51146,localport=60240]
+2019-03-09 16:19:07 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:19:07 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:19:07 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51148,localport=60240]
+2019-03-09 16:19:07 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:19:07 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:19:07 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51150,localport=60240]
+2019-03-09 16:19:08 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:19:08 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:19:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51153,localport=60240]
+2019-03-09 16:19:08 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:08 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51155,localport=60240]
+2019-03-09 16:19:08 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:19:08 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:19:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51157,localport=60240]
+2019-03-09 16:19:09 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:19:09 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:19:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51164,localport=60240]
+2019-03-09 16:19:15 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:19:15 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:19:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51166,localport=60240]
+2019-03-09 16:19:15 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:19:15 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:19:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51169,localport=60240]
+2019-03-09 16:19:15 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:19:15 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:19:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51171,localport=60240]
+2019-03-09 16:19:16 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:19:16 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:19:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51173,localport=60240]
+2019-03-09 16:19:16 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:17 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51176,localport=60240]
+2019-03-09 16:19:17 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:17 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51179,localport=60240]
+2019-03-09 16:19:17 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:17 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:17 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51181,localport=60240]
+2019-03-09 16:19:18 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:18 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51183,localport=60240]
+2019-03-09 16:19:18 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:18 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51185,localport=60240]
+2019-03-09 16:19:18 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:18 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:18 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51188,localport=60240]
+2019-03-09 16:19:19 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:19 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:19 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51190,localport=60240]
+2019-03-09 16:19:19 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:19 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:19 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51192,localport=60240]
+2019-03-09 16:19:19 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:20 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:19:20 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51194,localport=60240]
+2019-03-09 16:19:20 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:19:20 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:27:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51574,localport=60240]
+2019-03-09 16:27:53 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:27:53 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:27:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51576,localport=60240]
+2019-03-09 16:27:53 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:27:53 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:28:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51584,localport=60240]
+2019-03-09 16:28:03 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:28:03 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:28:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51588,localport=60240]
+2019-03-09 16:28:03 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526184, 9.38829
+2019-03-09 16:28:03 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:28:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51591,localport=60240]
+2019-03-09 16:28:04 INFO  AP_SERVER:57 - ricevuto: 5;45.526184, 9.38829
+2019-03-09 16:28:05 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:28:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51595,localport=60240]
+2019-03-09 16:28:06 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:28:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51597,localport=60240]
+2019-03-09 16:28:06 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.53, 9.40
+2019-03-09 16:28:06 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.1 km
+2019-03-09 16:28:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51600,localport=60240]
+2019-03-09 16:28:07 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.519113, 9.360389
+2019-03-09 16:28:07 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.9 km
+2019-03-09 16:28:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51604,localport=60240]
+2019-03-09 16:28:08 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:28:08 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51606,localport=60240]
+2019-03-09 16:28:09 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:09 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:28:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51608,localport=60240]
+2019-03-09 16:28:09 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:09 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51611,localport=60240]
+2019-03-09 16:28:09 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:28:09 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:28:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51614,localport=60240]
+2019-03-09 16:28:10 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:28:10 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51633,localport=60240]
+2019-03-09 16:28:31 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:28:31 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51637,localport=60240]
+2019-03-09 16:28:31 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:31 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:28:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51639,localport=60240]
+2019-03-09 16:28:31 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:31 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51641,localport=60240]
+2019-03-09 16:28:31 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:28:32 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:28:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51643,localport=60240]
+2019-03-09 16:28:32 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:28:32 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51648,localport=60240]
+2019-03-09 16:28:32 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:28:33 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:33 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51650,localport=60240]
+2019-03-09 16:28:33 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:33 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:28:33 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51652,localport=60240]
+2019-03-09 16:28:33 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:33 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:33 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51654,localport=60240]
+2019-03-09 16:28:33 INFO  AP_SERVER:57 - ricevuto: 7;8
+2019-03-09 16:28:34 INFO  AP_SERVER:73 - invio di un messaggio: 8;Pizzeria San Marco;45.519113, 9.360389;0;3343301876;2#5#Pizza con Porcini#Pomodoro, Mozzarella, Funghi-3#5#Pizza Siciliana#Pomodoro, Fior di Latte, Melanzane, Cotto-4#5#Pizza Tonno e Cipolla#Pomodoro, Mozzarella, Tonno, Cipolla-5#5#Pizza Diavola#Pomodoro, Mozzarella, Salame Piccante-6#5#Pizza Ortolana#Pomodoro, Mozzarella, Peperoni, Melanzane, Funghi-7#5#Pizza Sfiziosa#Pomodoro, Mozzarella, Porcini, Patate-8#5#Pizza Marinara#Aglio, Pomodoro, Origano-9#5#Pizza 4 Stagioni#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Melanzane-10#5#Pizza Capricciosa#Pomodoro, Mozzarella, Cotto, Funghi, Salame, Olive-11#5#Pizza 4 Formaggi#Panna, Mozzarella, Gorgonzola, Emmenthal, Provolone-12#5#Pizza Americana#Pomodoro, Mozzarella, Patatine, Wurstel-13#5#Pizza Romana#Pomodoro, Mozzarella, Acciughe-14#5#Pizza Napoli#Pomodoro, Aglio, Alici, Acciughe-15#5#Acqua Naturale#Acqua Naturale-16#5#Acqua Frizzante#Acqua Frizzante-17#5#Coca Cola#Coca Cola-18#5#Sprite#Sprite-19#5#Fanta#Fanta-20#5#Birra#Birra-21#5#Pizza Cotto e Funghi#Pomodoro, Mozzarella, Cotto, Funghi-22#5#Pizza con Carciofi#Pomodoro, Mozzarella, Carciofi-23#5#Pizza Genovese#Pomodoro, Mozzarella, Olive Nere-24#5#Pizza Rucola#Pomodoro, Mozzarella, Rucola-25#5#Pizza Salsiccia#Pomodoro, Mozzarella, Salsiccia-26#5#Pizza Leggera#Pomodoro Fresco, Mozzarella-27#5#Pizza Pugliese#Pomodoro, Mozzarella, Tonno, Cipolla-28#5#Pizza Prosciutto e Panna#Pomodoro, Mozzarella, Cotto, Panna-29#5#Pizza alla Bufala di Paolo#Pomodoro, Mozzarella di Bufala, Patatine fritte
+2019-03-09 16:28:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51657,localport=60240]
+2019-03-09 16:28:35 INFO  AP_SERVER:57 - ricevuto: 32;45.519113; 9.360389
+2019-03-09 16:28:35 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Donatori di Sangue, 4, 20060 Cassina De' Pecchi MI, Italy
+2019-03-09 16:28:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51661,localport=60240]
+2019-03-09 16:28:37 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:28:37 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51663,localport=60240]
+2019-03-09 16:28:37 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:37 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:28:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51665,localport=60240]
+2019-03-09 16:28:38 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51667,localport=60240]
+2019-03-09 16:28:38 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:28:38 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:28:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51670,localport=60240]
+2019-03-09 16:28:38 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:28:38 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:43 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51676,localport=60240]
+2019-03-09 16:28:43 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:43 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:43 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51678,localport=60240]
+2019-03-09 16:28:44 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:44 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:28:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51681,localport=60240]
+2019-03-09 16:28:44 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:28:44 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:28:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51683,localport=60240]
+2019-03-09 16:28:44 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-
+2019-03-09 16:28:44 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:28:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51685,localport=60240]
+2019-03-09 16:28:45 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:45 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51687,localport=60240]
+2019-03-09 16:28:45 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:45 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:28:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51689,localport=60240]
+2019-03-09 16:28:45 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:28:45 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:28:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51692,localport=60240]
+2019-03-09 16:28:46 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-2-1-4-
+2019-03-09 16:28:46 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:28:46 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51694,localport=60240]
+2019-03-09 16:28:46 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:28:46 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:46 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51696,localport=60240]
+2019-03-09 16:28:47 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:47 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:28:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51698,localport=60240]
+2019-03-09 16:28:47 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:28:47 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-2-1-4-
+2019-03-09 16:28:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51701,localport=60240]
+2019-03-09 16:28:47 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-2-1-4-2-1-4-
+2019-03-09 16:28:47 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:28:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51704,localport=60240]
+2019-03-09 16:28:49 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:28:49 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51706,localport=60240]
+2019-03-09 16:28:49 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:49 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:28:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51708,localport=60240]
+2019-03-09 16:28:49 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:28:50 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-2-1-4-2-1-4-
+2019-03-09 16:28:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51710,localport=60240]
+2019-03-09 16:28:50 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:28:50 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:28:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51713,localport=60240]
+2019-03-09 16:28:50 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:28:50 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:28:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51715,localport=60240]
+2019-03-09 16:28:50 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:28:50 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:28:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51720,localport=60240]
+2019-03-09 16:28:53 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:28:53 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:28:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51722,localport=60240]
+2019-03-09 16:28:53 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:28:53 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-2-1-4-2-1-4-
+2019-03-09 16:28:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51725,localport=60240]
+2019-03-09 16:28:53 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:28:53 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:28:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51727,localport=60240]
+2019-03-09 16:28:53 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:28:54 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51730,localport=60240]
+2019-03-09 16:28:54 INFO  AP_SERVER:57 - ricevuto: 11;2;2-1-4-2-1-4-2-1-4-;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:54 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:28:54 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:28:54 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:28:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 16:28:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51732,localport=60240]
+2019-03-09 16:28:54 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:28:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51735,localport=60240]
+2019-03-09 16:28:55 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:28:55 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51737,localport=60240]
+2019-03-09 16:28:55 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:28:55 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:28:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51739,localport=60240]
+2019-03-09 16:28:55 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:28:55 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51741,localport=60240]
+2019-03-09 16:28:56 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:28:56 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:28:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51744,localport=60240]
+2019-03-09 16:28:56 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:28:56 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:28:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51746,localport=60240]
+2019-03-09 16:28:56 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:28:56 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:28:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51748,localport=60240]
+2019-03-09 16:28:57 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:28:57 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:28:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51752,localport=60240]
+2019-03-09 16:28:59 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:28:59 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:28:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51754,localport=60240]
+2019-03-09 16:28:59 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:29:00 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:29:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51756,localport=60240]
+2019-03-09 16:29:00 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:29:00 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:29:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51758,localport=60240]
+2019-03-09 16:29:00 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:29:00 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:29:00 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51761,localport=60240]
+2019-03-09 16:29:01 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:01 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51763,localport=60240]
+2019-03-09 16:29:01 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:01 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51765,localport=60240]
+2019-03-09 16:29:01 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:01 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51767,localport=60240]
+2019-03-09 16:29:02 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:02 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51770,localport=60240]
+2019-03-09 16:29:02 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:02 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51772,localport=60240]
+2019-03-09 16:29:02 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:02 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51774,localport=60240]
+2019-03-09 16:29:03 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:03 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51776,localport=60240]
+2019-03-09 16:29:03 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:03 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51778,localport=60240]
+2019-03-09 16:29:03 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:03 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:29:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51781,localport=60240]
+2019-03-09 16:29:04 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:29:04 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:30:39 INFO  AP_SERVER:57 - Server attivo
+2019-03-09 16:30:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51857,localport=60240]
+2019-03-09 16:30:44 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:30:44 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:30:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51860,localport=60240]
+2019-03-09 16:30:45 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:30:45 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:30:58 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51874,localport=60240]
+2019-03-09 16:30:59 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:30:59 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:30:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51876,localport=60240]
+2019-03-09 16:30:59 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526184, 9.38829
+2019-03-09 16:30:59 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:30:59 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51878,localport=60240]
+2019-03-09 16:30:59 INFO  AP_SERVER:57 - ricevuto: 5;45.526184, 9.38829
+2019-03-09 16:31:01 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:31:01 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51883,localport=60240]
+2019-03-09 16:31:02 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:31:02 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51885,localport=60240]
+2019-03-09 16:31:02 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.53, 9.40
+2019-03-09 16:31:02 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.1 km
+2019-03-09 16:31:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51887,localport=60240]
+2019-03-09 16:31:02 INFO  AP_SERVER:57 - ricevuto: 45;45.526184, 9.38829;45.519113, 9.360389
+2019-03-09 16:31:02 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.9 km
+2019-03-09 16:31:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51892,localport=60240]
+2019-03-09 16:31:06 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:31:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51894,localport=60240]
+2019-03-09 16:31:06 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:31:06 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:31:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51896,localport=60240]
+2019-03-09 16:31:06 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:31:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51898,localport=60240]
+2019-03-09 16:31:07 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:31:07 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:31:07 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51901,localport=60240]
+2019-03-09 16:31:07 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:31:07 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:31:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51908,localport=60240]
+2019-03-09 16:31:12 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:31:12 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51910,localport=60240]
+2019-03-09 16:31:12 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:31:12 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:31:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51912,localport=60240]
+2019-03-09 16:31:13 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:31:13 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:31:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51915,localport=60240]
+2019-03-09 16:31:13 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-
+2019-03-09 16:31:13 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:31:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51929,localport=60240]
+2019-03-09 16:31:31 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:31:31 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51932,localport=60240]
+2019-03-09 16:31:31 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:31:31 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:31:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51934,localport=60240]
+2019-03-09 16:31:31 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:31:31 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:31:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51936,localport=60240]
+2019-03-09 16:31:32 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:31:32 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:31:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51940,localport=60240]
+2019-03-09 16:31:35 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:31:35 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:31:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51943,localport=60240]
+2019-03-09 16:31:36 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:31:36 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:31:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51945,localport=60240]
+2019-03-09 16:31:36 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:31:36 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:31:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51947,localport=60240]
+2019-03-09 16:31:36 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:31:37 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:31:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51950,localport=60240]
+2019-03-09 16:31:37 INFO  AP_SERVER:57 - ricevuto: 11;2;2-1-4-;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:31:37 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:31:37 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 16:31:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51953,localport=60240]
+2019-03-09 16:31:37 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:31:37 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51955,localport=60240]
+2019-03-09 16:31:38 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:31:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51957,localport=60240]
+2019-03-09 16:31:38 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:31:38 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:31:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51959,localport=60240]
+2019-03-09 16:31:38 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:31:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:31:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51963,localport=60240]
+2019-03-09 16:31:39 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:31:39 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:31:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51966,localport=60240]
+2019-03-09 16:31:39 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:31:39 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:31:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51968,localport=60240]
+2019-03-09 16:31:39 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:31:39 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:31:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=51970,localport=60240]
+2019-03-09 16:31:40 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:31:40 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:35:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52126,localport=60240]
+2019-03-09 16:35:12 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:35:12 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52128,localport=60240]
+2019-03-09 16:35:12 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:12 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:35:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52131,localport=60240]
+2019-03-09 16:35:12 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:35:12 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:35:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52133,localport=60240]
+2019-03-09 16:35:13 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:35:13 INFO  AP_SERVER:73 - invio di un messaggio: 21;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829;2;Pizzeria San Marco;8;Pizza Prosciutto e Panna;08-03-2019 18:10;5;2;45.526184, 9.38829;1;Pizzeria San Marco;8;Pizza alla Bufala di Paolo;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:35:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52135,localport=60240]
+2019-03-09 16:35:13 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:13 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52139,localport=60240]
+2019-03-09 16:35:14 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:14 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52141,localport=60240]
+2019-03-09 16:35:14 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:14 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:14 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52143,localport=60240]
+2019-03-09 16:35:14 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:15 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52145,localport=60240]
+2019-03-09 16:35:15 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:15 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52148,localport=60240]
+2019-03-09 16:35:15 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:15 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52150,localport=60240]
+2019-03-09 16:35:16 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:16 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52152,localport=60240]
+2019-03-09 16:35:16 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:16 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52154,localport=60240]
+2019-03-09 16:35:16 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:16 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52156,localport=60240]
+2019-03-09 16:35:17 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:17 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:29 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52167,localport=60240]
+2019-03-09 16:35:29 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:35:29 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:29 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52169,localport=60240]
+2019-03-09 16:35:30 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:30 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:35:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52171,localport=60240]
+2019-03-09 16:35:30 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:35:30 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:35:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52174,localport=60240]
+2019-03-09 16:35:30 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-
+2019-03-09 16:35:30 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:35:31 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52176,localport=60240]
+2019-03-09 16:35:32 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:35:32 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52179,localport=60240]
+2019-03-09 16:35:32 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:32 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:35:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52181,localport=60240]
+2019-03-09 16:35:32 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:35:32 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:35:32 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52183,localport=60240]
+2019-03-09 16:35:32 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:35:32 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:35:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52186,localport=60240]
+2019-03-09 16:35:34 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:35:34 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:35:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52188,localport=60240]
+2019-03-09 16:35:34 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:35:34 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:35:34 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52191,localport=60240]
+2019-03-09 16:35:35 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:35:35 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:35:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52193,localport=60240]
+2019-03-09 16:35:35 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:35 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52196,localport=60240]
+2019-03-09 16:35:35 INFO  AP_SERVER:57 - ricevuto: 11;2;2-1-4-;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:35 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:35:35 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 16:35:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52198,localport=60240]
+2019-03-09 16:35:36 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:35:36 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52200,localport=60240]
+2019-03-09 16:35:36 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:35:36 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52203,localport=60240]
+2019-03-09 16:35:36 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:36 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:35:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52205,localport=60240]
+2019-03-09 16:35:37 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:35:37 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52207,localport=60240]
+2019-03-09 16:35:37 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:35:37 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526184, 9.38829
+2019-03-09 16:35:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52209,localport=60240]
+2019-03-09 16:35:38 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:35:38 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:35:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52213,localport=60240]
+2019-03-09 16:35:38 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:35:38 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:35:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52215,localport=60240]
+2019-03-09 16:35:38 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:35:38 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:35:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52224,localport=60240]
+2019-03-09 16:35:45 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:35:45 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:35:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52226,localport=60240]
+2019-03-09 16:35:46 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:35:46 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:35:46 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52228,localport=60240]
+2019-03-09 16:35:46 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:46 INFO  AP_SERVER:73 - invio di un messaggio: 35;11
+2019-03-09 16:35:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52231,localport=60240]
+2019-03-09 16:35:48 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:35:48 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:48 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52233,localport=60240]
+2019-03-09 16:35:48 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:48 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:35:48 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52235,localport=60240]
+2019-03-09 16:35:48 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:35:48 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:35:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52239,localport=60240]
+2019-03-09 16:35:51 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:35:51 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:35:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52242,localport=60240]
+2019-03-09 16:35:51 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:35:51 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:36:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52251,localport=60240]
+2019-03-09 16:36:03 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:36:03 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:36:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52256,localport=60240]
+2019-03-09 16:36:03 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526127, 9.386752
+2019-03-09 16:36:03 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:36:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52258,localport=60240]
+2019-03-09 16:36:04 INFO  AP_SERVER:57 - ricevuto: 5;45.526127, 9.386752
+2019-03-09 16:36:05 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:36:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52262,localport=60240]
+2019-03-09 16:36:06 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:36:06 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52264,localport=60240]
+2019-03-09 16:36:06 INFO  AP_SERVER:57 - ricevuto: 45;45.526127, 9.386752;45.53, 9.40
+2019-03-09 16:36:06 INFO  AP_SERVER:73 - invio di un messaggio: 46;1.9 km
+2019-03-09 16:36:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52267,localport=60240]
+2019-03-09 16:36:06 INFO  AP_SERVER:57 - ricevuto: 45;45.526127, 9.386752;45.519113, 9.360389
+2019-03-09 16:36:06 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.7 km
+2019-03-09 16:36:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52270,localport=60240]
+2019-03-09 16:36:08 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:36:08 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52272,localport=60240]
+2019-03-09 16:36:08 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:36:08 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:36:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52274,localport=60240]
+2019-03-09 16:36:09 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:36:09 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52276,localport=60240]
+2019-03-09 16:36:09 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:36:09 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:36:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52279,localport=60240]
+2019-03-09 16:36:09 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:36:09 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:36:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52283,localport=60240]
+2019-03-09 16:36:11 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:36:11 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52285,localport=60240]
+2019-03-09 16:36:11 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:36:11 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:36:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52287,localport=60240]
+2019-03-09 16:36:12 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:36:12 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:36:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52289,localport=60240]
+2019-03-09 16:36:12 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-
+2019-03-09 16:36:12 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:36:15 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52294,localport=60240]
+2019-03-09 16:36:16 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:36:16 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52296,localport=60240]
+2019-03-09 16:36:16 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:36:16 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:36:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52299,localport=60240]
+2019-03-09 16:36:16 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:36:16 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:36:16 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52301,localport=60240]
+2019-03-09 16:36:17 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:36:17 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:36:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52318,localport=60240]
+2019-03-09 16:36:36 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:36:36 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:36:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52320,localport=60240]
+2019-03-09 16:36:37 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:36:37 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:36:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52322,localport=60240]
+2019-03-09 16:36:37 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:36:37 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526127, 9.386752
+2019-03-09 16:36:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52324,localport=60240]
+2019-03-09 16:36:37 INFO  AP_SERVER:57 - ricevuto: 32;45.526127;9.386752
+2019-03-09 16:36:38 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:36:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52328,localport=60240]
+2019-03-09 16:36:38 INFO  AP_SERVER:57 - ricevuto: 11;2;2-1-4-;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:36:38 ERROR AP_SERVER:109 - com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'Indirizzo' at row 1
+2019-03-09 16:36:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;false
+2019-03-09 16:36:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52330,localport=60240]
+2019-03-09 16:36:38 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:36:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52332,localport=60240]
+2019-03-09 16:36:38 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:36:39 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52334,localport=60240]
+2019-03-09 16:36:39 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:36:39 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:36:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52336,localport=60240]
+2019-03-09 16:36:39 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:36:39 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:36:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52340,localport=60240]
+2019-03-09 16:36:40 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:36:40 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526127, 9.386752
+2019-03-09 16:36:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52342,localport=60240]
+2019-03-09 16:36:40 INFO  AP_SERVER:57 - ricevuto: 32;45.526127;9.386752
+2019-03-09 16:36:40 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:36:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52344,localport=60240]
+2019-03-09 16:36:40 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:36:40 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:36:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52346,localport=60240]
+2019-03-09 16:36:41 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:36:41 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:39:22 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52467,localport=60240]
+2019-03-09 16:39:22 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:39:22 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:39:22 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52469,localport=60240]
+2019-03-09 16:39:23 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:39:23 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:39:23 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52471,localport=60240]
+2019-03-09 16:39:23 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:39:23 INFO  AP_SERVER:73 - invio di un messaggio: 35;11
+2019-03-09 16:39:24 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52475,localport=60240]
+2019-03-09 16:39:25 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:39:25 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:39:25 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52477,localport=60240]
+2019-03-09 16:39:25 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:39:25 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:39:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52487,localport=60240]
+2019-03-09 16:39:35 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:39:35 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:39:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52489,localport=60240]
+2019-03-09 16:39:36 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526127, 9.386752
+2019-03-09 16:39:36 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:39:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52491,localport=60240]
+2019-03-09 16:39:36 INFO  AP_SERVER:57 - ricevuto: 5;45.526127, 9.386752
+2019-03-09 16:39:38 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:40:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52575,localport=60240]
+2019-03-09 16:40:47 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:40:47 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:40:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52578,localport=60240]
+2019-03-09 16:40:48 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526127, 9.386752
+2019-03-09 16:40:48 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:40:48 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52580,localport=60240]
+2019-03-09 16:40:48 INFO  AP_SERVER:57 - ricevuto: 5;45.526127, 9.386752
+2019-03-09 16:40:49 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:41:24 INFO  AP_SERVER:57 - Server attivo
+2019-03-09 16:41:29 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52616,localport=60240]
+2019-03-09 16:41:30 INFO  AP_SERVER:57 - ricevuto: 36;102638984;12
+2019-03-09 16:41:30 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:30 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52619,localport=60240]
+2019-03-09 16:41:30 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:30 INFO  AP_SERVER:73 - invio di un messaggio: 35;12
+2019-03-09 16:41:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52626,localport=60240]
+2019-03-09 16:41:35 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:41:35 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:41:35 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52629,localport=60240]
+2019-03-09 16:41:36 INFO  AP_SERVER:57 - ricevuto: 40;102638984;3;45.526127, 9.386752
+2019-03-09 16:41:36 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:41:36 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52631,localport=60240]
+2019-03-09 16:41:36 INFO  AP_SERVER:57 - ricevuto: 5;45.526127, 9.386752
+2019-03-09 16:41:37 INFO  AP_SERVER:73 - invio di un messaggio: 006;Da Ribo;45.53, 9.40;Nessuna Recensione;2;Pizzeria San Marco;45.519113, 9.360389;Nessuna Recensione;8
+2019-03-09 16:41:37 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52635,localport=60240]
+2019-03-09 16:41:38 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:41:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52637,localport=60240]
+2019-03-09 16:41:38 INFO  AP_SERVER:57 - ricevuto: 45;45.526127, 9.386752;45.53, 9.40
+2019-03-09 16:41:38 INFO  AP_SERVER:73 - invio di un messaggio: 46;1.9 km
+2019-03-09 16:41:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52639,localport=60240]
+2019-03-09 16:41:38 INFO  AP_SERVER:57 - ricevuto: 45;45.526127, 9.386752;45.519113, 9.360389
+2019-03-09 16:41:38 INFO  AP_SERVER:73 - invio di un messaggio: 46;2.7 km
+2019-03-09 16:41:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52643,localport=60240]
+2019-03-09 16:41:40 INFO  AP_SERVER:57 - ricevuto: 36;102638984;19
+2019-03-09 16:41:40 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52646,localport=60240]
+2019-03-09 16:41:41 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:41 INFO  AP_SERVER:73 - invio di un messaggio: 35;19
+2019-03-09 16:41:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52648,localport=60240]
+2019-03-09 16:41:41 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:41:41 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52650,localport=60240]
+2019-03-09 16:41:41 INFO  AP_SERVER:57 - ricevuto: 7;2
+2019-03-09 16:41:41 INFO  AP_SERVER:73 - invio di un messaggio: 8;Da Ribo;45.53, 9.40;0;3453797411;1#4#Pizza Margherita#Pomodoro, Mozzarella
+2019-03-09 16:41:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52653,localport=60240]
+2019-03-09 16:41:42 INFO  AP_SERVER:57 - ricevuto: 32;45.53; 9.40
+2019-03-09 16:41:42 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Raffaello Sanzio, 14, 20064 Gorgonzola MI, Italy
+2019-03-09 16:41:44 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52658,localport=60240]
+2019-03-09 16:41:45 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:41:45 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52660,localport=60240]
+2019-03-09 16:41:45 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:45 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:41:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52662,localport=60240]
+2019-03-09 16:41:45 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:41:45 INFO  AP_SERVER:73 - invio di un messaggio: 42;null
+2019-03-09 16:41:45 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52664,localport=60240]
+2019-03-09 16:41:46 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-
+2019-03-09 16:41:46 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:41:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52667,localport=60240]
+2019-03-09 16:41:47 INFO  AP_SERVER:57 - ricevuto: 36;102638984;20
+2019-03-09 16:41:47 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52669,localport=60240]
+2019-03-09 16:41:47 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:47 INFO  AP_SERVER:73 - invio di un messaggio: 35;20
+2019-03-09 16:41:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52671,localport=60240]
+2019-03-09 16:41:47 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:41:47 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-
+2019-03-09 16:41:47 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52674,localport=60240]
+2019-03-09 16:41:48 INFO  AP_SERVER:57 - ricevuto: 40;102638984;7;2-1-4-2-1-4-
+2019-03-09 16:41:48 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:41:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52676,localport=60240]
+2019-03-09 16:41:49 INFO  AP_SERVER:57 - ricevuto: 36;102638984;14
+2019-03-09 16:41:49 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52679,localport=60240]
+2019-03-09 16:41:49 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:49 INFO  AP_SERVER:73 - invio di un messaggio: 35;14
+2019-03-09 16:41:49 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52681,localport=60240]
+2019-03-09 16:41:49 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:41:50 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-2-1-4-
+2019-03-09 16:41:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52683,localport=60240]
+2019-03-09 16:41:50 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:41:50 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:41:50 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52685,localport=60240]
+2019-03-09 16:41:50 INFO  AP_SERVER:57 - ricevuto: 47;1
+2019-03-09 16:41:50 INFO  AP_SERVER:73 - invio di un messaggio: 48;Pizza Margherita
+2019-03-09 16:41:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52688,localport=60240]
+2019-03-09 16:41:51 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:41:51 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:41:51 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52690,localport=60240]
+2019-03-09 16:41:52 INFO  AP_SERVER:57 - ricevuto: 41;102638984;7
+2019-03-09 16:41:52 INFO  AP_SERVER:73 - invio di un messaggio: 42;2-1-4-2-1-4-
+2019-03-09 16:41:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52692,localport=60240]
+2019-03-09 16:41:52 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:41:52 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526127, 9.386752
+2019-03-09 16:41:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52695,localport=60240]
+2019-03-09 16:41:52 INFO  AP_SERVER:57 - ricevuto: 32;45.526127;9.386752
+2019-03-09 16:41:52 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:41:52 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52698,localport=60240]
+2019-03-09 16:41:53 INFO  AP_SERVER:57 - ricevuto: 29;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:41:53 INFO  AP_SERVER:73 - invio di un messaggio: 30;45.524593, 9.385669
+2019-03-09 16:41:53 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52700,localport=60240]
+2019-03-09 16:41:53 INFO  AP_SERVER:57 - ricevuto: 11;2;2-1-4-2-1-4-;45.524593, 9.385669
+2019-03-09 16:41:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;true
+2019-03-09 16:41:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52703,localport=60240]
+2019-03-09 16:41:54 INFO  AP_SERVER:57 - ricevuto: 36;102638984;21
+2019-03-09 16:41:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52705,localport=60240]
+2019-03-09 16:41:54 INFO  AP_SERVER:57 - ricevuto: 49;102638984
+2019-03-09 16:41:54 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:54 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52707,localport=60240]
+2019-03-09 16:41:54 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:41:55 INFO  AP_SERVER:73 - invio di un messaggio: 35;21
+2019-03-09 16:41:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52709,localport=60240]
+2019-03-09 16:41:55 INFO  AP_SERVER:57 - ricevuto: 36;102638984;11
+2019-03-09 16:41:55 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:41:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52712,localport=60240]
+2019-03-09 16:41:55 INFO  AP_SERVER:57 - ricevuto: 41;102638984;3
+2019-03-09 16:41:55 INFO  AP_SERVER:73 - invio di un messaggio: 42;45.526127, 9.386752
+2019-03-09 16:41:55 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52714,localport=60240]
+2019-03-09 16:41:55 INFO  AP_SERVER:57 - ricevuto: 32;45.526127;9.386752
+2019-03-09 16:41:56 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Enrico Berlinguer, 1, 20064 Gorgonzola MI, Italy
+2019-03-09 16:41:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52716,localport=60240]
+2019-03-09 16:41:56 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:41:56 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:41:56 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52718,localport=60240]
+2019-03-09 16:41:56 INFO  AP_SERVER:57 - ricevuto: 50;2;1
+2019-03-09 16:41:56 INFO  AP_SERVER:73 - invio di un messaggio: 51;rino
+2019-03-09 16:42:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52724,localport=60240]
+2019-03-09 16:42:02 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:42:02 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:42:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52726,localport=60240]
+2019-03-09 16:42:02 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:42:02 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:42:02 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52729,localport=60240]
+2019-03-09 16:42:03 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:42:03 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:42:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52731,localport=60240]
+2019-03-09 16:42:03 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:42:03 INFO  AP_SERVER:73 - invio di un messaggio: 21;12;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;11;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:42:03 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52733,localport=60240]
+2019-03-09 16:42:04 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:42:04 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52736,localport=60240]
+2019-03-09 16:42:04 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:42:04 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:04 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52739,localport=60240]
+2019-03-09 16:42:04 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:05 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52741,localport=60240]
+2019-03-09 16:42:05 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:05 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52743,localport=60240]
+2019-03-09 16:42:05 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:05 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:05 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52745,localport=60240]
+2019-03-09 16:42:06 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:06 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52748,localport=60240]
+2019-03-09 16:42:06 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:06 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52752,localport=60240]
+2019-03-09 16:42:06 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:06 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:06 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52754,localport=60240]
+2019-03-09 16:42:07 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:07 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:42:07 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52756,localport=60240]
+2019-03-09 16:42:07 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:42:07 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52898,localport=60240]
+2019-03-09 16:45:08 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:45:08 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:45:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52900,localport=60240]
+2019-03-09 16:45:08 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:45:08 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:45:08 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52902,localport=60240]
+2019-03-09 16:45:09 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:45:09 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:45:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52904,localport=60240]
+2019-03-09 16:45:09 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:45:09 INFO  AP_SERVER:73 - invio di un messaggio: 21;12;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;11;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:45:09 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52909,localport=60240]
+2019-03-09 16:45:09 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:45:10 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:10 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52912,localport=60240]
+2019-03-09 16:45:10 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:45:10 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:10 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52914,localport=60240]
+2019-03-09 16:45:10 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:11 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52917,localport=60240]
+2019-03-09 16:45:11 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:11 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52919,localport=60240]
+2019-03-09 16:45:11 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:11 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:11 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52921,localport=60240]
+2019-03-09 16:45:12 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:12 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52923,localport=60240]
+2019-03-09 16:45:12 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:12 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52926,localport=60240]
+2019-03-09 16:45:12 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:12 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:12 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52928,localport=60240]
+2019-03-09 16:45:13 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:13 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:45:13 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=52930,localport=60240]
+2019-03-09 16:45:13 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:45:13 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53000,localport=60240]
+2019-03-09 16:46:38 INFO  AP_SERVER:57 - ricevuto: 36;102638984;15
+2019-03-09 16:46:38 INFO  AP_SERVER:73 - invio di un messaggio: 44;idc
+2019-03-09 16:46:38 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53002,localport=60240]
+2019-03-09 16:46:39 INFO  AP_SERVER:57 - ricevuto: 34;102638984
+2019-03-09 16:46:39 INFO  AP_SERVER:73 - invio di un messaggio: 35;15
+2019-03-09 16:46:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53004,localport=60240]
+2019-03-09 16:46:39 INFO  AP_SERVER:57 - ricevuto: 41;102638984;6
+2019-03-09 16:46:39 INFO  AP_SERVER:73 - invio di un messaggio: 42;2
+2019-03-09 16:46:39 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53006,localport=60240]
+2019-03-09 16:46:39 INFO  AP_SERVER:57 - ricevuto: 20;2
+2019-03-09 16:46:40 INFO  AP_SERVER:73 - invio di un messaggio: 21;12;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;11;Da Ribo;2;Pizza Margherita;09-03-2019 16:41;4;2;45.524593, 9.385669;10;Pizzeria San Marco;8;Pizza con Porcini;08-03-2019 18:10;5;2;45.526184, 9.38829;9;Pizzeria San Marco;8;Pizza Ortolana;08-03-2019 18:10;5;2;45.526184, 9.38829;8;Pizzeria San Marco;8;Pizza Capricciosa;08-03-2019 18:10;5;2;45.526184, 9.38829;7;Pizzeria San Marco;8;Pizza Napoli;08-03-2019 18:10;5;2;45.526184, 9.38829;6;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;5;Pizzeria San Marco;8;Coca Cola;08-03-2019 18:10;5;2;45.526184, 9.38829;4;Pizzeria San Marco;8;Pizza Cotto e Funghi;08-03-2019 18:10;5;2;45.526184, 9.38829;3;Pizzeria San Marco;8;Pizza Salsiccia;08-03-2019 18:10;5;2;45.526184, 9.38829
+2019-03-09 16:46:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53009,localport=60240]
+2019-03-09 16:46:40 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:46:40 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53012,localport=60240]
+2019-03-09 16:46:40 INFO  AP_SERVER:57 - ricevuto: 32;45.524593;9.385669
+2019-03-09 16:46:40 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Frazione Riva, 18, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:40 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53014,localport=60240]
+2019-03-09 16:46:41 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:41 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53017,localport=60240]
+2019-03-09 16:46:41 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:41 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53019,localport=60240]
+2019-03-09 16:46:41 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:41 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:41 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53021,localport=60240]
+2019-03-09 16:46:42 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:42 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53023,localport=60240]
+2019-03-09 16:46:42 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:42 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53027,localport=60240]
+2019-03-09 16:46:42 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:42 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:42 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53030,localport=60240]
+2019-03-09 16:46:43 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:43 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy
+2019-03-09 16:46:43 INFO  AP_SERVER:66 - Connesso: Socket[addr=/127.0.0.1,port=53032,localport=60240]
+2019-03-09 16:46:43 INFO  AP_SERVER:57 - ricevuto: 32;45.526184;9.38829
+2019-03-09 16:46:43 INFO  AP_SERVER:73 - invio di un messaggio: 33;Via Massara, 4C, 20064 Gorgonzola MI, Italy

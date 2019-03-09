@@ -9,7 +9,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.IOException;
@@ -24,8 +23,8 @@ import org.xml.sax.SAXException;
  */
 public class ConfigurationLoader {
 
-    private static final String CONFIG_PATH = "AP_SERVER/config.xml";
-//    private static final String CONFIG_PATH = "config.xml";
+//    private static final String CONFIG_PATH = "AP_SERVER/config.xml";
+    private static final String CONFIG_PATH = "config.xml";
     private static File CONFIG_FILE;
 
     private static File getConfigFile() {

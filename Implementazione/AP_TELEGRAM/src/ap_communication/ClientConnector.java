@@ -26,11 +26,11 @@ public class ClientConnector {
         Socket client = new Socket(IP_SERVER, PORT);
         PrintWriter out = new PrintWriter(client.getOutputStream(), true);
         out.println(request);
-        System.out.println("Richiesta inviata");
 //        if (Pacchetto.needResponse(request)) {
-        System.out.println("risposta:");
         BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
-        return br.readLine();
+        String msg = br.readLine();
+        System.out.println("Richiesta inviata.\n  Risposta: "+msg);
+        return msg;
 //        }
 //        return "null";
     }

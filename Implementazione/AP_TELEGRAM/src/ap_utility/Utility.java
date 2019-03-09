@@ -6,6 +6,8 @@
 package ap_utility;
 
 import ap_communication.ClientConnector;
+import ap_telegram.BotLogic;
+import com.vdurmont.emoji.EmojiParser;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -121,9 +123,9 @@ public class Utility {
             //ottengo idcliente
             String IDCliente = getIDCliente(ChatID);
             //ottengo cognome
-            String latlon = ClientConnector.request("50;"+IDCliente+";3").split(";")[1];
+            String latlon = ClientConnector.request("50;" + IDCliente + ";3").split(";")[1];
             String[] formll = formatLatLong(latlon);
-            return ClientConnector.request("32;"+formll[0]+";"+formll[1]).split(";")[1];
+            return ClientConnector.request("32;" + formll[0] + ";" + formll[1]).split(";")[1];
         } catch (Exception ex) {
             return "address_not_available_:(";
         }
@@ -142,7 +144,7 @@ public class Utility {
             //ottengo idcliente
             String IDCliente = getIDCliente(ChatID);
             //ottengo cognome
-            return ClientConnector.request("50;"+IDCliente+";1").split(";")[1];
+            return ClientConnector.request("50;" + IDCliente + ";1").split(";")[1];
         } catch (Exception ex) {
             return "surname_not_available_:(";
         }
@@ -158,9 +160,53 @@ public class Utility {
 
     public static String getTelegramAddress(long mittente) {
         try {
-            return ClientConnector.request("41;"+mittente+";3").split(";")[1];
+            String[] latlon = ClientConnector.request("41;" + mittente + ";3").split(";")[1].split(" ");
+            String lat = latlon[0].replace(",", "");
+            String lon = latlon[1];
+            return ClientConnector.request("32;" + lat + ";" + lon).split(";")[1];
         } catch (Exception ex) {
             return "casa tua";
+        }
+    }
+
+    public static String latLonToAddress(String latlon) {
+        try {
+            String[] geo = formatLatLong(latlon);
+            return ClientConnector.request("32;" + geo[0] + ";" + geo[1]).split(";")[1];
+        } catch (Exception ex) {
+            return "indirizzo sconosciuto";
+        }
+    }
+
+    public static String[] getOrders(String msgx) {
+        //idordine;nome locale; idlocale; nome prod; timestamp; costo; idfatto; indirizzo
+        String[] params = popFirstElement(msgx.split(";"));
+        if (params.length < 7) {
+            return new String[]{"Nessun ordine disponibile"};
+        }
+        StringBuilder msg = new StringBuilder("*Ultimi ordini effettuati:*\n\n");
+        for (int i = 0; i < params.length; i += 8) {
+            msg.append(":star: _ordine n.#").append(params[i]).append("_   -  (").append(params[i+4]).append(")\n");
+            msg.append("  *").append(params[i + 3]).append("* (").append(params[i+5]).append("€)\n");
+            msg.append("  *presso:* ").append(params[i + 1]).append("\n");
+            msg.append("  *consegnato in:* ").append(Utility.latLonToAddress(params[i + 7])).append("\n\n");
+        }
+        return new String[]{EmojiParser.parseToUnicode(msg.toString())};
+    }
+
+    public static String[] popFirstElement(String[] array) {
+        String[] elements = new String[array.length - 1];
+        for (int i = 1; i < array.length; i++) {
+            elements[i - 1] = array[i];
+        }
+        return elements;
+    }
+
+    public static String addressToLatLon(String address) {
+        try {
+            return ClientConnector.request("29;"+address).split(";")[1];
+        } catch (Exception ex) {
+            return "0, 0";
         }
     }
 }

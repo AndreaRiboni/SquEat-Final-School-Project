@@ -61,11 +61,12 @@ public class BotLogic {
                     case "purchase":
                         String IDCliente = Utility.getIDCliente(mittente);
                         String carrello = Utility.getCart(mittente);
+                        System.out.println("carrello da comprare: "+carrello);
                         if (carrello.contains("vuoto")) {
                             throw new Exception("il carrello è vuoto.");
                         }
                         //stato acquisto
-                        String address = Utility.getTelegramAddress(mittente);
+                        String address = Utility.addressToLatLon(Utility.getTelegramAddress(mittente));
                         System.out.println("ESITO  ACQ: " + ClientConnector.request("11;" + IDCliente + ";" + carrello + ";" + address));
                         ClientConnector.request("36;" + mittente + ";21");
                         System.out.println("ESITO CART: " + ClientConnector.request("49;" + mittente));
@@ -217,6 +218,10 @@ public class BotLogic {
                     } else {
                         return getMessages("emptycart");
                     }
+                case "15": //show orders
+                    String info = "20;" + Utility.getIDCliente(ChatID);
+                    String msgx = ClientConnector.request(info);
+                    return Utility.getOrders(msgx);
                 case "19": //ho ricevuto la richiesta di informazioni su un ristorante
                     if (message.startsWith("ASKDATA")) {
                         //vado al livello successivo
@@ -243,7 +248,7 @@ public class BotLogic {
                 case "21":
                     //torno alla home
                     ClientConnector.request("36;" + ChatID + ";11");
-                    return concat(getMessages("purchased"),  getMessages("homepage"));
+                    return concat(getMessages("purchased"), getMessages("homepage"));
                 default:
                     return getMessages("unknown");
             }
@@ -260,7 +265,7 @@ public class BotLogic {
         try {
             //salvo l'indirizzo nel db
             ClientConnector.request("40;" + mittente + ";3;" + lat + ", " + lon);
-            String[] restaurants = popFirstElement(ClientConnector.request("5;" + lat + ", " + lon).split(";"));
+            String[] restaurants = Utility.popFirstElement(ClientConnector.request("5;" + lat + ", " + lon).split(";"));
             if (restaurants.length > 3) {
                 //vado alla ricezione di ristoranti
                 ClientConnector.request("36;" + mittente + ";19");
@@ -302,14 +307,6 @@ public class BotLogic {
             ex.printStackTrace();
             return new SendMessage[]{error};
         }
-    }
-
-    private static String[] popFirstElement(String[] array) {
-        String[] elements = new String[array.length - 1];
-        for (int i = 1; i < array.length; i++) {
-            elements[i - 1] = array[i];
-        }
-        return elements;
     }
 
     private static String[] concat(String[]... answers) {
