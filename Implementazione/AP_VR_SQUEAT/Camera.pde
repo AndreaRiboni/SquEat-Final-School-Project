@@ -17,7 +17,6 @@ void onCameraPreviewEvent() {
     bright += brightness(cam.pixels[i]);
   }
   bright /= cam.pixels.length/5;
-  println(bright);
   //se è molto scura e posso lanciare il controllo vocale, lo lancio
   if(bright < 25 && millis()-LastActivation > ActivationInterval){
     vibrate(200);
@@ -26,7 +25,6 @@ void onCameraPreviewEvent() {
     act.runOnUiThread(new Runnable() {
       @ Override
       public void run() {
-        println("runnn");
         //Initialize the recognizer on the UI thread
         initRecognizer();
       }

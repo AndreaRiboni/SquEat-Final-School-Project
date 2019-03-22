@@ -38,7 +38,7 @@ void initRecognizer() {
  
   intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS,5); 
   sr.startListening(intent);
-  println("OK INITIALIZED");
+  //println("OK INITIALIZED");
 }
 
 public class listener implements RecognitionListener {
@@ -97,7 +97,8 @@ public class listener implements RecognitionListener {
     ArrayList data = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
     if(data.size() > 0){
       ListenedText = data.get(0).toString();
-      println(data.get(0));
+      println(ListenedText);
+      processSpeech(ListenedText);
     } else println("not enough text");
   }
   

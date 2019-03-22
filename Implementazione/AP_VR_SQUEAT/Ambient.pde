@@ -6,6 +6,13 @@ float angle;
 PImage logo;
 float logoY;
 
+//Font
+PFont createdFont;
+
+//Quale menu mostrare
+int MenuToShow = 0; //0 = logo, 1 = ristoranti
+int PreviousMenu = 0;
+
 void initializeAmbient(){
   imageMode(CENTER);
   logo = loadImage("logoVR.png");
@@ -37,10 +44,71 @@ void showGrid(){
 }
 
 void showLogo(){
-  image(logo, 0, logoY+=sin(angle+=0.01));
+  image(logo, 0, logoY+=sin(angle+=0.01)/2);
 }
 
 void showAmbient(){
   showGrid();
-  showLogo();
+  switch(MenuToShow){
+    case 1:
+      drawRestaurants(restaurants);
+      break;
+    default:
+      showLogo();
+  }
+}
+
+void drawRestaurants(Restaurant[] restaurants){
+  for(int i = 0; i < restaurants.length; i++){
+    if(i > 4) break;
+      switch(i){
+        case 0:
+          translate(0, 0, 0);
+          rotateY(0);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 1:
+          translate(-500, 0, 300);
+          rotateY(1.25*PI);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 2:
+          rotateY(-1.25*PI);
+          translate(1000, 0, 0);
+          rotateY(1.75*PI);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 3:
+          rotateY(-1.75*PI);
+          translate(-1300, 0, 500);
+          rotateY(0.5*PI);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 4:
+          rotateY(-0.5*PI);
+          translate(1300, 0, 0);
+          rotateY(-0.5*PI);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 5:
+          translate(-60, 0, 60);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 6:
+          translate(0, 0, 100);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+        case 7:
+          translate(60, 0, 60);
+          drawRestaurantPlaceHolder(restaurants[i]);
+          continue;
+      }
+      //text(restaurants[i].nome, 0, 0);
+  }
+}
+
+void drawRestaurantPlaceHolder(Restaurant r){
+  fill(127);
+  String path = getImage(r.pos);
+  image(loadImage(path), 0, 0);
 }
