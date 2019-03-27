@@ -76,8 +76,7 @@ public class getrestaurant extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            String[] data = Pacchetto.estrai(ClientConnector.request("7;" + request.getParameter("ID")));
-            request.setAttribute("info", data);;
+            request.setAttribute("info", Pacchetto.estrai(ClientConnector.request("7;" + request.getParameter("ID"))));
             request.getRequestDispatcher("restaurant.jsp").forward(request, response);
         } catch (ServerException ex) {
             ex.printStackTrace();

@@ -13,8 +13,15 @@
     </head>
     <body>
         <h2>Info Locale</h2>
-            <%for (String data : (String[]) request.getAttribute("info")) {
-                    out.println(data+"<br>");
-            }%>
+            <% String[] data = (String[]) request.getAttribute("info");
+                    out.println("Nome: "+data[1]+"<br>");
+                    out.println("Lougo: "+data[2]+"<br>");
+                    out.println("Stelle: "+data[3]+"<br>");
+                    out.println("Cellulare: "+data[4]+"<br>");
+                    out.println("Menù: "+data[5]+"<br>");
+                    request.setAttribute("menù", data[5]);
+                    out.println("<a href='menù.jsp'>Menù</a>");
+
+            %>
     </body>
 </html>
