@@ -15,6 +15,10 @@ echo '<link rel="stylesheet" href="./mystyle.css" type="text/css">';
 //Sfondo
 echo '<script src = "background.js"></script>';
 
+echo '<title>SquEat</title>';
+
+echo '<link rel="icon" href="data/logo/squeatlogo.ico" />';
+
 session_start();
 
 function connect(){

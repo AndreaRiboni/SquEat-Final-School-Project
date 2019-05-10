@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class=" navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -76,9 +76,9 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-    
-<img src="data/pizza.jpg" class="img-fluid" alt="Pizza" width=100%>
 </nav>
+<br><br>
+<img src="data/pizza.jpg.png" class="img-fluid" alt="Pizza" width=100%>
 
 <?php
 function sessionValid(){

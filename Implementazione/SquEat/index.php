@@ -8,11 +8,17 @@
         <?php
         include 'navbar.php';
         ?>
-        <h1 class="text-center">Ordina il cibo con SquEat</h1>
-        <form action="listrist.php" method="get">
-            Indirizzo:<input type="text" name="address">
-            <input type="submit">
-        </form>
+        <div class="container center_div text-center">
+            <h1>Ordina il cibo con SquEat</h1>
+                    <form action="listrist.php" method="get" style="margin: 0 auto">
+                    <div class="input-group">
+                        <input type="text" name="address" id="address" placeholder="Indirizzo" class="form-control input-lg">
+                        <span class="input-group-btn">
+                        <input class="btn btn-danger btn-lg" type="submit">
+                        </span>
+                        </div>
+                    </form>
+        </div>
     </body>
 </html>
 
