@@ -13,7 +13,7 @@ echo "<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet
 //Mio CSS
 echo '<link rel="stylesheet" href="./mystyle.css" type="text/css">';
 //Sfondo
-echo '<script src = "background.js"></script>';
+//echo '<script src = "background.js"></script>';
 
 echo '<title>SquEat</title>';
 

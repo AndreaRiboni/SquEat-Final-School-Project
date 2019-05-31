@@ -1,24 +1,37 @@
 h1 {
-    font-family: 'Karla';
+  font-family: 'Karla';
 }
 
-.titolo {
-    font-size: 50px;
+h2 {
+  font-family: 'Karla';
 }
 
-.sottotitolo {
-    font-size: 24px;
+p {
+  font-family: 'Karla';
 }
 
-#selectable {
+div {
+  font-family: 'Karla';
+}
+
+h3 {
+  font-family: 'Karla';
+}
+
+h4 {
+  font-family: 'Karla';
+}
+
+h5 {
+  font-family: 'Karla';
+}
+
+h6 {
+  font-family: 'Karla';
+}
+
+td {
     transition: 0.3s;
-}
-
-#selectable:hover {
-    transition: 0.3s;
-    opacity: 0.6;
-    background-color: red;
-    color: white;
 }
 
 a:link {
@@ -44,4 +57,14 @@ a:active {
 .center_div{
   margin: 0 auto;
   width:80% /* value of your choice which suits your alignment */
+}
+
+@media only screen and (max-width: 765px) {
+  #map {
+      width: 100%;
+  }
+}
+
+.popover{
+  max-width: 100%; /* Max Width of the popover (depending on the container!) */
 }

@@ -17,58 +17,63 @@
             <ul class="nav navbar-nav">
                 <li role="separator" class="divider"></li>
                 <li><a href="index.php">Trova ristoranti</a></li>
+                <?php
+                    if(sessionValid()){
+                        echo "<li><a href='locale.php'>Hai un locale?</a></li>";
+                    }
+                ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <?php if(sessionValid()){ ?>
-                <li><a href="TODO">Profilo</a></li>
-                <li><a href = "carrello.php">Carrello (<span id="NumProdCart">0</span>)</a></li>
+                <li><a href="profile.php">Profilo e Ordini</a></li>
+                <li><a href = "carrello.php">Carrello (<span id="NumProdCart"><?php echo ($_COOKIE["carrello"]) == "" ? '0' : count(explode("-", substr($_COOKIE['carrello'], 0, -1)))/3; ?></span>)</a></li>
                 <li><a href="index.php?action=logout">Logout</a></li>
                 <?php } else { ?>
                     <li><a rel="popover" data-content='
                                 <form method="post" action="index.php">
-                                    <p>
+                                    <div class="form-group">
                                         <label>Mail:</label>
-                                        <input type="email" name="loginemail" />
-                                    </p>
-                                    <p>
+                                        <input type="email" name="loginemail" class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Password:</label>
-                                        <input type="password" name="loginpsw" />
-                                    </p>
-                                    <p class=" col text-center">
+                                        <input type="password" name="loginpsw" class="form-control"/>
+                                    </div>
+                                    <div class="form-group text-center">
                                         <input type="submit" value="login" class="btn btn-danger">
-                                    </p>
+                                    </div>
                                 </form>'
-                            data-placement="bottom" data-original-title="SquEat">Login</a>
+                            data-placement="bottom" data-original-title="SquEat" >Login</a>
                     </li>
                     <li><a rel="popover" data-content='
                                 <form method="post" action="index.php">
-                                    <p>
+                                    <div class="form-group">
                                         <label>Nome:</label>
-                                        <input type="text" name="registername" />
-                                    </p>
-                                    <p>
+                                        <input type="text" name="registername"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Cognome:</label>
-                                        <input type="text" name="registersurname" />
-                                    </p>
-                                    <p>
+                                        <input type="text" name="registersurname"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Email:</label>
-                                        <input type="email" name="registeremail" />
-                                    </p>
-                                    <p>
+                                        <input type="email" name="registeremail"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Cellulare:</label>
-                                        <input type="phone" name="registerphone" />
-                                    </p>
-                                    <p>
+                                        <input type="phone" name="registerphone"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Indirizzo:</label>
-                                        <input type="text" name="registeraddress" />
-                                    </p>
-                                    <p>
+                                        <input type="text" name="registeraddress"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Password:</label>
-                                        <input type="password" name="registerpassword" />
-                                    </p>
-                                    <p class=" col text-center">
+                                        <input type="password" name="registerpassword"  class="form-control"/>
+                                    </div>
+                                    <div class="form-group text-center">
                                         <input type="submit" value="registrati" class="btn btn-danger">
-                                    </p>
+                                    </div>
                                 </form>'
                             data-placement="bottom" data-original-title="SquEat">Registrati</a>
                     </li>
@@ -92,7 +97,6 @@ function sessionValid(){
 ?>
 
 <script>
-document.getElementById("NumProdCart").innerHTML = getCookie("carrello").split("#").length;
 
 function getCookie(name) {
     var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -104,7 +108,8 @@ function getCookie(name) {
 <script>
 $('a[rel=popover]').popover({
     html: 'true',
-placement: 'bottom'
+placement: 'bottom',
+container: 'body'
 })
 $('a[rel=popover]').popover();
 

@@ -3,16 +3,19 @@
         <?php
         include 'setup.php';
         ?>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
+
     <body>
         <?php
         include 'navbar.php';
         ?>
         <div class="container center_div text-center">
-            <h1>Ordina il cibo con SquEat</h1>
+            <p class="h1">Ordina con SquEat</p>
                     <form action="listrist.php" method="get" style="margin: 0 auto">
                     <div class="input-group">
-                        <input type="text" name="address" id="address" placeholder="Indirizzo" class="form-control input-lg">
+                       <input type="text" name="address" id="address" placeholder="Indirizzo di consegna" class="form-control input-lg">
                         <span class="input-group-btn">
                         <input class="btn btn-danger btn-lg" type="submit">
                         </span>
@@ -80,9 +83,8 @@ if (
         !empty($_GET["action"]) &&
         $_GET["action"] == "logout"
 ) {
-    unset($_SESSION);
     session_destroy();
-    setcookie('carrello', null, -1, '/');
+    setcookie('carrello', "", 0);
     svuota();
 }
 
@@ -93,4 +95,5 @@ function svuota() {
     echo '<script>window.location.href = "index.php";</script>';
     die();
 }
+
 ?>
