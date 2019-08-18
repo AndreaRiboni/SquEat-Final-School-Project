@@ -58,9 +58,10 @@
                     $costo = &$data[1];
                     $nomeprod = &$data[2];
                     $ingredients = &$data[3];
-                    echo '<tr>'.
-                    '<td><button class="btn btn-danger" style="border-radius: 100%; font-size: 100%" onclick="addCart('.$idprod.','.$_GET["rest"].','.$costo.')">+</button>&nbsp&nbsp</td>
-                    <td class="selectable"><b>' . $nomeprod . '</b></td><td>' . number_format((float)$costo, 2, ",", "") . '€</td></tr>';
+                    echo '<tr>';
+                    if(isset($_SESSION["id"])) echo '<td><button class="btn btn-danger" style="border-radius: 100%; font-size: 100%" onclick="addCart('.$idprod.','.$_GET["rest"].','.$costo.')">+</button>&nbsp&nbsp</td>';
+                    else echo '<td></td>';
+                    echo '<td class="selectable"><b>' . $nomeprod . '</b></td><td>' . number_format((float)$costo, 2, ",", "") . '€</td></tr>';
                     echo '<tr><td></td><td>' . $ingredients . '</td></tr>';
                     echo '<tr><td>&nbsp</td></tr>';
                 }
@@ -122,9 +123,6 @@
                 xhttp.open("GET", "util.php?idlocale="+idloc+"&idprodotto="+idprod+"&costo="+costo, true);
                 xhttp.send();
             }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
         
     </body>

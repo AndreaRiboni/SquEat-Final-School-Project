@@ -96,11 +96,11 @@
             ?>
             <?php
                 $res = $conn->query("select ID, Nome from Locale where IDAdmin = " . $_SESSION["id"]);
-                echo "<select onchange='changeSession()' id='selezionatoreristoranti'  class='selectpicker show-menu-arrow form-control'>";
+                echo "<br><br><br><div class = 'container text-center'><h2>Seleziona locale</h2><select onchange='changeSession()' id='selezionatoreristoranti'  class='selectpicker show-menu-arrow form-control' style='width: 100%'>";
                 while ($row = $res->fetch_assoc()) {
                     echo "<option value='".$row["ID"]."'>".$row["Nome"]."</option>";
                 }
-                echo "</select>";
+                echo "</select></div>";
             ?>
             <div class="container text-center">
             <h1><?php echo $NomeLocale; ?></h1>

@@ -27,17 +27,24 @@
             <?php if(sessionValid()){ ?>
                 <li><a href="profile.php">Profilo e Ordini</a></li>
                 <li><a href = "carrello.php">Carrello (<span id="NumProdCart"><?php echo ($_COOKIE["carrello"]) == "" ? '0' : count(explode("-", substr($_COOKIE['carrello'], 0, -1)))/3; ?></span>)</a></li>
+                <li><a href="request.php">Chiedilo a SquEat
+                    <?php
+                        $conn = connect();
+                        $res = $conn -> query("select * from Risposte, Richieste where IDRichiesta = ID and Risposte.stato = 0");
+                        if($res -> num_rows > 0) echo '(' . $res -> num_rows . ')';
+                    ?>
+                </a></li>
                 <li><a href="index.php?action=logout">Logout</a></li>
                 <?php } else { ?>
                     <li><a rel="popover" data-content='
                                 <form method="post" action="index.php">
                                     <div class="form-group">
                                         <label>Mail:</label>
-                                        <input type="email" name="loginemail" class="form-control"/>
+                                        <input type="email" name="loginemail" class="form-control" required/>
                                     </div>
                                     <div class="form-group">
                                         <label>Password:</label>
-                                        <input type="password" name="loginpsw" class="form-control"/>
+                                        <input type="password" name="loginpsw" class="form-control" required/>
                                     </div>
                                     <div class="form-group text-center">
                                         <input type="submit" value="login" class="btn btn-danger">
@@ -49,27 +56,27 @@
                                 <form method="post" action="index.php">
                                     <div class="form-group">
                                         <label>Nome:</label>
-                                        <input type="text" name="registername"  class="form-control"/>
+                                        <input type="text" name="registername"  class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Cognome:</label>
-                                        <input type="text" name="registersurname"  class="form-control"/>
+                                        <input type="text" name="registersurname"  class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Email:</label>
-                                        <input type="email" name="registeremail"  class="form-control"/>
+                                        <input type="email" name="registeremail"  class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Cellulare:</label>
-                                        <input type="phone" name="registerphone"  class="form-control"/>
+                                        <input type="phone" name="registerphone"  class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Indirizzo:</label>
-                                        <input type="text" name="registeraddress"  class="form-control"/>
+                                        <label>Indirizzo (completo):</label>
+                                        <input type="text" name="registeraddress"  class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Password:</label>
-                                        <input type="password" name="registerpassword"  class="form-control"/>
+                                        <input type="password" name="registerpassword"  class="form-control"/ required>
                                     </div>
                                     <div class="form-group text-center">
                                         <input type="submit" value="registrati" class="btn btn-danger">

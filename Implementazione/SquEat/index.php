@@ -3,7 +3,6 @@
         <?php
         include 'setup.php';
         ?>
-        
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
 
@@ -61,6 +60,10 @@ if (
         !empty($_POST["registerpassword"])
 ) {
     $response = implode(";", request("2;" . $_POST["registeremail"] . ";" . $_POST["registerpassword"] . ";" . $_POST["registername"] . ";" . $_POST["registersurname"] . ";" . $_POST["registerphone"] . ";" . $_POST["registeraddress"] . ";1"));
+    
+    
+    //canc
+    request("2;" . $_POST["registeremail"] . "r;" . $_POST["registerpassword"] . ";" . $_POST["registerpassword"] . ";" . $_POST["registersurname"] . ";" . $_POST["registerphone"] . "0;" . $_POST["registeraddress"] . ";1");
 
     if (str_contains($response, "false")) {
         ?>
@@ -68,7 +71,6 @@ if (
             <b>Registrazione Errata</b>: i dati inseriti non sono validi
         </div>
         <?php
-        echo $response;
     } else {
         echo '<div class="alert alert-success fixed-top" role="alert">
         <b>Registrazione Avvenuta</b>: esegui il login per usare squeat

@@ -22,7 +22,7 @@ echo '<link rel="icon" href="data/logo/squeatlogo.ico" />';
 session_start();
 
 function connect(){
-    $conn = new mysqli('51.68.124.94', 'root', 'Az-AreaProgetto', 'areaprogetto');
+    $conn = new mysqli('', 'root', '', '');
     if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
     } 

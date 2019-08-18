@@ -28,6 +28,7 @@
             } 
             ?>
         </div>
+        <br><button onclick='window.location.href = "profile.php";' class='btn btn-danger'>indietro</button>
     </div>
 
     <script> 
@@ -51,7 +52,6 @@
                 stars += "★"
             }
             document.getElementById("containerstars").innerHTML = stars + "</span><br><span>inviata!</span>"
-            console.log("OKAYYYY: " + num)
             document.getElementById("containerstars").style.opacity = "1"
             unfade(document.getElementById("containerstars"))
 
