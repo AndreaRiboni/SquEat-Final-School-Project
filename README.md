@@ -1,3 +1,9 @@
+# Disclaimer:
+
+This project may contain a lot of bad practices, but i like to keep it here as It's showcasing part of my growth over last years.
+
+It was created as my "final project" for my high school exam.
+
 # AreaProgetto
 ## Area di Progetto 5AI - AS 2018/19
 
